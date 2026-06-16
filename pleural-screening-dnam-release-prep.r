@@ -2,66 +2,96 @@
 packages <- c("meffil", "eval.save") #, "readxl") 
 lapply(packages, require, character.only=T)
 
+dir <- paths
+dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "%Y-%m-%d"))
+dir$reports <- file.path(dir$release, "derived/reports")
+
 if(!dir.exists(dir$cache)) dir.create(dir$cache)
 eval.save.dir(dir$cache)
 
-## ----load.data -------------------------------------------------------------
 options(mc.cores=16)
 packageVersion("meffil")
 
 ## ----idats -------------------------------------------------------------
-dir <- paths
-dir$idats <- file.path(dir$data, "raw", "03_MethylationArray_WholeBlood")
+dir$idats <- file.path(dir$data, "raw", "M2644")
 
-## ----file -------------------------------------------------------------
+## ----files -------------------------------------------------------------
 file <- list()
-file$samplesheet <- file.path(dir$output, "beatpd-dnam-wb-samplesheet.csv")
+file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.csv")
+file$qc.report <- file.path(dir$reports, "qc/pleural-screening.qc-report.html")
+file$detect.p <- file.path(dir$release, "detect.p/pleural-screening.detection_p_values.rds")
+file$pc.fit.plot <- file.path(dir$reports,"qc/pleural-screening.pc.fit.pdf")
+file$betas <- file.path(dir$release, "betas/pleural-screening.betas.rds")
+file$norm.report <- file.path(dir$reports, "normalization/pleural-screening.normalization-report.html")
+
+# Recursively make directories for a vector of filepaths and 
+# return logic of success
+make_dirs <- function(paths) {
+  sapply(paths, function(p) {
+    if (!dir.exists(p)) dir.create(p, recursive = TRUE)
+    dir.exists(p)
+  })
+}
+
+make_dirs(paths = 
+			c(dir$release, 
+			dir$reports,
+			dirname(unlist(file))))
+
+
+## ----samplesheets -------------------------------------------------------------
+## below works to get read the lab provided sample sheet, but going to hold
+## off until after data cleaning
+
+#file$samplesheets <- list.files(dir$idats, 
+#						pattern = "\\.csv$", 
+#						recursive = TRUE, 
+#						full.names = TRUE)
+#
+#samplesheet <- lapply(file$samplesheets, function(f) {
+#    skip_n <- grep("^\\[Data\\]", readLines(f, warn = FALSE))
+#    dt <- data.table::fread(f, skip = skip_n)
+#    dt[, source_file := basename(f)]
+#    dt
+#}) |> data.table::rbindlist(fill = TRUE)
 
 ## ----parameters -------------------------------------------------------------
 param <- list()
 param$verbose <- TRUE  
 param$report.author <- "Paul Yousefi"
-param$report.study <- "beatpd-wholeblood"
+param$report.study <- "pleural-cfDNA-screening-array"
 param$pc <- 10
 
 run <- list()
-run$qc <- TRUE
+run$qc <- FALSE
+run$qc.summary <- FALSE
+run$detect.p <- FALSE
+run$norm.objects <- FALSE
 
 ## ----samplesheet -------------------------------------------------------------
 samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
-samplesheet %>% 
-	write_csv(file = file$samplesheet)
+data.table::fwrite(samplesheet,file = file$samplesheet)
 
 ## ----qc -------------------------------------------------------------
-meffil.list.cell.type.references()
-  
+meffil.list.featuresets()
+
 eval.save({
-	qc.objects <- meffil.qc(samplesheet, 
-					cell.type.reference = "blood gse35069 complete", 
+	qc.objects <- meffil.qc(samplesheet,  
 					verbose = param$verbose)	
-}, "qc.objects", redo=F)
+}, "qc.objects", redo=run$qc)
 qc.objects <- eval.ret("qc.objects")
 
-
-if(run$qc){
-	qc.objects <- meffil.qc(samplesheet, 
-					cell.type.reference = "blood gse35069 complete", 
-					verbose = param$verbose)	
-
-	qc.objects %>%
-	write_rds(file = file$qc)
-
-} else {
-	qc.objects <- read_rds(file = file$qc)
-}
-
 ## ----qc.summary -------------------------------------------------------------
-qc.summary <- meffil.qc.summary(qc.objects, verbose = param$verbose)
+eval.save({
+	qc.summary <- meffil.qc.summary(qc.objects, verbose = param$verbose)
+}, "qc.summary", redo=run$qc.summary)
+qc.summary <- eval.ret("qc.summary")
+
 
 ## ----qc.report -------------------------------------------------------------
 sapply(
 	list(file$qc.report, 
-		file.path(dir$reports, "qc", basename(file$qc.report))),
+		file.path(dir$scripts, "docs", basename(file$qc.report))),
 			function(i){
 				meffil.qc.report(
 			    qc.summary,
@@ -103,25 +133,20 @@ length(qc.objects)
 qc.objects <- meffil.remove.samples(qc.objects, outlier$sample.name)
 length(qc.objects)
 
-samplesheet <- samplesheet %>%
-				filter(!Sample_Name %in% outlier$sample.name)
+samplesheet <- subset(samplesheet, 
+					!Sample_Name %in% outlier$sample.name)
 
-file$qc <- str_replace(file$qc,".rds$", ".clean.rds")
-qc.objects %>%
-	write_rds(file = file$qc)
-
-file$samplesheet <- str_replace(file$samplesheet,".csv$", ".clean.csv")
-samplesheet %>%
-	write_csv(file = file$samplesheet)
+file$samplesheet <- sub("\\.csv$", ".clean.csv", file$samplesheet)
+data.table::fwrite(samplesheet,file = file$samplesheet)
 
 ## ----qc.summary.clean -------------------------------------------------------------
 qc.summary <- meffil.qc.summary(qc.objects, verbose = param$verbose)
 
 ## ----qc.report.clean -------------------------------------------------------------
-file$qc.report <- str_replace(file$qc.report,".html$", ".clean.html")
+file$qc.report <- sub("\\.html$", ".clean.html", file$qc.report)
 sapply(
 	list(file$qc.report, 
-		file.path(dir$reports, "qc", basename(file$qc.report))),
+		file.path(dir$scripts, "docs", basename(file$qc.report))),
 			function(i){
 				meffil.qc.report(
 			    qc.summary,
@@ -132,16 +157,19 @@ sapply(
 	)
 
 ## ----detection.pvalue -------------------------------------------------------------
-qc.objects %>% 
-	meffil.load.detection.pvalues(verbose = param$verbose) %>%
-	write_rds(file = file$detect.p)
+# runs if detect.p doesn't exist or run is TRUE
+if(!file.exists(file$detect.p) || run$detect.p){
+	qc.objects |>
+		meffil.load.detection.pvalues(verbose = param$verbose) |>
+		readr::write_rds(file = file$detect.p)
+}
 
 ## ----pc.plot -------------------------------------------------------------
 y <- meffil.plot.pc.fit(qc.objects)
 
 sapply(
 	list(file$pc.fit.plot, 
-		file.path(dir$reports, "qc", basename(file$pc.fit.plot))),
+		file.path(dir$scripts, "docs", basename(file$pc.fit.plot))),
 			function(i){
 				ggsave(y$plot, 
 					filename = i, 
@@ -151,13 +179,13 @@ sapply(
 	)
 
 ## ----norm -------------------------------------------------------------
-norm.objects <- meffil.normalize.quantiles(
-    qc.objects,
-    number.pcs=param$pc, # set to 20 @top by visual inspection of pc plot
-    verbose = param$verbose)
-
-	norm.objects %>%
-		write_rds(file = file$norm)
+eval.save({
+	norm.objects <- meffil.normalize.quantiles(
+		qc.objects,
+		number.pcs=param$pc, # set to 20 @top by visual inspection of pc plot
+		verbose = param$verbose)
+}, "norm.objects", redo=run$norm.objects)
+norm.objects <- eval.ret("norm.objects")
 
 beta.meffil <- meffil.normalize.samples(
     norm.objects,
@@ -165,14 +193,13 @@ beta.meffil <- meffil.normalize.samples(
     cpglist.remove=qc.summary$bad.cpgs$name,
     verbose = param$verbose)
 
-
-	beta.meffil %>%
-		write_rds(file = file$betas)
+beta.meffil |>
+	readr::write_rds(file = file$betas)
  
 ## ----pcs--------------------------------------------------
 pcs <- meffil.methylation.pcs(
     beta.meffil,
-    sites=meffil.get.autosomal.sites("epic"),
+    sites=meffil.get.autosomal.sites("msa"),
     verbose = param$verbose)
 
 ## ----norm.summary -------------------------------------------------------------
@@ -187,7 +214,7 @@ norm.summary <- meffil.normalization.summary(
 ## ----norm.report -------------------------------------------------------------
 sapply(
 	list(file$norm.report, 
-		file.path(dir$reports, "normalization", basename(file$norm.report))),
+		file.path(dir$scripts, "docs", basename(file$norm.report))),
 			function(i){				
 				meffil.normalization.report(
 				    norm.summary,

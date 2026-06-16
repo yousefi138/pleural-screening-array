@@ -1,6 +1,6 @@
 args <- commandArgs(trailingOnly=TRUE)
 
-config.name <- "local"
+config.name <- "default"
 if (length(args) > 0)
     config.name <- args[1]
 
@@ -10,7 +10,7 @@ print(paths)
 paths$data <- file.path(paths$project, "data")
 paths$output <- file.path(paths$project, "results")
 paths$cache <- file.path(paths$project, "results", "analysis-cache")
-paths$scripts <- file.path(paths$project, "scripts")
+paths$scripts <- file.path(paths$project, "scripts/repo/pleural-screening-array")
 print(paths)
 
 ## 
@@ -19,10 +19,7 @@ print(paths)
 source("set-array-locations.r", echo=T, max.deparse.length = 500)
 
 
-## run analysis looking at relationship between
-## methylation predicted proteins and 
-## tumor vs. normal tissue type. 
-## render an html summary
+source("pleural-screening-dnam-release-prep.r", echo=T, max.deparse.length = 500)
 
 #packages <- c("rmarkdown", "knitr")
 #lapply(packages, require, character.only=T)
