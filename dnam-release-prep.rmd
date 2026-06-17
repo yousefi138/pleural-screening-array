@@ -49,21 +49,26 @@ Define all output file paths (samplesheet, QC report, detection p-values, PC fit
 ```{r files}
 ```
 
-The lab-provided sample sheets (one per plate) can be parsed and combined using the commented code below. This is retained for reference but is not used here — the samplesheet is instead derived directly from the IDAT file names via `meffil.create.samplesheet()`.
-
-```{r samplesheets}
-```
-
-Set analysis parameters: report authorship metadata, the number of principal components to use for normalisation (`param$pc = 10`), and `run` flags that control whether cached intermediate objects are recomputed.
+Set analysis parameters: report authorship metadata, the number of principal components to use for normalisation (`param$pc = 20`), and `run` flags that control whether cached intermediate objects are recomputed.
 
 ```{r parameters}
 ```
 
 # Samplesheet
 
-Automatically construct the meffil samplesheet by recursively scanning the IDAT directory for Sentrix barcode and position information. The resulting samplesheet is written to the release directory.
+Automatically construct the meffil samplesheet by recursively scanning the IDAT directory for Sentrix barcode and position information. The result is stored as `meffil.samplesheet` and written to the release directory.
 
 ```{r samplesheet}
+```
+
+Read and combine the lab-provided per-plate sample sheets (one CSV per plate). Each file is parsed by skipping the `[Data]` header block, then all plates are row-bound. `Sample_Name` is renamed to `pid` to avoid collision with the meffil convention, and a new `Sample_Name` is constructed as `Sentrix_ID_Sentrix_Position` to match the meffil samplesheet key.
+
+```{r lab.samplesheet}
+```
+
+Join the meffil-derived samplesheet with the lab samplesheet on `Sample_Name` to attach participant IDs (`pid`) and plate source information to each array position.
+
+```{r combined.samplesheet}
 ```
 
 # Quality Control
@@ -83,7 +88,7 @@ Generate an HTML QC report from the summary object. The report is written to bot
 ```{r qc.report}
 ```
 
-SNP probes on the array can be used to verify sample identity against independent genotype data. The code below (commented out) exports the SNP probe names for use with PLINK, and would load the resulting genotype calls back into R. This step is retained for reference but was not applied in this release.
+SNP probes on the array can be used to verify sample identity against independent genotype data. The code below (commented out) exports the SNP probe names for use with PLINK, and would load the resulting genotype calls back into R. This step is retained for reference but was not applied in this release. The pipeline continues directly to sample filtering.
 
 ```{r qc.snps}
 ```
@@ -124,7 +129,7 @@ Extract per-sample, per-CpG detection p-values from the QC objects and save them
 
 # Normalisation
 
-Plot the variance explained by successive principal components of the control-probe intensities to inform the choice of PC count for functional normalisation. Visual inspection of this elbow plot was used to select `param$pc = 10`.
+Plot the variance explained by successive principal components of the control-probe intensities to inform the choice of PC count for functional normalisation. Visual inspection of this elbow plot was used to select `param$pc = 20`.
 
 ```{r pc.plot}
 ```

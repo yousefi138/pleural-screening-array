@@ -31,13 +31,13 @@ The variance captured by each principal component.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-293-1.png" width="576" />
-
-
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-294-1.png" width="576" />
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-295-1.png" width="576" />
+
+
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-296-1.png" width="576" />
 
 ## Principal components of the control probes
 
@@ -48,12 +48,12 @@ Batch variables with more than 10 levels are omitted.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-299-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-300-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-302-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-303-1.png" width="1728" />
 
 ## Control probe associations with measured batch variables
 
@@ -64,17 +64,17 @@ The horizontal dotted line denotes $p = 0.05$ in log-scale.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-307-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-308-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-310-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-311-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-313-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-314-1.png" width="1728" />
 
 
 The following plots show regression coefficients when
@@ -84,9 +84,6 @@ Cases significantly different from zero are coloured red
 (p < 0.01, t-test).
 
 
-
-
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-317-1.png" width="576" />
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-318-1.png" width="576" />
@@ -114,6 +111,9 @@ Cases significantly different from zero are coloured red
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-326-1.png" width="576" />
+
+
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-327-1.png" width="576" />
 
 
 |batch.variable |batch.value  |principal.component |test   |p.value  |estimate |lower   |upper   |r2     |
@@ -194,12 +194,12 @@ Batch variables with more than 10 levels are omitted.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-331-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-332-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-334-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-335-1.png" width="1728" />
 
 ## Normalized probe associations with measured batch variables
 
@@ -212,17 +212,17 @@ variables. Horizontal dotted line denotes $p = 0.05$ in log-scale.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-339-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-340-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-342-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-343-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-345-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-346-1.png" width="1728" />
 
 The following plots show regression coefficients when
 each principal component is regressed against each batch variable level
@@ -231,9 +231,6 @@ Cases significantly different from zero are coloured red
 (p < 0.01, t-test).
 
 
-
-
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-349-1.png" width="576" />
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-350-1.png" width="576" />
@@ -261,6 +258,9 @@ Cases significantly different from zero are coloured red
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-358-1.png" width="576" />
+
+
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-359-1.png" width="576" />
 
 
 |batch.variable |batch.value  |principal.component |test   |p.value  |estimate |lower  |upper  |r2     |
@@ -322,19 +322,20 @@ Cases significantly different from zero are coloured red
 > [8] base     
 > 
 > other attached packages:
->  [1] eval.save_1.0.0       meffil_1.6.0          preprocessCore_1.68.0
->  [4] SmartSVA_0.1.3        RSpectra_0.16-2       isva_1.9             
->  [7] JADE_2.0-4            qvalue_2.38.0         gdsfmt_1.38.0        
-> [10] statmod_1.5.0         quadprog_1.5-8        DNAcopy_1.76.0       
-> [13] fastICA_1.2-7         lme4_1.1-35.5         Matrix_1.6-5         
-> [16] multcomp_1.4-26       TH.data_1.1-2         survival_3.8-3       
-> [19] mvtnorm_1.3-2         matrixStats_1.5.0     markdown_1.13        
-> [22] gridExtra_2.3         Cairo_1.6-2           reshape2_1.4.4       
-> [25] plyr_1.8.9            ggplot2_3.5.1         sva_3.54.0           
-> [28] BiocParallel_1.40.0   genefilter_1.88.0     mgcv_1.9-1           
-> [31] nlme_3.1-165          limma_3.62.1          sandwich_3.1-1       
-> [34] lmtest_0.9-40         zoo_1.8-12            MASS_7.3-60.0.1      
-> [37] illuminaio_0.48.0     knitr_1.49            rmarkdown_2.29       
+>  [1] dplyr_1.1.4           eval.save_1.0.0       meffil_1.6.0         
+>  [4] preprocessCore_1.68.0 SmartSVA_0.1.3        RSpectra_0.16-2      
+>  [7] isva_1.9              JADE_2.0-4            qvalue_2.38.0        
+> [10] gdsfmt_1.38.0         statmod_1.5.0         quadprog_1.5-8       
+> [13] DNAcopy_1.76.0        fastICA_1.2-7         lme4_1.1-35.5        
+> [16] Matrix_1.6-5          multcomp_1.4-26       TH.data_1.1-2        
+> [19] survival_3.8-3        mvtnorm_1.3-2         matrixStats_1.5.0    
+> [22] markdown_1.13         gridExtra_2.3         Cairo_1.6-2          
+> [25] reshape2_1.4.4        plyr_1.8.9            ggplot2_3.5.1        
+> [28] sva_3.54.0            BiocParallel_1.40.0   genefilter_1.88.0    
+> [31] mgcv_1.9-1            nlme_3.1-165          limma_3.62.1         
+> [34] sandwich_3.1-1        lmtest_0.9-40         zoo_1.8-12           
+> [37] MASS_7.3-60.0.1       illuminaio_0.48.0     knitr_1.49           
+> [40] rmarkdown_2.29       
 > 
 > loaded via a namespace (and not attached):
 >  [1] DBI_1.2.3               rlang_1.1.4             magrittr_2.0.3         
@@ -361,9 +362,9 @@ Cases significantly different from zero are coloured red
 > [64] XML_3.99-0.17           grid_4.4.2              AnnotationDbi_1.68.0   
 > [67] edgeR_4.4.0             colorspace_2.1-1        base64_2.0.2           
 > [70] GenomeInfoDbData_1.2.13 cli_3.6.3               config_0.3.2           
-> [73] textshaping_0.4.0       dplyr_1.1.4             gtable_0.3.6           
-> [76] sass_0.4.9              digest_0.6.37           BiocGenerics_0.52.0    
-> [79] farver_2.1.2            memoise_2.0.1           htmltools_0.5.8.1      
-> [82] lifecycle_1.0.4         httr_1.4.7              mime_0.12              
-> [85] openssl_2.3.1           bit64_4.5.2
+> [73] textshaping_0.4.0       gtable_0.3.6            sass_0.4.9             
+> [76] digest_0.6.37           BiocGenerics_0.52.0     farver_2.1.2           
+> [79] memoise_2.0.1           htmltools_0.5.8.1       lifecycle_1.0.4        
+> [82] httr_1.4.7              mime_0.12               openssl_2.3.1          
+> [85] bit64_4.5.2
 ```

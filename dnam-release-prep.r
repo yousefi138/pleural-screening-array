@@ -1,5 +1,5 @@
 ## ----globals -------------------------------------------------------------
-packages <- c("meffil", "eval.save") #, "readxl") 
+packages <- c("meffil", "eval.save", "dplyr") #, "readxl") 
 lapply(packages, require, character.only=T)
 
 dir <- paths
@@ -38,23 +38,6 @@ make_dirs(paths =
 			dir$reports,
 			dirname(unlist(file))))
 
-
-## ----samplesheets -------------------------------------------------------------
-## below works to get read the lab provided sample sheet, but going to hold
-## off until after data cleaning
-
-#file$samplesheets <- list.files(dir$idats, 
-#						pattern = "\\.csv$", 
-#						recursive = TRUE, 
-#						full.names = TRUE)
-#
-#samplesheet <- lapply(file$samplesheets, function(f) {
-#    skip_n <- grep("^\\[Data\\]", readLines(f, warn = FALSE))
-#    dt <- data.table::fread(f, skip = skip_n)
-#    dt[, source_file := basename(f)]
-#    dt
-#}) |> data.table::rbindlist(fill = TRUE)
-
 ## ----parameters -------------------------------------------------------------
 param <- list()
 param$verbose <- TRUE  
@@ -69,8 +52,32 @@ run$detect.p <- FALSE
 run$norm.objects <- FALSE
 
 ## ----samplesheet -------------------------------------------------------------
-samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
-data.table::fwrite(samplesheet,file = file$samplesheet)
+meffil.samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
+data.table::fwrite(meffil.samplesheet,file = file$samplesheet)
+
+## ----lab.samplesheet -------------------------------------------------------------
+## below works to get read the lab provided sample sheet, but going to hold
+## off until after data cleaning
+file$lab.samplesheets <- list.files(dir$idats, 
+						pattern = "\\.csv$", 
+						recursive = TRUE, 
+						full.names = TRUE)
+
+lab.samplesheet <- lapply(file$lab.samplesheets, function(f) {
+    skip_n <- grep("^\\[Data\\]", readLines(f, warn = FALSE))
+    dt <- data.table::fread(f, skip = skip_n)
+    dt[, source_file := basename(f)]
+    dt
+}) |> data.table::rbindlist(fill = TRUE) |>
+	dplyr::rename(pid = Sample_Name)|>
+	mutate(Slide = as.character(Sentrix_ID))|>
+	mutate(Sample_Name = paste(Slide, Sentrix_Position, sep="_"))|>
+	dplyr::select(Sample_Name, pid, source_file)
+
+## ----combined.samplesheet--------------------------------------------------------
+samplesheet <- meffil.samplesheet |>
+				left_join(lab.samplesheet, by = c("Sample_Name"))
+
 
 ## ----qc -------------------------------------------------------------
 meffil.list.featuresets()

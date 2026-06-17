@@ -74,7 +74,7 @@ chromosome Y and chromosome X probe intensities ("XY diff").
 Cutoff for sex detection was
 XY diff = -2. Mismatched samples are shown in red. The dashed lines represent 3 SD from  the mean xy difference. Samples that fall in this interval are denoted as outliers.
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-54-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-55-1.png" width="960" />
 
 
 ## Methylated vs unmethylated
@@ -95,7 +95,7 @@ from the expected (regression line).
 
 This is a plot of the methylation signals vs unmethylated signals
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-56-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-57-1.png" width="960" />
 
 
 ## Control probe means
@@ -121,7 +121,7 @@ There were 13 outliers detected based on deviations from mean values for control
 
 The distribution of sample control means are plotted here:
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-58-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-59-1.png" width="960" />
 
 
 ## Sample detection p-values
@@ -153,7 +153,7 @@ is > 0.2).
 
 Distribution:
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-60-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-61-1.png" width="960" />
 
 
 ## Sample bead numbers
@@ -170,7 +170,7 @@ is > 0.2).
 
 Distribution:
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-62-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-63-1.png" width="960" />
 
 
 ## CpG detection p-values
@@ -182,7 +182,7 @@ probes with only background signal in a high proportion of samples
 is > 0.2).
 Manhattan plot shows the proportion of samples.
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-63-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-64-1.png" width="960" />
 
 ## Low number of beads per CpG
 
@@ -193,7 +193,7 @@ with low bead numbers in a high proportion of samples
 is > 0.2).
 Manhattan plot of proportion of samples.
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-64-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-65-1.png" width="960" />
 
 ## Cellular composition estimates
 
@@ -206,7 +206,7 @@ This section omitted.
 
 The array includes snp probes which can be used to identify sample swaps by comparing these genotypes to genotype calls from a genotype array. First you could check the quality of these snp probes before using them for sample quality.
 Distributions of SNP probe beta values are used to determine the quality of the snp probe and should show 3 peaks, one for each genotype probability.
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-67-1.png" width="960" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-68-1.png" width="960" />
 
 ## Genotype concordance
 
@@ -240,19 +240,20 @@ This section omitted.
 > [8] base     
 > 
 > other attached packages:
->  [1] eval.save_1.0.0       meffil_1.6.0          preprocessCore_1.68.0
->  [4] SmartSVA_0.1.3        RSpectra_0.16-2       isva_1.9             
->  [7] JADE_2.0-4            qvalue_2.38.0         gdsfmt_1.38.0        
-> [10] statmod_1.5.0         quadprog_1.5-8        DNAcopy_1.76.0       
-> [13] fastICA_1.2-7         lme4_1.1-35.5         Matrix_1.6-5         
-> [16] multcomp_1.4-26       TH.data_1.1-2         survival_3.8-3       
-> [19] mvtnorm_1.3-2         matrixStats_1.5.0     markdown_1.13        
-> [22] gridExtra_2.3         Cairo_1.6-2           reshape2_1.4.4       
-> [25] plyr_1.8.9            ggplot2_3.5.1         sva_3.54.0           
-> [28] BiocParallel_1.40.0   genefilter_1.88.0     mgcv_1.9-1           
-> [31] nlme_3.1-165          limma_3.62.1          sandwich_3.1-1       
-> [34] lmtest_0.9-40         zoo_1.8-12            MASS_7.3-60.0.1      
-> [37] illuminaio_0.48.0     knitr_1.49            rmarkdown_2.29       
+>  [1] dplyr_1.1.4           eval.save_1.0.0       meffil_1.6.0         
+>  [4] preprocessCore_1.68.0 SmartSVA_0.1.3        RSpectra_0.16-2      
+>  [7] isva_1.9              JADE_2.0-4            qvalue_2.38.0        
+> [10] gdsfmt_1.38.0         statmod_1.5.0         quadprog_1.5-8       
+> [13] DNAcopy_1.76.0        fastICA_1.2-7         lme4_1.1-35.5        
+> [16] Matrix_1.6-5          multcomp_1.4-26       TH.data_1.1-2        
+> [19] survival_3.8-3        mvtnorm_1.3-2         matrixStats_1.5.0    
+> [22] markdown_1.13         gridExtra_2.3         Cairo_1.6-2          
+> [25] reshape2_1.4.4        plyr_1.8.9            ggplot2_3.5.1        
+> [28] sva_3.54.0            BiocParallel_1.40.0   genefilter_1.88.0    
+> [31] mgcv_1.9-1            nlme_3.1-165          limma_3.62.1         
+> [34] sandwich_3.1-1        lmtest_0.9-40         zoo_1.8-12           
+> [37] MASS_7.3-60.0.1       illuminaio_0.48.0     knitr_1.49           
+> [40] rmarkdown_2.29       
 > 
 > loaded via a namespace (and not attached):
 >  [1] DBI_1.2.3               rlang_1.1.4             magrittr_2.0.3         
@@ -277,9 +278,9 @@ This section omitted.
 > [58] locfit_1.5-9.10         XML_3.99-0.17           grid_4.4.2             
 > [61] AnnotationDbi_1.68.0    edgeR_4.4.0             colorspace_2.1-1       
 > [64] base64_2.0.2            GenomeInfoDbData_1.2.13 cli_3.6.3              
-> [67] config_0.3.2            dplyr_1.1.4             gtable_0.3.6           
-> [70] sass_0.4.9              digest_0.6.37           BiocGenerics_0.52.0    
-> [73] farver_2.1.2            memoise_2.0.1           htmltools_0.5.8.1      
-> [76] lifecycle_1.0.4         httr_1.4.7              mime_0.12              
-> [79] openssl_2.3.1           bit64_4.5.2
+> [67] config_0.3.2            gtable_0.3.6            sass_0.4.9             
+> [70] digest_0.6.37           BiocGenerics_0.52.0     farver_2.1.2           
+> [73] memoise_2.0.1           htmltools_0.5.8.1       lifecycle_1.0.4        
+> [76] httr_1.4.7              mime_0.12               openssl_2.3.1          
+> [79] bit64_4.5.2
 ```
