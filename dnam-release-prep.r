@@ -47,8 +47,8 @@ param$pc <- 20
 param$qc <- meffil.qc.parameters()
 
 run <- list()
-run$qc <- TRUE
-run$qc.summary <- TRUE
+run$qc <- FALSE
+run$qc.summary <- FALSE
 run$detect.p <- FALSE
 run$norm.objects <- FALSE
 
