@@ -60,7 +60,7 @@ param <- list()
 param$verbose <- TRUE  
 param$report.author <- "Paul Yousefi"
 param$report.study <- "pleural-cfDNA-screening-array"
-param$pc <- 10
+param$pc <- 20
 
 run <- list()
 run$qc <- FALSE
