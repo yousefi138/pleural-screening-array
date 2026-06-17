@@ -31,13 +31,13 @@ The variance captured by each principal component.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-294-1.png" width="576" />
-
-
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-295-1.png" width="576" />
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-296-1.png" width="576" />
+
+
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-297-1.png" width="576" />
 
 ## Principal components of the control probes
 
@@ -48,12 +48,12 @@ Batch variables with more than 10 levels are omitted.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-300-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-301-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-303-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-304-1.png" width="1728" />
 
 ## Control probe associations with measured batch variables
 
@@ -64,17 +64,17 @@ The horizontal dotted line denotes $p = 0.05$ in log-scale.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-308-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-309-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-311-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-312-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-314-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-315-1.png" width="1728" />
 
 
 The following plots show regression coefficients when
@@ -84,9 +84,6 @@ Cases significantly different from zero are coloured red
 (p < 0.01, t-test).
 
 
-
-
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-318-1.png" width="576" />
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-319-1.png" width="576" />
@@ -114,6 +111,9 @@ Cases significantly different from zero are coloured red
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-327-1.png" width="576" />
+
+
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-328-1.png" width="576" />
 
 
 |batch.variable |batch.value  |principal.component |test   |p.value  |estimate |lower   |upper   |r2     |
@@ -194,12 +194,12 @@ Batch variables with more than 10 levels are omitted.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-332-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-333-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-335-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-336-1.png" width="1728" />
 
 ## Normalized probe associations with measured batch variables
 
@@ -212,17 +212,17 @@ variables. Horizontal dotted line denotes $p = 0.05$ in log-scale.
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-340-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-341-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-343-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-344-1.png" width="1728" />
 
 
 
 
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-346-1.png" width="1728" />
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-347-1.png" width="1728" />
 
 The following plots show regression coefficients when
 each principal component is regressed against each batch variable level
@@ -231,9 +231,6 @@ Cases significantly different from zero are coloured red
 (p < 0.01, t-test).
 
 
-
-
-<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-350-1.png" width="576" />
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-351-1.png" width="576" />
@@ -261,6 +258,9 @@ Cases significantly different from zero are coloured red
 
 
 <img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-359-1.png" width="576" />
+
+
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-360-1.png" width="576" />
 
 
 |batch.variable |batch.value  |principal.component |test   |p.value  |estimate |lower  |upper  |r2     |

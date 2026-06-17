@@ -44,10 +44,11 @@ param$verbose <- TRUE
 param$report.author <- "Paul Yousefi"
 param$report.study <- "pleural-cfDNA-screening-array"
 param$pc <- 20
+param$qc <- meffil.qc.parameters()
 
 run <- list()
-run$qc <- FALSE
-run$qc.summary <- FALSE
+run$qc <- TRUE
+run$qc.summary <- TRUE
 run$detect.p <- FALSE
 run$norm.objects <- FALSE
 
@@ -84,13 +85,18 @@ meffil.list.featuresets()
 
 eval.save({
 	qc.objects <- meffil.qc(samplesheet,  
-					verbose = param$verbose)	
+					verbose = param$verbose,
+					detection.threshold = 0.01)	## default but specifying for clarity
 }, "qc.objects", redo=run$qc)
 qc.objects <- eval.ret("qc.objects")
 
 ## ----qc.summary -------------------------------------------------------------
+param$qc
+
 eval.save({
-	qc.summary <- meffil.qc.summary(qc.objects, verbose = param$verbose)
+	qc.summary <- meffil.qc.summary(qc.objects, 
+					verbose = param$verbose,
+					parameters = param$qc)
 }, "qc.summary", redo=run$qc.summary)
 qc.summary <- eval.ret("qc.summary")
 
@@ -180,6 +186,13 @@ sapply(
 			}
 	)
 
+
+## ----bad.probes -------------------------------------------------------------
+# probes not meeting detection p-value thresholds
+# these are removed below prior to normalization  in meffil.normalize.samples()  
+# using the cpglist.remove argument
+table(qc.summary$bad.cpgs$issue)
+
 ## ----detection.pvalue -------------------------------------------------------------
 # runs if detect.p doesn't exist or run is TRUE
 if(!file.exists(file$detect.p) || run$detect.p){
@@ -214,7 +227,7 @@ norm.objects <- eval.ret("norm.objects")
 beta.meffil <- meffil.normalize.samples(
     norm.objects,
     just.beta=T, 
-    cpglist.remove=qc.summary$bad.cpgs$name,
+    cpglist.remove=qc.summary$bad.cpgs$name, ## removing 
     verbose = param$verbose)
 
 beta.meffil |>

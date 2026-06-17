@@ -120,6 +120,13 @@ Generate a second QC report reflecting the post-exclusion sample set. This is th
 ```{r qc.report.clean}
 ```
 
+# CpG Filtering
+
+Tabulate the CpGs flagged in the QC summary by failure reason (e.g. low detection p-values). These probes are not removed here but are passed to `meffil.normalize.samples()` via the `cpglist.remove` argument during normalisation, ensuring they are excluded from the final beta matrix.
+
+```{r bad.probes}
+```
+
 # Detection P-values
 
 Extract per-sample, per-CpG detection p-values from the QC objects and save them as an RDS file. Detection p-values indicate whether a probe signal is distinguishable from background and are used downstream to mask unreliable methylation calls.
