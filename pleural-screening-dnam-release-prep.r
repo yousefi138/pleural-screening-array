@@ -111,6 +111,8 @@ sapply(
 ## genotypes <- meffil.extract.genotypes("genotypes.raw")
 ## genotypes <- genotypes[,match(samplesheet$Sample_Name, colnames(genotypes))]
 
+stop("--- stopping here ---", call. = FALSE)
+
 ## ----id.bad.samples -------------------------------------------------------------
 outlier <- qc.summary$bad.samples
 table(outlier$issue)
@@ -128,13 +130,28 @@ outlier <- outlier[index,]
 outlier
 length(unique(outlier$sample.name))
 
+## ----extra.outliers -------------------------------------------------------------
+# these were 5 further "Methylated vs Unmethylated" outliers that only
+# came up after dropping the first time. They still look like outliers
+# so manually dropping them in cleaning now
+
+bad.ids <- 
+	c("208661850045_R09C03",
+	"208661850045_R10C02",
+	"208661850041_R09C01",
+	"208661850044_R09C02",
+	"208661850042_R15C02")
+
+outlier <- unique(c(outlier$sample.name, bad.ids))
+length(outlier)
+
 ## ----rm.bad.samples -------------------------------------------------------------
 length(qc.objects)
-qc.objects <- meffil.remove.samples(qc.objects, outlier$sample.name)
+qc.objects <- meffil.remove.samples(qc.objects, outlier)
 length(qc.objects)
 
 samplesheet <- subset(samplesheet, 
-					!Sample_Name %in% outlier$sample.name)
+					!Sample_Name %in% outlier)
 
 file$samplesheet <- sub("\\.csv$", ".clean.csv", file$samplesheet)
 data.table::fwrite(samplesheet,file = file$samplesheet)
