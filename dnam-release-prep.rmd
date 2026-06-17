@@ -1,6 +1,6 @@
 ---
-title: "P"
-subtitle: "Analysis"
+title: "Pleural cfDNA Screening Array"
+subtitle: "DNAm Data Release Preparation"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 author: Paul Yousefi
 output:
@@ -23,15 +23,128 @@ cache=FALSE)
 
 ```{r call_source, echo = F}
 path <- "."
-sourcecode <- grep("analysis.r$", 
+sourcecode <- grep("dnam-release-prep.r$", 
 	list.files(path), value = T)
 read_chunk(file.path(path, sourcecode))
 ```
 
-# Load data 
+# Overview
+
+This document prepares a versioned DNAm data release for the pleural cfDNA screening array study (project M2644). Raw IDAT files are read and processed using the `meffil` package: a samplesheet is generated, per-sample quality control (QC) is performed, failing samples are identified and removed, and quantile normalisation is applied to produce a clean beta-value matrix. Output files — including the samplesheet, detection p-values, beta matrix, and QC/normalisation reports — are written to a date-stamped release directory.
+
+# Setup
+
+Load required packages, configure directory paths for input data and release outputs, and set parallelisation options.
 
 ```{r globals, results = 'hide'}
 ```
 
-```{r load.data}
+Set the root path for the IDAT files (project M2644).
+
+```{r idats}
+```
+
+Define all output file paths (samplesheet, QC report, detection p-values, PC fit plot, beta matrix, normalisation report) and create the required directory structure under the date-stamped release folder.
+
+```{r files}
+```
+
+The lab-provided sample sheets (one per plate) can be parsed and combined using the commented code below. This is retained for reference but is not used here — the samplesheet is instead derived directly from the IDAT file names via `meffil.create.samplesheet()`.
+
+```{r samplesheets}
+```
+
+Set analysis parameters: report authorship metadata, the number of principal components to use for normalisation (`param$pc = 10`), and `run` flags that control whether cached intermediate objects are recomputed.
+
+```{r parameters}
+```
+
+# Samplesheet
+
+Automatically construct the meffil samplesheet by recursively scanning the IDAT directory for Sentrix barcode and position information. The resulting samplesheet is written to the release directory.
+
+```{r samplesheet}
+```
+
+# Quality Control
+
+Run per-sample QC using `meffil.qc()`. This extracts intensities from each IDAT pair and evaluates a battery of control probes, dye-bias, sex prediction, detection p-values, and bead-count metrics. Results are cached via `eval.save` to avoid recomputation on subsequent runs.
+
+```{r qc}
+```
+
+Summarise the QC results across all samples and probes using `meffil.qc.summary()`. The summary identifies samples and CpGs that fail QC thresholds and is used both for reporting and for downstream sample exclusion.
+
+```{r qc.summary}
+```
+
+Generate an HTML QC report from the summary object. The report is written to both the release directory and the `docs/` folder for version-controlled archiving.
+
+```{r qc.report}
+```
+
+SNP probes on the array can be used to verify sample identity against independent genotype data. The code below (commented out) exports the SNP probe names for use with PLINK, and would load the resulting genotype calls back into R. This step is retained for reference but was not applied in this release.
+
+```{r qc.snps}
+```
+
+# Sample Filtering
+
+Extract flagged samples from the QC summary and restrict to those failing on interpretable technical issues: dye-bias, methylated vs unmethylated signal ratio, X–Y ratio, low bead numbers, high detection p-values, sex mismatch, genotype mismatch, and bisulfite conversion control probes.
+
+```{r id.bad.samples}
+```
+
+Five additional "Methylated vs Unmethylated" outliers were identified only after the initial round of sample removal (i.e. they became apparent once other failing samples were excluded). These are added manually to the exclusion list.
+
+```{r extra.outliers}
+```
+
+Remove all flagged samples from the QC object list and from the samplesheet. The cleaned samplesheet is saved with a `.clean.csv` suffix to distinguish it from the initial full samplesheet.
+
+```{r rm.bad.samples}
+```
+
+Recompute the QC summary on the cleaned sample set to confirm that no further outliers are present after exclusion.
+
+```{r qc.summary.clean}
+```
+
+Generate a second QC report reflecting the post-exclusion sample set. This is the report that accompanies the released data.
+
+```{r qc.report.clean}
+```
+
+# Detection P-values
+
+Extract per-sample, per-CpG detection p-values from the QC objects and save them as an RDS file. Detection p-values indicate whether a probe signal is distinguishable from background and are used downstream to mask unreliable methylation calls.
+
+```{r detection.pvalue}
+```
+
+# Normalisation
+
+Plot the variance explained by successive principal components of the control-probe intensities to inform the choice of PC count for functional normalisation. Visual inspection of this elbow plot was used to select `param$pc = 10`.
+
+```{r pc.plot}
+```
+
+Apply functional normalisation using quantile regression on the selected number of control-probe PCs (`meffil.normalize.quantiles()`). Beta values are then extracted with `meffil.normalize.samples()`, excluding CpGs identified as poor quality in the QC summary. The resulting beta matrix is saved as an RDS file.
+
+```{r norm}
+```
+
+Compute principal components of the normalised beta matrix using autosomal CpG sites only. These PCs are used in the normalisation summary to assess residual technical variation after normalisation.
+
+```{r pcs}
+```
+
+Summarise the normalisation by testing for association between the normalisation PCs and sample phenotype/batch variables. A batch threshold of 0.01 is used to flag potential residual confounding.
+
+```{r norm.summary}
+```
+
+Generate an HTML normalisation report and write it to both the release directory and `docs/`.
+
+```{r norm.report}
 ```

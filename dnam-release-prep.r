@@ -111,7 +111,7 @@ sapply(
 ## genotypes <- meffil.extract.genotypes("genotypes.raw")
 ## genotypes <- genotypes[,match(samplesheet$Sample_Name, colnames(genotypes))]
 
-stop("--- stopping here ---", call. = FALSE)
+#stop("--- stopping here ---", call. = FALSE)
 
 ## ----id.bad.samples -------------------------------------------------------------
 outlier <- qc.summary$bad.samples

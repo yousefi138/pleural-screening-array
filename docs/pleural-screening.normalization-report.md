@@ -1,3 +1,4 @@
+
 # Normalization performance report
 - study: pleural-cfDNA-screening-array
 - author: Paul Yousefi
@@ -7,20 +8,20 @@
 
 
 ```
-## $variables
-## [1] "Slide"       "sentrix_row" "sentrix_col"
-## 
-## $control.pcs
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## 
-## $batch.pcs
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## 
-## $batch.threshold
-## [1] 0.01
-## 
-## $colours
-## NULL
+> $variables
+> [1] "Slide"       "sentrix_row" "sentrix_col"
+> 
+> $control.pcs
+>  [1]  1  2  3  4  5  6  7  8  9 10
+> 
+> $batch.pcs
+>  [1]  1  2  3  4  5  6  7  8  9 10
+> 
+> $batch.threshold
+> [1] 0.01
+> 
+> $colours
+> NULL
 ```
 
 ## Control probe scree plots
@@ -30,19 +31,13 @@ The variance captured by each principal component.
 
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-293-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-21](figure/unnamed-chunk-21-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-294-1.png" width="576" />
 
 
-
-
-![plot of chunk unnamed-chunk-22](figure/unnamed-chunk-22-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-23](figure/unnamed-chunk-23-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-295-1.png" width="576" />
 
 ## Principal components of the control probes
 
@@ -53,16 +48,12 @@ Batch variables with more than 10 levels are omitted.
 
 
 
-
-
-![plot of chunk unnamed-chunk-27](figure/unnamed-chunk-27-1.png)
-
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-299-1.png" width="1728" />
 
 
 
 
-
-![plot of chunk unnamed-chunk-30](figure/unnamed-chunk-30-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-302-1.png" width="1728" />
 
 ## Control probe associations with measured batch variables
 
@@ -73,23 +64,17 @@ The horizontal dotted line denotes $p = 0.05$ in log-scale.
 
 
 
-
-
-![plot of chunk unnamed-chunk-35](figure/unnamed-chunk-35-1.png)
-
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-307-1.png" width="1728" />
 
 
 
 
-
-![plot of chunk unnamed-chunk-38](figure/unnamed-chunk-38-1.png)
-
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-310-1.png" width="1728" />
 
 
 
 
-
-![plot of chunk unnamed-chunk-41](figure/unnamed-chunk-41-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-313-1.png" width="1728" />
 
 
 The following plots show regression coefficients when
@@ -101,54 +86,34 @@ Cases significantly different from zero are coloured red
 
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-317-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-45](figure/unnamed-chunk-45-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-318-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-319-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-46](figure/unnamed-chunk-46-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-320-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-321-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-47](figure/unnamed-chunk-47-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-322-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-323-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-48](figure/unnamed-chunk-48-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-324-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-325-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-49](figure/unnamed-chunk-49-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-50](figure/unnamed-chunk-50-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-51](figure/unnamed-chunk-51-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-52](figure/unnamed-chunk-52-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-53](figure/unnamed-chunk-53-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-54](figure/unnamed-chunk-54-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-326-1.png" width="576" />
 
 
 |batch.variable |batch.value  |principal.component |test   |p.value  |estimate |lower   |upper   |r2     |
@@ -229,16 +194,12 @@ Batch variables with more than 10 levels are omitted.
 
 
 
-
-
-![plot of chunk unnamed-chunk-59](figure/unnamed-chunk-59-1.png)
-
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-331-1.png" width="1728" />
 
 
 
 
-
-![plot of chunk unnamed-chunk-62](figure/unnamed-chunk-62-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-334-1.png" width="1728" />
 
 ## Normalized probe associations with measured batch variables
 
@@ -251,23 +212,17 @@ variables. Horizontal dotted line denotes $p = 0.05$ in log-scale.
 
 
 
-
-
-![plot of chunk unnamed-chunk-67](figure/unnamed-chunk-67-1.png)
-
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-339-1.png" width="1728" />
 
 
 
 
-
-![plot of chunk unnamed-chunk-70](figure/unnamed-chunk-70-1.png)
-
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-342-1.png" width="1728" />
 
 
 
 
-
-![plot of chunk unnamed-chunk-73](figure/unnamed-chunk-73-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-345-1.png" width="1728" />
 
 The following plots show regression coefficients when
 each principal component is regressed against each batch variable level
@@ -278,155 +233,137 @@ Cases significantly different from zero are coloured red
 
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-349-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-77](figure/unnamed-chunk-77-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-350-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-351-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-78](figure/unnamed-chunk-78-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-352-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-353-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-79](figure/unnamed-chunk-79-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-354-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-355-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-80](figure/unnamed-chunk-80-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-356-1.png" width="576" />
 
 
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-357-1.png" width="576" />
 
 
-![plot of chunk unnamed-chunk-81](figure/unnamed-chunk-81-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-82](figure/unnamed-chunk-82-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-83](figure/unnamed-chunk-83-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-84](figure/unnamed-chunk-84-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-85](figure/unnamed-chunk-85-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-86](figure/unnamed-chunk-86-1.png)
+<img src="/projects/MRC-IEU/research/projects/ieu3/p5/062/working/scripts/repo/pleural-screening-array/docs/dnam-release-prep_files/figure-html/unnamed-chunk-358-1.png" width="576" />
 
 
 |batch.variable |batch.value  |principal.component |test   |p.value  |estimate |lower  |upper  |r2     |
 |:--------------|:------------|:-------------------|:------|:--------|:--------|:------|:------|:------|
-|Slide          |208661850041 |PC3                 |t-test |8.76e-04 |4.00     |1.342  |6.660  |0.0344 |
+|Slide          |208661850041 |PC3                 |t-test |8.71e-04 |4.00     |1.344  |6.662  |0.0344 |
 |sentrix_row    |09           |PC3                 |t-test |2.82e-05 |7.62     |3.603  |11.642 |0.0536 |
-|Slide          |208661850041 |PC6                 |t-test |4.01e-03 |1.37     |0.317  |2.430  |0.0285 |
-|Slide          |208661850043 |PC6                 |t-test |3.93e-06 |-2.16    |-3.181 |-1.134 |0.0716 |
-|sentrix_row    |04           |PC6                 |t-test |2.02e-03 |-1.63    |-2.795 |-0.456 |0.0333 |
-|sentrix_row    |08           |PC6                 |t-test |5.96e-03 |-1.57    |-2.836 |-0.299 |0.0264 |
-|sentrix_row    |09           |PC6                 |t-test |7.97e-03 |-1.60    |-2.948 |-0.258 |0.0244 |
-|sentrix_row    |11           |PC6                 |t-test |7.41e-05 |2.23     |0.988  |3.477  |0.0541 |
-|sentrix_col    |             |PC6                 |F-test |3.43e-04 |8.17     |       |       |0.0468 |
-|sentrix_col    |02           |PC6                 |t-test |2.23e-04 |-1.86    |-2.953 |-0.759 |0.0442 |
-|sentrix_col    |03           |PC6                 |t-test |1.32e-04 |1.68     |0.722  |2.634  |0.0482 |
-|sentrix_row    |04           |PC7                 |t-test |2.15e-03 |-2.59    |-4.462 |-0.714 |0.0295 |
-|sentrix_col    |             |PC7                 |F-test |5.30e-04 |7.72     |       |       |0.0443 |
-|sentrix_col    |02           |PC7                 |t-test |3.58e-04 |-1.85    |-2.979 |-0.716 |0.0387 |
-|sentrix_col    |03           |PC7                 |t-test |2.27e-03 |1.42     |0.402  |2.447  |0.0289 |
-|Slide          |208788350010 |PC8                 |t-test |4.71e-04 |-1.37    |-2.235 |-0.514 |0.0408 |
-|sentrix_row    |01           |PC8                 |t-test |8.79e-04 |-1.84    |-3.071 |-0.614 |0.0382 |
-|sentrix_row    |05           |PC8                 |t-test |1.39e-08 |-3.65    |-5.043 |-2.247 |0.1070 |
-|sentrix_row    |10           |PC8                 |t-test |1.76e-05 |2.63     |1.281  |3.980  |0.0634 |
-|sentrix_row    |12           |PC8                 |t-test |8.11e-04 |-1.51    |-2.504 |-0.509 |0.0391 |
-|Slide          |208661850041 |PC9                 |t-test |5.55e-05 |1.72     |0.782  |2.662  |0.0535 |
-|Slide          |208661850042 |PC9                 |t-test |6.46e-03 |-1.12    |-2.024 |-0.208 |0.0246 |
-|Slide          |208661850044 |PC9                 |t-test |4.65e-03 |1.39     |0.302  |2.483  |0.0262 |
-|sentrix_row    |01           |PC9                 |t-test |9.43e-07 |2.98     |1.648  |4.316  |0.0784 |
-|sentrix_row    |16           |PC9                 |t-test |2.63e-03 |-1.64    |-2.855 |-0.429 |0.0304 |
-|sentrix_row    |             |PC10                |F-test |5.75e-03 |2.22     |       |       |0.0944 |
-|sentrix_row    |03           |PC10                |t-test |2.89e-04 |1.92     |0.747  |3.095  |0.0417 |
-|sentrix_row    |06           |PC10                |t-test |2.49e-03 |-1.72    |-2.985 |-0.456 |0.0291 |
-|sentrix_row    |12           |PC10                |t-test |5.45e-04 |-2.18    |-3.571 |-0.780 |0.0381 |
-|sentrix_row    |14           |PC10                |t-test |1.00e-04 |2.33     |1.004  |3.651  |0.0477 |
-|sentrix_row    |15           |PC10                |t-test |2.48e-04 |2.10     |0.829  |3.362  |0.0425 |
+|Slide          |208661850041 |PC6                 |t-test |4.75e-03 |1.34     |0.289  |2.391  |0.0276 |
+|Slide          |208661850043 |PC6                 |t-test |1.97e-06 |-2.21    |-3.228 |-1.195 |0.0764 |
+|sentrix_row    |04           |PC6                 |t-test |1.10e-03 |-1.70    |-2.859 |-0.545 |0.0374 |
+|sentrix_row    |08           |PC6                 |t-test |4.71e-03 |-1.60    |-2.851 |-0.340 |0.0281 |
+|sentrix_row    |09           |PC6                 |t-test |5.67e-03 |-1.66    |-2.993 |-0.325 |0.0266 |
+|sentrix_row    |11           |PC6                 |t-test |9.57e-05 |2.17     |0.943  |3.405  |0.0528 |
+|sentrix_col    |             |PC6                 |F-test |2.91e-04 |8.34     |       |       |0.0477 |
+|sentrix_col    |02           |PC6                 |t-test |1.12e-04 |-1.94    |-3.037 |-0.847 |0.0486 |
+|sentrix_col    |03           |PC6                 |t-test |1.90e-04 |1.64     |0.681  |2.593  |0.0463 |
+|sentrix_row    |04           |PC7                 |t-test |2.30e-03 |-2.57    |-4.448 |-0.697 |0.0291 |
+|sentrix_col    |             |PC7                 |F-test |6.21e-04 |7.55     |       |       |0.0434 |
+|sentrix_col    |02           |PC7                 |t-test |4.24e-04 |-1.83    |-2.960 |-0.693 |0.0378 |
+|sentrix_col    |03           |PC7                 |t-test |2.65e-03 |1.40     |0.380  |2.426  |0.0281 |
+|Slide          |208788350010 |PC8                 |t-test |4.61e-04 |-1.38    |-2.239 |-0.517 |0.0409 |
+|sentrix_row    |01           |PC8                 |t-test |8.73e-04 |-1.84    |-3.068 |-0.615 |0.0382 |
+|sentrix_row    |05           |PC8                 |t-test |1.42e-08 |-3.65    |-5.052 |-2.250 |0.1069 |
+|sentrix_row    |10           |PC8                 |t-test |1.72e-05 |2.63     |1.282  |3.979  |0.0635 |
+|sentrix_row    |12           |PC8                 |t-test |7.40e-04 |-1.52    |-2.513 |-0.520 |0.0396 |
+|Slide          |208661850041 |PC9                 |t-test |5.45e-05 |1.72     |0.784  |2.662  |0.0536 |
+|Slide          |208661850042 |PC9                 |t-test |6.52e-03 |-1.11    |-2.021 |-0.206 |0.0246 |
+|Slide          |208661850044 |PC9                 |t-test |4.66e-03 |1.39     |0.302  |2.481  |0.0262 |
+|sentrix_row    |01           |PC9                 |t-test |9.28e-07 |2.98     |1.650  |4.318  |0.0785 |
+|sentrix_row    |16           |PC9                 |t-test |2.60e-03 |-1.64    |-2.857 |-0.431 |0.0304 |
+|sentrix_row    |             |PC10                |F-test |5.74e-03 |2.22     |       |       |0.0944 |
+|sentrix_row    |03           |PC10                |t-test |2.78e-04 |1.93     |0.753  |3.102  |0.0419 |
+|sentrix_row    |06           |PC10                |t-test |2.54e-03 |-1.72    |-2.983 |-0.453 |0.0290 |
+|sentrix_row    |12           |PC10                |t-test |5.36e-04 |-2.18    |-3.574 |-0.783 |0.0382 |
+|sentrix_row    |14           |PC10                |t-test |1.01e-04 |2.33     |1.003  |3.651  |0.0477 |
+|sentrix_row    |15           |PC10                |t-test |2.58e-04 |2.09     |0.823  |3.357  |0.0422 |
 
 ## R session information
 
 
 ```
-## R version 4.4.2 (2024-10-31)
-## Platform: x86_64-conda-linux-gnu
-## Running under: Red Hat Enterprise Linux 8.10 (Ootpa)
-## 
-## Matrix products: default
-## BLAS/LAPACK: /home/py16069/miniforge3/envs/r442/lib/libopenblasp-r0.3.28.so;  LAPACK version 3.12.0
-## 
-## locale:
-##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
-##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
-##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-## 
-## time zone: Europe/London
-## tzcode source: system (glibc)
-## 
-## attached base packages:
-## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
-## [8] base     
-## 
-## other attached packages:
-##  [1] eval.save_1.0.0       meffil_1.6.0          preprocessCore_1.68.0
-##  [4] SmartSVA_0.1.3        RSpectra_0.16-2       isva_1.9             
-##  [7] JADE_2.0-4            qvalue_2.38.0         gdsfmt_1.38.0        
-## [10] statmod_1.5.0         quadprog_1.5-8        DNAcopy_1.76.0       
-## [13] fastICA_1.2-7         lme4_1.1-35.5         Matrix_1.6-5         
-## [16] multcomp_1.4-26       TH.data_1.1-2         survival_3.8-3       
-## [19] mvtnorm_1.3-2         matrixStats_1.5.0     markdown_1.13        
-## [22] gridExtra_2.3         Cairo_1.6-2           knitr_1.49           
-## [25] reshape2_1.4.4        plyr_1.8.9            ggplot2_3.5.1        
-## [28] sva_3.54.0            BiocParallel_1.40.0   genefilter_1.88.0    
-## [31] mgcv_1.9-1            nlme_3.1-165          limma_3.62.1         
-## [34] sandwich_3.1-1        lmtest_0.9-40         zoo_1.8-12           
-## [37] MASS_7.3-60.0.1       illuminaio_0.48.0    
-## 
-## loaded via a namespace (and not attached):
-##  [1] DBI_1.2.3               rlang_1.1.4             magrittr_2.0.3         
-##  [4] clue_0.3-66             compiler_4.4.2          RSQLite_2.3.9          
-##  [7] systemfonts_1.1.0       png_0.1-8               vctrs_0.6.5            
-## [10] stringr_1.5.1           pkgconfig_2.0.3         crayon_1.5.3           
-## [13] fastmap_1.2.0           XVector_0.46.0          labeling_0.4.3         
-## [16] tzdb_0.4.0              UCSC.utils_1.2.0        nloptr_2.1.1           
-## [19] ragg_1.3.3              bit_4.5.0.1             xfun_0.52              
-## [22] zlibbioc_1.52.0         cachem_1.1.0            GenomeInfoDb_1.42.0    
-## [25] jsonlite_1.8.9          blob_1.2.4              cluster_2.1.8          
-## [28] R6_2.5.1                stringi_1.8.4           boot_1.3-31            
-## [31] Rcpp_1.0.13-1           readr_2.1.5             IRanges_2.40.0         
-## [34] splines_4.4.2           tidyselect_1.2.1        yaml_2.3.10            
-## [37] codetools_0.2-20        lattice_0.22-6          tibble_3.2.1           
-## [40] Biobase_2.66.0          withr_3.0.2             KEGGREST_1.46.0        
-## [43] askpass_1.2.1           evaluate_1.0.1          Biostrings_2.74.0      
-## [46] pillar_1.10.1           MatrixGenerics_1.18.0   stats4_4.4.2           
-## [49] generics_0.1.3          hms_1.1.3               S4Vectors_0.44.0       
-## [52] commonmark_1.9.5        munsell_0.5.1           scales_1.3.0           
-## [55] minqa_1.2.8             xtable_1.8-4            glue_1.8.0             
-## [58] tools_4.4.2             data.table_1.15.4       annotate_1.84.0        
-## [61] locfit_1.5-9.10         XML_3.99-0.17           grid_4.4.2             
-## [64] AnnotationDbi_1.68.0    edgeR_4.4.0             colorspace_2.1-1       
-## [67] base64_2.0.2            GenomeInfoDbData_1.2.13 cli_3.6.3              
-## [70] config_0.3.2            textshaping_0.4.0       dplyr_1.1.4            
-## [73] gtable_0.3.6            BiocGenerics_0.52.0     farver_2.1.2           
-## [76] memoise_2.0.1           lifecycle_1.0.4         httr_1.4.7             
-## [79] mime_0.12               openssl_2.3.1           bit64_4.5.2
+> R version 4.4.2 (2024-10-31)
+> Platform: x86_64-conda-linux-gnu
+> Running under: Red Hat Enterprise Linux 8.10 (Ootpa)
+> 
+> Matrix products: default
+> BLAS/LAPACK: /home/py16069/miniforge3/envs/r442/lib/libopenblasp-r0.3.28.so;  LAPACK version 3.12.0
+> 
+> locale:
+>  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+>  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+>  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+> [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+> 
+> time zone: Europe/London
+> tzcode source: system (glibc)
+> 
+> attached base packages:
+> [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+> [8] base     
+> 
+> other attached packages:
+>  [1] eval.save_1.0.0       meffil_1.6.0          preprocessCore_1.68.0
+>  [4] SmartSVA_0.1.3        RSpectra_0.16-2       isva_1.9             
+>  [7] JADE_2.0-4            qvalue_2.38.0         gdsfmt_1.38.0        
+> [10] statmod_1.5.0         quadprog_1.5-8        DNAcopy_1.76.0       
+> [13] fastICA_1.2-7         lme4_1.1-35.5         Matrix_1.6-5         
+> [16] multcomp_1.4-26       TH.data_1.1-2         survival_3.8-3       
+> [19] mvtnorm_1.3-2         matrixStats_1.5.0     markdown_1.13        
+> [22] gridExtra_2.3         Cairo_1.6-2           reshape2_1.4.4       
+> [25] plyr_1.8.9            ggplot2_3.5.1         sva_3.54.0           
+> [28] BiocParallel_1.40.0   genefilter_1.88.0     mgcv_1.9-1           
+> [31] nlme_3.1-165          limma_3.62.1          sandwich_3.1-1       
+> [34] lmtest_0.9-40         zoo_1.8-12            MASS_7.3-60.0.1      
+> [37] illuminaio_0.48.0     knitr_1.49            rmarkdown_2.29       
+> 
+> loaded via a namespace (and not attached):
+>  [1] DBI_1.2.3               rlang_1.1.4             magrittr_2.0.3         
+>  [4] clue_0.3-66             compiler_4.4.2          RSQLite_2.3.9          
+>  [7] systemfonts_1.1.0       png_0.1-8               vctrs_0.6.5            
+> [10] stringr_1.5.1           pkgconfig_2.0.3         crayon_1.5.3           
+> [13] fastmap_1.2.0           XVector_0.46.0          labeling_0.4.3         
+> [16] tzdb_0.4.0              UCSC.utils_1.2.0        nloptr_2.1.1           
+> [19] ragg_1.3.3              bit_4.5.0.1             xfun_0.52              
+> [22] zlibbioc_1.52.0         cachem_1.1.0            GenomeInfoDb_1.42.0    
+> [25] jsonlite_1.8.9          blob_1.2.4              cluster_2.1.8          
+> [28] R6_2.5.1                bslib_0.8.0             stringi_1.8.4          
+> [31] boot_1.3-31             jquerylib_0.1.4         Rcpp_1.0.13-1          
+> [34] readr_2.1.5             IRanges_2.40.0          splines_4.4.2          
+> [37] tidyselect_1.2.1        yaml_2.3.10             codetools_0.2-20       
+> [40] lattice_0.22-6          tibble_3.2.1            Biobase_2.66.0         
+> [43] withr_3.0.2             KEGGREST_1.46.0         askpass_1.2.1          
+> [46] evaluate_1.0.1          Biostrings_2.74.0       pillar_1.10.1          
+> [49] MatrixGenerics_1.18.0   stats4_4.4.2            generics_0.1.3         
+> [52] hms_1.1.3               S4Vectors_0.44.0        commonmark_1.9.5       
+> [55] munsell_0.5.1           scales_1.3.0            minqa_1.2.8            
+> [58] xtable_1.8-4            glue_1.8.0              tools_4.4.2            
+> [61] data.table_1.15.4       annotate_1.84.0         locfit_1.5-9.10        
+> [64] XML_3.99-0.17           grid_4.4.2              AnnotationDbi_1.68.0   
+> [67] edgeR_4.4.0             colorspace_2.1-1        base64_2.0.2           
+> [70] GenomeInfoDbData_1.2.13 cli_3.6.3               config_0.3.2           
+> [73] textshaping_0.4.0       dplyr_1.1.4             gtable_0.3.6           
+> [76] sass_0.4.9              digest_0.6.37           BiocGenerics_0.52.0    
+> [79] farver_2.1.2            memoise_2.0.1           htmltools_0.5.8.1      
+> [82] lifecycle_1.0.4         httr_1.4.7              mime_0.12              
+> [85] openssl_2.3.1           bit64_4.5.2
 ```
