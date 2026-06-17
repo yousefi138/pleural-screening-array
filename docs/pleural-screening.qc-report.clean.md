@@ -1,7 +1,7 @@
 # QC report
 - study: pleural-cfDNA-screening-array
 - author: Paul Yousefi
-- date: 16 June, 2026
+- date: 17 June, 2026
 
 ## Parameters used for QC
 
