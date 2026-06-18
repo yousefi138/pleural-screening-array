@@ -20,7 +20,6 @@ print(paths)
 ## out:  results/YYYYMMDD-pleural-array-locations.csv
 source("set-array-locations.r", echo=T, max.deparse.length = 500)
 
-
 ## desc: Runs the full DNAm data release pipeline: builds the meffil
 ##       samplesheet from IDATs, performs per-sample QC, removes
 ##       failing samples, extracts detection p-values, applies
@@ -39,3 +38,18 @@ lapply(packages, require, character.only=T)
 
 render("dnam-release-prep.rmd", output_format = "all", output_dir = "docs")
 #source("pleural-screening-dnam-release-prep.r", echo=T, max.deparse.length = 500)
+
+
+## clean raw pheno data
+## in: "Proteomics Infection and Controls 10.11.25.xlsx"
+## out: pheno.rda in analysis-cache i.e. eval.ret("pheno")
+source("pheno.r", echo=T, max.deparse.length = 500)
+
+## run ewas
+## in: eval.ret("pheno")
+##      eval.ret(paste("prot.mat", project, sep="."))
+##      eval.ret(paste("batch", project, sep="."))
+##      protein.summary.r, report.rmd
+## out: rendered output in docs/ for each model run 
+#project <- "pleural"
+#source("ewas.r", echo=T, max.deparse.length = 500)
