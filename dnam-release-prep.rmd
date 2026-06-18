@@ -160,3 +160,15 @@ Generate an HTML normalisation report and write it to both the release directory
 
 ```{r norm.report}
 ```
+
+# Sample–Sample Correlation
+
+Compute the 336 × 336 Pearson correlation matrix across all pairs of samples using the full normalised beta matrix.
+
+```{r sample.cor}
+```
+
+Extract the upper-triangle off-diagonal values (56,280 unique pairs) and plot their distribution as a density-scaled histogram with a KDE overlay. The dashed line at r = 0 provides a visual reference point.
+
+```{r sample.cor.plot}
+```
