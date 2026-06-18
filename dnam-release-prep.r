@@ -3,7 +3,8 @@ packages <- c("meffil", "eval.save", "dplyr") #, "readxl")
 lapply(packages, require, character.only=T)
 
 dir <- paths
-dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "%Y-%m-%d"))
+dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "2026-06-18"))
+#dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "%Y-%m-%d"))
 dir$reports <- file.path(dir$release, "derived/reports")
 
 if(!dir.exists(dir$cache)) dir.create(dir$cache)
