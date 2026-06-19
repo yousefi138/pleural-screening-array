@@ -15,7 +15,8 @@ file$design <- file.path(dir$data,"pheno", "20251119-pleural-array-locations-wit
 
 ## ----load.data -------------------------------------------------------------
 design <- data.table::fread(file$design) |>
-			dplyr::rename(pid = patient.id)
+			dplyr::rename(pid = patient.id,
+				age = Age)
 
 samplesheet <- data.table::fread(file$samplesheet)
 colnames(samplesheet) <- colnames(samplesheet) |>
