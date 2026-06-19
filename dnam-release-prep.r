@@ -15,6 +15,7 @@ packageVersion("meffil")
 
 ## ----idats -------------------------------------------------------------
 dir$idats <- file.path(dir$data, "raw", "M2644")
+dir$samplesheets <- file.path(dir$data, "raw", "180626_M2644")
 
 ## ----files -------------------------------------------------------------
 file <- list()
@@ -48,19 +49,17 @@ param$pc <- 20
 param$qc <- meffil.qc.parameters()
 
 run <- list()
-run$qc <- FALSE
-run$qc.summary <- FALSE
-run$detect.p <- FALSE
-run$norm.objects <- FALSE
+run$qc <- TRUE
+run$qc.summary <- TRUE
+run$detect.p <- TRUE
+run$norm.objects <- TRUE
 
 ## ----samplesheet -------------------------------------------------------------
 meffil.samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
-data.table::fwrite(meffil.samplesheet,file = file$samplesheet)
+meffil.samplesheet$subdir <- sub(".*/M2644/", "", meffil.samplesheet$Basename)
 
 ## ----lab.samplesheet -------------------------------------------------------------
-## below works to get read the lab provided sample sheet, but going to hold
-## off until after data cleaning
-file$lab.samplesheets <- list.files(dir$idats, 
+file$lab.samplesheets <- list.files(dir$samplesheets, 
 						pattern = "\\.csv$", 
 						recursive = TRUE, 
 						full.names = TRUE)
@@ -74,12 +73,12 @@ lab.samplesheet <- lapply(file$lab.samplesheets, function(f) {
 	dplyr::rename(pid = Sample_Name)|>
 	mutate(Slide = as.character(Sentrix_ID))|>
 	mutate(Sample_Name = paste(Slide, Sentrix_Position, sep="_"))|>
-	dplyr::select(Sample_Name, pid, source_file)
+	dplyr::select(Sample_Name, pid, Slide, source_file)
 
 ## ----combined.samplesheet--------------------------------------------------------
 samplesheet <- meffil.samplesheet |>
 				left_join(lab.samplesheet, by = c("Sample_Name"))
-
+data.table::fwrite(samplesheet,file = file$samplesheet)
 
 ## ----qc -------------------------------------------------------------
 meffil.list.featuresets()

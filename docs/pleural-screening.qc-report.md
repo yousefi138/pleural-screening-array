@@ -79,7 +79,7 @@ XY diff = -2. Mismatched samples are shown in red. The dashed lines represent 3 
 
 ## Methylated vs unmethylated
 To explore the quality of the samples, it is useful to plot the median methylation intensity against the median unmethylation intensity with the option to color outliers by group.
-There are 5 outliers from the meth vs unmeth comparison.
+There are 6 outliers from the meth vs unmeth comparison.
 Outliers are samples whose predicted median methylated signal is
 more than 3 standard deviations
 from the expected (regression line).
@@ -87,11 +87,12 @@ from the expected (regression line).
 
 |sample.name         | methylated| unmethylated|    resids| methylated.lm| upper.lm| lower.lm|outliers |
 |:-------------------|----------:|------------:|---------:|-------------:|--------:|--------:|:--------|
-|208661850045_R16C01 |   1414.041|     944.7233| -1668.323|      3082.364| 4582.101| 1582.626|TRUE     |
-|208661850044_R12C01 |   1535.289|    2932.0324| -1939.905|      3475.194| 4974.932| 1975.457|TRUE     |
-|208661850042_R05C01 |   1244.025|     672.1941| -1784.468|      3028.493| 4528.230| 1528.755|TRUE     |
-|208661850043_R04C02 |   1082.759|    2511.2935| -2309.268|      3392.027| 4891.765| 1892.290|TRUE     |
-|208661850043_R14C02 |   1173.473|    3599.3017| -2433.620|      3607.093| 5106.831| 2107.356|TRUE     |
+|208661850045_R16C01 |  1414.0411|     944.7233| -1709.505|      3123.546| 4673.272| 1573.821|TRUE     |
+|208661850044_R12C01 |  1535.2892|    2932.0324| -1828.018|      3363.307| 4913.033| 1813.581|TRUE     |
+|208661850042_R05C01 |  1244.0250|     672.1941| -1846.642|      3090.667| 4640.393| 1540.941|TRUE     |
+|208661850043_R04C02 |  1082.7593|    2511.2935| -2229.788|      3312.547| 4862.273| 1762.821|TRUE     |
+|208661850043_R14C02 |  1173.4734|    3599.3017| -2270.337|      3443.811| 4993.537| 1894.085|TRUE     |
+|208661850039_R08C03 |   887.8804|    4018.1159| -2606.459|      3494.339| 5044.065| 1944.613|TRUE     |
 
 This is a plot of the methylation signals vs unmethylated signals
 
@@ -106,18 +107,18 @@ There were 13 outliers detected based on deviations from mean values for control
 |sample.name         |colour.code |  id|variable     |     value|outliers |
 |:-------------------|:-----------|---:|:------------|---------:|:--------|
 |208661850045_R15C02 |1           |  44|spec1.ratio1 | 0.5289179|TRUE     |
-|208661850044_R01C01 |1           | 193|spec1.ratio  | 1.7337789|TRUE     |
-|208661850044_R01C02 |1           | 194|spec1.ratio  | 1.3150980|TRUE     |
-|208661850044_R02C03 |1           | 198|spec1.ratio  | 1.2723109|TRUE     |
-|208661850044_R01C01 |1           | 193|spec2.ratio  | 2.4947644|TRUE     |
-|208661850044_R01C02 |1           | 194|spec2.ratio  | 2.1218182|TRUE     |
-|208661850044_R02C03 |1           | 198|spec2.ratio  | 2.7715134|TRUE     |
-|208661850044_R03C03 |1           | 201|spec2.ratio  | 2.0545455|TRUE     |
-|208661850044_R01C01 |1           | 193|spec1.ratio2 | 3.3651877|TRUE     |
-|208661850044_R01C02 |1           | 194|spec1.ratio2 | 2.5515695|TRUE     |
-|208661850044_R02C03 |1           | 198|spec1.ratio2 | 2.4559585|TRUE     |
-|208661850044_R01C01 |1           | 193|dye.bias     | 9.6319746|TRUE     |
-|208661850044_R02C03 |1           | 198|dye.bias     | 9.8287497|TRUE     |
+|208661850044_R01C01 |1           | 145|spec1.ratio  | 1.7337789|TRUE     |
+|208661850044_R01C02 |1           | 146|spec1.ratio  | 1.3150980|TRUE     |
+|208661850044_R02C03 |1           | 150|spec1.ratio  | 1.2723109|TRUE     |
+|208661850044_R01C01 |1           | 145|spec2.ratio  | 2.4947644|TRUE     |
+|208661850044_R01C02 |1           | 146|spec2.ratio  | 2.1218182|TRUE     |
+|208661850044_R02C03 |1           | 150|spec2.ratio  | 2.7715134|TRUE     |
+|208661850044_R03C03 |1           | 153|spec2.ratio  | 2.0545455|TRUE     |
+|208661850044_R01C01 |1           | 145|spec1.ratio2 | 3.3651877|TRUE     |
+|208661850044_R01C02 |1           | 146|spec1.ratio2 | 2.5515695|TRUE     |
+|208661850044_R02C03 |1           | 150|spec1.ratio2 | 2.4559585|TRUE     |
+|208661850044_R01C01 |1           | 145|dye.bias     | 9.6319746|TRUE     |
+|208661850044_R02C03 |1           | 150|dye.bias     | 9.8287497|TRUE     |
 
 The distribution of sample control means are plotted here:
 
@@ -140,16 +141,16 @@ is > 0.2).
 |208661850045_R07C02 |      0.2635650|           1|  20|TRUE     |
 |208661850045_R14C02 |      0.2272710|           1|  41|TRUE     |
 |208661850045_R16C01 |      0.2722911|           1|  46|TRUE     |
-|208661850041_R15C01 |      0.2303907|           1| 187|TRUE     |
-|208661850041_R15C02 |      0.2697165|           1| 188|TRUE     |
-|208661850044_R01C01 |      0.3079767|           1| 193|TRUE     |
-|208661850044_R01C02 |      0.2379668|           1| 194|TRUE     |
-|208661850044_R01C03 |      0.2604909|           1| 195|TRUE     |
-|208661850044_R02C03 |      0.2504177|           1| 198|TRUE     |
-|208661850044_R03C03 |      0.3208391|           1| 201|TRUE     |
-|208661850042_R03C03 |      0.2032634|           1| 249|TRUE     |
-|208661850042_R05C01 |      0.2766701|           1| 253|TRUE     |
-|208661850042_R07C02 |      0.2005508|           1| 260|TRUE     |
+|208661850041_R15C01 |      0.2303907|           1| 139|TRUE     |
+|208661850041_R15C02 |      0.2697165|           1| 140|TRUE     |
+|208661850044_R01C01 |      0.3079767|           1| 145|TRUE     |
+|208661850044_R01C02 |      0.2379668|           1| 146|TRUE     |
+|208661850044_R01C03 |      0.2604909|           1| 147|TRUE     |
+|208661850044_R02C03 |      0.2504177|           1| 150|TRUE     |
+|208661850044_R03C03 |      0.3208391|           1| 153|TRUE     |
+|208661850042_R03C03 |      0.2032634|           1| 201|TRUE     |
+|208661850042_R05C01 |      0.2766701|           1| 205|TRUE     |
+|208661850042_R07C02 |      0.2005508|           1| 212|TRUE     |
 
 Distribution:
 
@@ -176,7 +177,7 @@ Distribution:
 ## CpG detection p-values
 
 To explore the quality of the probes, the proportion of samples that didn't pass the detection pvalue threshold has been calculated.
-There were 29391
+There were 29798
 probes with only background signal in a high proportion of samples
 (proportion of samples with detection p-value > 0.01
 is > 0.2).

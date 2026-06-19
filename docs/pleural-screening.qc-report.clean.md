@@ -52,19 +52,21 @@
 ```
 ## Number of samples
 
-There are 310 samples analysed.
+There are 309 samples analysed.
 
 ## Sex mismatches
 
 To separate females and males, we use the difference of total median intensity for Y chromosome probes and X chromosome probes. This will give two distinct clusters of intensities. Females will be clustered on the left and males on the right. 
-There are 3 sex detection outliers, and 0 sex detection mismatches.
+There are 5 sex detection outliers, and 0 sex detection mismatches.
 
 
 |sample.name         |predicted.sex |declared.sex |   xy.diff|status  |
 |:-------------------|:-------------|:------------|---------:|:-------|
 |208661850044_R02C01 |M             |NA           | -1.428003|outlier |
 |208661850042_R13C03 |M             |NA           | -1.342757|outlier |
+|208661850039_R11C02 |M             |NA           | -1.342607|outlier |
 |208661850045_R08C03 |M             |NA           | -1.339344|outlier |
+|208661850039_R03C02 |M             |NA           | -1.287777|outlier |
 
 This is a plot of the difference between median 
 chromosome Y and chromosome X probe intensities ("XY diff").
@@ -138,7 +140,7 @@ Distribution:
 ## CpG detection p-values
 
 To explore the quality of the probes, the proportion of samples that didn't pass the detection pvalue threshold has been calculated.
-There were 26615
+There were 27161
 probes with only background signal in a high proportion of samples
 (proportion of samples with detection p-value > 0.01
 is > 0.2).
