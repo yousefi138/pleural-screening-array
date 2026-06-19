@@ -63,3 +63,13 @@ Of `r nrow(pheno)` samples, `r sum(pheno$qc.pass == 0)` (`r round(mean(pheno$qc.
 
 Of `r format(n_assayed, big.mark = ",")` CpG sites on the assay, `r format(n_failed, big.mark = ",")` (`r pct_failed`%) did not pass QC and are absent from the released beta-value matrix, leaving `r format(n_passed, big.mark = ",")` sites available for analysis.
 
+## Sample Correlation Structure
+
+To assess the overall similarity between samples, pairwise Pearson correlations were computed across all `r format(n_passed, big.mark = ",")` post-QC CpG sites. The histogram below shows the distribution of all `r format(choose(ncol(meth), 2), big.mark = ",", scientific = FALSE)` upper-triangle sample-pair correlations, with a density overlay. A tight, high-correlation distribution indicates consistent DNAm profiles across samples, while low-correlation outliers may reflect technical or biological heterogeneity.
+
+```{r sample.cor, echo = F, results = 'hide'}
+```
+
+```{r sample.cor.plot, echo = F, fig.width = 7, fig.height = 4}
+```
+

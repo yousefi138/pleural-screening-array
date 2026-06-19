@@ -71,3 +71,25 @@ n_passed  <- nrow(meth)
 n_failed  <- sum(!annot.msa$name %in% rownames(meth))
 pct_failed <- round(n_failed / n_assayed * 100, 1)
 
+## ---- sample.cor -------------------------------------------------------------
+sample.cor <- cor(meth)
+
+## ---- sample.cor.plot -------------------------------------------------------------
+sample.cor.offdiag <- sample.cor[upper.tri(sample.cor)]
+
+ggplot2::ggplot(data.frame(r = sample.cor.offdiag), ggplot2::aes(x = r)) +
+    ggplot2::geom_histogram(
+        ggplot2::aes(y = ggplot2::after_stat(density)),
+        bins = 100,
+        fill = "steelblue", colour = "white", linewidth = 0.2) +
+    ggplot2::geom_density(colour = "firebrick", linewidth = 0.8) +
+    ggplot2::geom_vline(xintercept = 0, linetype = "dashed", colour = "grey40") +
+    ggplot2::labs(
+        title = "Pairwise Sample-Sample correlations",
+        subtitle = sprintf("n = %s upper-triangle pairs", 
+                           format(length(sample.cor.offdiag), big.mark = ",")),
+        x = "Pearson r",
+        y = "Density") +
+    ggplot2::theme_bw(base_size = 13)
+
+
