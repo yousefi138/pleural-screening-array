@@ -57,7 +57,7 @@ eval.save({
 						data = pheno, 
 						family="gaussian",
 						method="glm",
-						generate.confounders="sva")
+						generate.confounders=NULL)
 
 				sum.ret <- ewaff.summary(ret, 
 								chr = annot$chromosome, 

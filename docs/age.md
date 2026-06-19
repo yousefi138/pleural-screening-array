@@ -1,5 +1,5 @@
 # Genome-wide methylation analysis report
-- study: Pleural cfDNAm analysis of malignant.fulladjvariable
+- study: Pleural cfDNAm analysis of agevariable
 - author: Paul Yousefi
 - date: 19 June, 2026
 
@@ -17,7 +17,7 @@
 ## [1] "median"
 ## 
 ## $practical.threshold
-## [1] 5.982495e-05
+## [1] 7.802769e-05
 ```
 
 1/2                   
@@ -33,12 +33,9 @@ of samples with the given "value" and the
 "sd/%" column the percentage of samples with the given "value".
 
 
-|variable  |value |mean      |sd..      |
-|:---------|:-----|:---------|:---------|
-|malignant |      |0.5570033 |0.497551  |
-|female    |      |0.3485342 |0.4772841 |
-|age       |      |71.00977  |12.89614  |
-|plate     |      |2.312704  |1.050957  |
+|variable |value |mean     |sd..     |
+|:--------|:-----|:--------|:--------|
+|age      |      |71.00977 |12.89614 |
 
 
 1/4                   
@@ -48,59 +45,6 @@ of samples with the given "value" and the
 
 
 ## Covariate associations
-
-
-
-
-### Covariate female
-
-
-statistics
-
-
-|var1      |var2   |        F|   p-value|         R|   p-value|
-|:---------|:------|--------:|---------:|---------:|---------:|
-|malignant |female | 5.191268| 0.0233919| 0.1293665| 0.0233919|
-
-
-
-
-
-![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32-1.png)
-
-
-### Covariate age
-
-
-statistics
-
-
-|var1      |var2 |        F|   p-value|        R|   p-value|
-|:---------|:----|--------:|---------:|--------:|---------:|
-|malignant |age  | 11.06231| 0.0009887| 0.163295| 0.0041207|
-
-
-
-
-
-![plot of chunk unnamed-chunk-38](figure/unnamed-chunk-38-1.png)
-
-
-### Covariate plate
-
-
-statistics
-
-
-|var1      |var2  |        F|   p-value|          R|   p-value|
-|:---------|:-----|--------:|---------:|----------:|---------:|
-|malignant |plate | 3.680628| 0.0559814| -0.1096438| 0.0549757|
-
-
-
-
-
-![plot of chunk unnamed-chunk-44](figure/unnamed-chunk-44-1.png)
 
 
 
@@ -115,7 +59,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-54](figure/unnamed-chunk-54-1.png)
+![plot of chunk unnamed-chunk-36](figure/unnamed-chunk-36-1.png)
 
 ## Manhattan plots
 
@@ -124,7 +68,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-59](figure/unnamed-chunk-59-1.png)
+![plot of chunk unnamed-chunk-41](figure/unnamed-chunk-41-1.png)
 
 ## Significant CpG sites
 
@@ -137,22 +81,22 @@ These are listed in the file [associations.csv](associations.csv).
 
 
 Below are the 10
-CpG sites with association p-values < 5.9824952 &times; 10<sup>-5</sup>
+CpG sites with association p-values < 7.8027689 &times; 10<sup>-5</sup>
 in the  regression model.
 
 
-|           |chromosome |  position|   estimate|  p.value| p.adjust|
-|:----------|:----------|---------:|----------:|--------:|--------:|
-|cg27358021 |chrX       |  99661597|  0.0808477| 1.53e-05|        1|
-|cg22539917 |chr17      |  40026259| -0.0685091| 5.89e-05|        1|
-|cg17955761 |chr8       |  11628430| -0.0791279| 3.87e-05|        1|
-|cg17978425 |chr3       |  10289658| -0.1072185| 3.65e-05|        1|
-|cg16372632 |chr16      |  55794595|  0.0836480| 5.77e-05|        1|
-|cg20853918 |chr15      |  96877305|  0.0620414| 5.06e-05|        1|
-|cg09930009 |chr6       | 107813585|  0.0888030| 1.33e-05|        1|
-|cg16926734 |chr1       |  38152104|  0.0344240| 4.25e-05|        1|
-|cg03571145 |chr8       | 146021168| -0.0691025| 3.53e-05|        1|
-|cg20652042 |chr12      |   6883826|  0.0397040| 3.44e-05|        1|
+|           |chromosome |  position|   estimate|  p.value|  p.adjust|
+|:----------|:----------|---------:|----------:|--------:|---------:|
+|cg20257171 |chr11      |  18548408| -0.0006185| 7.52e-05| 1.0000000|
+|cg22669566 |chr12      |    679287| -0.0008923| 6.50e-06| 1.0000000|
+|cg25221975 |chr3       |  13663444|  0.0027192| 6.47e-05| 1.0000000|
+|cg22157503 |chr17      |   8794268|  0.0010964| 3.00e-06| 0.7009914|
+|cg13450057 |chr4       |   2231660|  0.0005947| 4.67e-05| 1.0000000|
+|cg03714203 |chr2       | 160750451|  0.0015671| 3.62e-05| 1.0000000|
+|cg19195712 |chr6       |  31026215| -0.0032963| 4.13e-05| 1.0000000|
+|cg03162314 |chr19      |  51600935| -0.0023342| 5.04e-05| 1.0000000|
+|cg10235845 |chr17      |  80860419|  0.0008205| 5.11e-05| 1.0000000|
+|cg15752043 |chr10      | 120789955| -0.0004206| 7.64e-05| 1.0000000|
 
 Plots of these sites follow, one for each covariate set.
 "p[lm]" denotes the p-value obtained using a linear model
@@ -163,52 +107,52 @@ and "p[beta]" the p-value obtained using beta regression.
 
 
 
+![plot of chunk unnamed-chunk-48](figure/unnamed-chunk-48-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-50](figure/unnamed-chunk-50-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-52](figure/unnamed-chunk-52-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-54](figure/unnamed-chunk-54-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-56](figure/unnamed-chunk-56-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-58](figure/unnamed-chunk-58-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-60](figure/unnamed-chunk-60-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-62](figure/unnamed-chunk-62-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-64](figure/unnamed-chunk-64-1.png)
+
+
+
+
 ![plot of chunk unnamed-chunk-66](figure/unnamed-chunk-66-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-68](figure/unnamed-chunk-68-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-70](figure/unnamed-chunk-70-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-72](figure/unnamed-chunk-72-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-74](figure/unnamed-chunk-74-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-76](figure/unnamed-chunk-76-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-78](figure/unnamed-chunk-78-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-80](figure/unnamed-chunk-80-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-82](figure/unnamed-chunk-82-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-84](figure/unnamed-chunk-84-1.png)
 
 ## Selected CpG sites
 
