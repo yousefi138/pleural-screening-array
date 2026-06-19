@@ -40,9 +40,12 @@ render("dnam-release-prep.rmd", output_format = "all", output_dir = "docs")
 #source("pleural-screening-dnam-release-prep.r", echo=T, max.deparse.length = 500)
 
 
-## clean raw pheno data
-## in: "Proteomics Infection and Controls 10.11.25.xlsx"
-## out: pheno.rda in analysis-cache i.e. eval.ret("pheno")
+## desc: Joins the array-locations design file with the samplesheet,
+##       derives phenotype variables (female, malignant), and saves
+##       the resulting pheno object to the analysis cache.
+## in:   results/YYYYMMDD-pleural-array-locations.csv - array design file
+##       results/releases/YYYY-MM-DD/pleural-screening-samplesheet.csv - meffil samplesheet
+## out:  results/analysis-cache/pheno.rda - cached pheno data frame
 source("pheno.r", echo=T, max.deparse.length = 500)
 
 ## run ewas
