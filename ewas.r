@@ -1,6 +1,5 @@
 # packages
 packages <- c("eval.save", "ewaff", "purrr", "dplyr")
-#, "aries"
 lapply(packages, require, character.only=T)
 
 # dirs
@@ -32,7 +31,7 @@ eval.save({
 	# restrict annot to CpGs in meth, then reorder to match
 	annot <- annot[match(rownames(meth), annot$name), 
 						c("name", "chromosome", "position")]
-}, "annot", redo=F)
+}, "annot", redo=T)
 annot <- eval.ret("annot")
 
 # check 
@@ -58,7 +57,7 @@ eval.save({
 						data = pheno, 
 						family="gaussian",
 						method="glm",
-						generate.confounders=NULL)
+						generate.confounders="sva")
 
 				sum.ret <- ewaff.summary(ret, 
 								chr = annot$chromosome, 
