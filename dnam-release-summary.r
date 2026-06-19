@@ -11,7 +11,8 @@ eval.save.dir(dir$cache)
 file <- list()
 file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.csv")
 file$samplesheet.clean <- file.path(dir$release, "pleural-screening-samplesheet.clean.csv")
-file$design <- file.path(dir$output,"20251119-pleural-array-locations.csv")
+#file$design <- file.path(dir$output,"20251119-pleural-array-locations.csv")
+file$design <- file.path(dir$data,"pheno", "20251119-pleural-array-locations-with-ages.csv")
 file$betas <- file.path(dir$release, "betas/pleural-screening.betas.rds")
 
 ## ----get.samplesheets -------------------------------------------------------------
@@ -31,7 +32,8 @@ samplesheet.clean$sex <- NULL
 
 # design
 design <- data.table::fread(file$design) |>
-			dplyr::rename(pid = patient.id)
+			dplyr::rename(pid = patient.id,
+				age = Age)
 
 ## ----get.pheno -------------------------------------------------------------
 pheno <- design |>
@@ -44,10 +46,10 @@ pheno <- design |>
 			mutate(qc.pass = sign(!is.na(match(pid, samplesheet.clean$pid))))
 
 ## ----tab.pheno -------------------------------------------------------------
-#cont <- "age"
+cont <- "age"
 cat <- c("malignant", "female", "plate", "slide")
 tab <- CreateTableOne(data = pheno, 
-						vars = cat, 
+						vars = c(cont,cat), 
 						factorVars = cat,
 						strata = "qc.pass")
 
