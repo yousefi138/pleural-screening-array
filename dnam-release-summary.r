@@ -92,4 +92,21 @@ ggplot2::ggplot(data.frame(r = sample.cor.offdiag), ggplot2::aes(x = r)) +
         y = "Density") +
     ggplot2::theme_bw(base_size = 13)
 
+## ---- sample.median.cor.plot -------------------------------------------------------------
+diag(sample.cor) <- NA
+sample.median.cor <- apply(sample.cor, 1, median, na.rm = TRUE)
+
+ggplot2::ggplot(data.frame(med_r = sample.median.cor), ggplot2::aes(x = med_r)) +
+    ggplot2::geom_histogram(
+        ggplot2::aes(y = ggplot2::after_stat(density)),
+        bins = 40,
+        fill = "steelblue", colour = "white", linewidth = 0.2) +
+    ggplot2::geom_density(colour = "firebrick", linewidth = 0.8) +
+    ggplot2::labs(
+        title = "Per-sample median pairwise correlation",
+        subtitle = sprintf("n = %s samples", format(length(sample.median.cor), big.mark = ",")),
+        x = "Median Pearson r",
+        y = "Density") +
+    ggplot2::theme_bw(base_size = 13)
+
 

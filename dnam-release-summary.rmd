@@ -73,3 +73,8 @@ To assess the overall similarity between samples, pairwise Pearson correlations 
 ```{r sample.cor.plot, echo = F, fig.width = 7, fig.height = 4}
 ```
 
+The plot below shows the distribution of per-sample median correlations — i.e. for each sample, the median of its pairwise Pearson *r* with all other samples. Samples with an unusually low median correlation may be outliers warranting further investigation.
+
+```{r sample.median.cor.plot, echo = F, fig.width = 7, fig.height = 4}
+```
+
