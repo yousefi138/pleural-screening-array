@@ -2,7 +2,7 @@
 # QC report
 - study: pleural-cfDNA-screening-array
 - author: Paul Yousefi
-- date: 18 June, 2026
+- date: 19 June, 2026
 
 ## Parameters used for QC
 
@@ -52,7 +52,7 @@
 ```
 ## Number of samples
 
-There are 309 samples analysed.
+There are 308 samples analysed.
 
 ## Sex mismatches
 
@@ -95,9 +95,9 @@ This is a plot of the methylation signals vs unmethylated signals
 There were 1 outliers detected based on deviations from mean values for control probes. The beachip arrays contain control probe which can be used to evaluate the quality of specific sample processing steps (staining, extension,target removal, hybridization, bisulfate conversion etc.). For each step, a plot has been generated which shows the control means for each sample. Outliers are deviations from the mean. Some of the control probe categories have a very small number of probes. See Page 222 in this doc: https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/infinium_assays/infinium_hd_methylation/infinium-hd-methylation-guide-15019519-01.pdf. The most important control probes are the bisulfite1 and bisulfite2 control probes. 
 
 
-|sample.name         |colour.code | id|variable     |     value|outliers |
-|:-------------------|:-----------|--:|:------------|---------:|:--------|
-|208661850045_R15C02 |1           | 39|spec1.ratio1 | 0.5289179|TRUE     |
+|sample.name         |colour.code |  id|variable     |     value|outliers |
+|:-------------------|:-----------|---:|:------------|---------:|:--------|
+|208661850041_R16C02 |1           | 132|spec1.ratio1 | 0.4786376|TRUE     |
 
 The distribution of sample control means are plotted here:
 
@@ -140,7 +140,7 @@ Distribution:
 ## CpG detection p-values
 
 To explore the quality of the probes, the proportion of samples that didn't pass the detection pvalue threshold has been calculated.
-There were 27161
+There were 26960
 probes with only background signal in a high proportion of samples
 (proportion of samples with detection p-value > 0.01
 is > 0.2).
