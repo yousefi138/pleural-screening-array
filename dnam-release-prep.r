@@ -49,10 +49,10 @@ param$pc <- 20
 param$qc <- meffil.qc.parameters()
 
 run <- list()
-run$qc <- TRUE
-run$qc.summary <- TRUE
-run$detect.p <- TRUE
-run$norm.objects <- TRUE
+run$qc <- FALSE
+run$qc.summary <- FALSE
+run$detect.p <- FALSE
+run$norm.objects <- FALSE
 
 ## ----samplesheet -------------------------------------------------------------
 meffil.samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
@@ -73,7 +73,7 @@ lab.samplesheet <- lapply(file$lab.samplesheets, function(f) {
 	dplyr::rename(pid = Sample_Name)|>
 	mutate(Slide = as.character(Sentrix_ID))|>
 	mutate(Sample_Name = paste(Slide, Sentrix_Position, sep="_"))|>
-	dplyr::select(Sample_Name, pid, Slide, source_file)
+	dplyr::select(Sample_Name, pid, source_file)
 
 ## ----combined.samplesheet--------------------------------------------------------
 samplesheet <- meffil.samplesheet |>
