@@ -39,6 +39,14 @@ lapply(packages, require, character.only=T)
 render("dnam-release-prep.rmd", output_format = "all", output_dir = "docs")
 #source("pleural-screening-dnam-release-prep.r", echo=T, max.deparse.length = 500)
 
+## desc:
+## in:
+## out:
+packages <- c("rmarkdown", "knitr")
+lapply(packages, require, character.only=T)
+
+render("dnam-release-summary.rmd", output_format = "all", output_dir = "docs")
+
 
 ## desc: Joins the array-locations design file with the samplesheet,
 ##       derives phenotype variables (female, malignant), and saves
