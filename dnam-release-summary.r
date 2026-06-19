@@ -55,3 +55,19 @@ tab_mat <- print(tab, printToggle = FALSE, noSpaces = TRUE, showAllLevels = TRUE
 kable(tab_mat, format = "html",
 		caption = "Sample characteristics stratified by QC pass/fail status") |>
 	kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+## ----get.dnam -------------------------------------------------------------
+meth <- readr::read_rds(file$betas)
+
+## ----get.annotation -------------------------------------------------------------
+eval.save({
+	annot.msa <- meffil::meffil.get.features(featureset = "msa") 
+}, "annot.msa", redo=F)
+annot.msa <- eval.ret("annot.msa")
+
+## ----cpg.qc -------------------------------------------------------------
+n_assayed <- length(annot.msa$name)
+n_passed  <- nrow(meth)
+n_failed  <- sum(!annot.msa$name %in% rownames(meth))
+pct_failed <- round(n_failed / n_assayed * 100, 1)
+

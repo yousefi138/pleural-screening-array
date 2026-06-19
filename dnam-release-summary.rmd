@@ -50,3 +50,16 @@ Of `r nrow(pheno)` samples, `r sum(pheno$qc.pass == 0)` (`r round(mean(pheno$qc.
 
 ```{r tab.pheno, echo = F}
 ```
+
+# CpG Site QC
+
+```{r get.dnam, echo = F}
+```
+
+```{r get.annotation, results = 'hide', echo = F}
+```
+```{r cpg.qc, echo = F}
+```
+
+Of `r format(n_assayed, big.mark = ",")` CpG sites on the assay, `r format(n_failed, big.mark = ",")` (`r pct_failed`%) did not pass QC and are absent from the released beta-value matrix, leaving `r format(n_passed, big.mark = ",")` sites available for analysis.
+
