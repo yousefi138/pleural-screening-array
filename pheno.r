@@ -10,7 +10,8 @@ eval.save.dir(dir$cache)
 ## ----files -------------------------------------------------------------
 file <- list()
 file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.clean.csv")
-file$design <- file.path(dir$output,"20251119-pleural-array-locations.csv")
+#file$design <- file.path(dir$output,"20251119-pleural-array-locations.csv")
+file$design <- file.path(dir$data,"pheno", "20251119-pleural-array-locations-with-ages.csv")
 
 ## ----load.data -------------------------------------------------------------
 design <- data.table::fread(file$design) |>
