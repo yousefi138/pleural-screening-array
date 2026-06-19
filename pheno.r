@@ -9,7 +9,7 @@ eval.save.dir(dir$cache)
 
 ## ----files -------------------------------------------------------------
 file <- list()
-file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.csv")
+file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.clean.csv")
 file$design <- file.path(dir$output,"20251119-pleural-array-locations.csv")
 
 ## ----load.data -------------------------------------------------------------
@@ -24,7 +24,7 @@ samplesheet$sex <- NULL
 
 # Need to revisit this join once the idat match issue has been sorted
 raw <- design |>
-			left_join(samplesheet, by = c("pid"))
+			inner_join(samplesheet, by = c("pid"))
 
 ## ----make.pheno -------------------------------------------------------------
 pheno <- raw |>          
