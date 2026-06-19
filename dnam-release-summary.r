@@ -1,5 +1,5 @@
 ## ----globals -------------------------------------------------------------
-packages <- c("eval.save", "dplyr", "tableone") 
+packages <- c("eval.save", "dplyr", "tableone", "knitr", "kableExtra") 
 lapply(packages, require, character.only=T)
 
 # set dirs  
@@ -51,6 +51,7 @@ tab <- CreateTableOne(data = pheno,
 						factorVars = cat,
 						strata = "qc.pass")
 
-print(tab, showAllLevels = TRUE)
-summary(tab)
-
+tab_mat <- print(tab, printToggle = FALSE, noSpaces = TRUE, showAllLevels = TRUE)
+kable(tab_mat, format = "html",
+		caption = "Sample characteristics stratified by QC pass/fail status") |>
+	kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)

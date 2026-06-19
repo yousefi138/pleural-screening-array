@@ -209,6 +209,230 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+<style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
 
 <style type="text/css">
 code{white-space: pre-wrap;}
@@ -221,107 +445,6 @@ ul.task-list{list-style: none;}
 
 
 
-<style type="text/css">
-code {
-white-space: pre;
-}
-.sourceCode {
-overflow: visible;
-}
-</style>
-<style type="text/css" data-origin="pandoc">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-color: #aaaaaa;
-}
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
-div.sourceCode
-{ background-color: #f8f8f8; }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } 
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } 
-code span.at { color: #204a87; } 
-code span.bn { color: #0000cf; } 
-code span.cf { color: #204a87; font-weight: bold; } 
-code span.ch { color: #4e9a06; } 
-code span.cn { color: #8f5902; } 
-code span.co { color: #8f5902; font-style: italic; } 
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } 
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } 
-code span.dt { color: #204a87; } 
-code span.dv { color: #0000cf; } 
-code span.er { color: #a40000; font-weight: bold; } 
-code span.ex { } 
-code span.fl { color: #0000cf; } 
-code span.fu { color: #204a87; font-weight: bold; } 
-code span.im { } 
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } 
-code span.kw { color: #204a87; font-weight: bold; } 
-code span.op { color: #ce5c00; font-weight: bold; } 
-code span.ot { color: #8f5902; } 
-code span.pp { color: #8f5902; font-style: italic; } 
-code span.sc { color: #ce5c00; font-weight: bold; } 
-code span.ss { color: #4e9a06; } 
-code span.st { color: #4e9a06; } 
-code span.va { color: #000000; } 
-code span.vs { color: #4e9a06; } 
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } 
-</style>
-<script>
-// apply pandoc div.sourceCode style to pre.sourceCode instead
-(function() {
-  var sheets = document.styleSheets;
-  for (var i = 0; i < sheets.length; i++) {
-    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
-    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    var j = 0;
-    while (j < rules.length) {
-      var rule = rules[j];
-      // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
-        j++;
-        continue;
-      }
-      var style = rule.style.cssText;
-      // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') {
-        j++;
-        continue;
-      }
-      // replace div.sourceCode by a pre.sourceCode rule
-      sheets[i].deleteRule(j);
-      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
-    }
-  }
-})();
-</script>
 
 
 
@@ -485,10 +608,8 @@ display: none;
 <div id="TOC">
 <ul>
 <li><a href="#overview" id="toc-overview">Overview</a></li>
-<li><a href="#setup" id="toc-setup">Setup</a></li>
-<li><a href="#samplesheets" id="toc-samplesheets">Samplesheets</a></li>
-<li><a href="#phenotype" id="toc-phenotype">Phenotype</a></li>
-<li><a href="#sample-characteristics" id="toc-sample-characteristics">Sample Characteristics</a></li>
+<li><a href="#sample-characteristics-of-qc-passfail-samples" id="toc-sample-characteristics-of-qc-passfail-samples">Sample
+Characteristics of QC Pass/Fail Samples</a></li>
 </ul>
 </div>
 
@@ -501,162 +622,321 @@ table annotating each sample with sex, malignancy status, plate, and
 QC-pass/fail status, and produces a stratified descriptive table to
 characterise the study population.</p>
 </div>
-<div id="setup" class="section level1">
-<h1>Setup</h1>
-<p>Load required packages and configure directory paths pointing to the
-release outputs and the analysis cache.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;eval.save&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;tableone&quot;</span>) </span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">lapply</span>(packages, require, <span class="at">character.only=</span>T)</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># set dirs  </span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>dir <span class="ot">&lt;-</span> paths</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>dir<span class="sc">$</span>release <span class="ot">&lt;-</span> <span class="fu">file.path</span>(dir<span class="sc">$</span>output, <span class="st">&quot;releases&quot;</span>, <span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">&quot;2026-06-18&quot;</span>))</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">eval.save.dir</span>(dir<span class="sc">$</span>cache)</span></code></pre></div>
-<p>Define input file paths for the full samplesheet, the QC-filtered
-samplesheet, the array location design file, and the beta-value
-matrix.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>file <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>file<span class="sc">$</span>samplesheet <span class="ot">&lt;-</span> <span class="fu">file.path</span>(dir<span class="sc">$</span>release, <span class="st">&quot;pleural-screening-samplesheet.csv&quot;</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>file<span class="sc">$</span>samplesheet.clean <span class="ot">&lt;-</span> <span class="fu">file.path</span>(dir<span class="sc">$</span>release, <span class="st">&quot;pleural-screening-samplesheet.clean.csv&quot;</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>file<span class="sc">$</span>design <span class="ot">&lt;-</span> <span class="fu">file.path</span>(dir<span class="sc">$</span>output,<span class="st">&quot;20251119-pleural-array-locations.csv&quot;</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>file<span class="sc">$</span>betas <span class="ot">&lt;-</span> <span class="fu">file.path</span>(dir<span class="sc">$</span>release, <span class="st">&quot;betas/pleural-screening.betas.rds&quot;</span>)</span></code></pre></div>
-</div>
-<div id="samplesheets" class="section level1">
-<h1>Samplesheets</h1>
-<p>Read the full samplesheet (all samples before QC exclusions) and the
-clean samplesheet (post-exclusion), standardising column names to
-lowercase <code>make.names</code> format. Also read the array location
-design file containing patient IDs and slide positions.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># full</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>samplesheet <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(file<span class="sc">$</span>samplesheet)</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">colnames</span>(samplesheet) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(samplesheet) <span class="sc">|&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>                <span class="fu">make.names</span>()<span class="sc">|&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>                <span class="fu">tolower</span>()</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>samplesheet<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co"># qc restricted</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>samplesheet.clean <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(file<span class="sc">$</span>samplesheet.clean)</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="fu">colnames</span>(samplesheet.clean) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(samplesheet.clean) <span class="sc">|&gt;</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>                <span class="fu">make.names</span>()<span class="sc">|&gt;</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>                <span class="fu">tolower</span>()</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>samplesheet.clean<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># design</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>design <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(file<span class="sc">$</span>design) <span class="sc">|&gt;</span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a>            dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="at">pid =</span> patient.id)</span></code></pre></div>
-</div>
-<div id="phenotype" class="section level1">
-<h1>Phenotype</h1>
-<p>Join the design file to the full samplesheet on <code>pid</code> to
-produce a unified phenotype table. Binary indicator variables are
-derived: <code>female</code> (1 = Female), <code>malignant</code> (1 =
-malignant diagnosis based on the first component of
-<code>final.diagnosis.1</code>), and <code>qc.pass</code> (1 = sample
-present in the clean samplesheet). This table forms the basis for all
-downstream descriptive analyses.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>pheno <span class="ot">&lt;-</span> design <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>            <span class="fu">inner_join</span>(samplesheet, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;pid&quot;</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>            <span class="fu">mutate</span>(<span class="at">female =</span> <span class="fu">sign</span>(sex <span class="sc">==</span> <span class="st">&quot;Female&quot;</span>))<span class="sc">|&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>            <span class="fu">mutate</span>(<span class="at">malignant =</span> {</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>                char <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;^([^/]+)/.*&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">1&quot;</span>, final.diagnosis<span class="fl">.1</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>                <span class="fu">sign</span>(char <span class="sc">==</span><span class="st">&quot;M&quot;</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>            }) <span class="sc">|&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>            <span class="fu">mutate</span>(<span class="at">qc.pass =</span> <span class="fu">sign</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">match</span>(pid, samplesheet.clean<span class="sc">$</span>pid))))</span></code></pre></div>
-</div>
-<div id="sample-characteristics" class="section level1">
-<h1>Sample Characteristics</h1>
+<div id="sample-characteristics-of-qc-passfail-samples" class="section level1">
+<h1>Sample Characteristics of QC Pass/Fail Samples</h1>
 <p>Of 336 samples, 28 (8.3%) failed QC and were excluded from the clean
 release. The table below compares the distribution of malignancy status,
 sex, plate, and slide between samples that passed and failed QC, giving
 an overview of the study population and highlighting any systematic
 differences between included and excluded samples.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">#cont &lt;- &quot;age&quot;</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>cat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;malignant&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;plate&quot;</span>, <span class="st">&quot;slide&quot;</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">CreateTableOne</span>(<span class="at">data =</span> pheno, </span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>                        <span class="at">vars =</span> cat, </span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>                        <span class="at">factorVars =</span> cat,</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>                        <span class="at">strata =</span> <span class="st">&quot;qc.pass&quot;</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="fu">print</span>(tab, <span class="at">showAllLevels =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>&gt;                Stratified by qc.pass
-&gt;                 level        0          1           p      test
-&gt;   n                          28         308                    
-&gt;   malignant (%) 0            11 (39.3)  137 (44.5)   0.740     
-&gt;                 1            17 (60.7)  171 (55.5)             
-&gt;   female (%)    0            11 (39.3)  200 (64.9)   0.013     
-&gt;                 1            17 (60.7)  108 (35.1)             
-&gt;   plate (%)     1             8 (28.6)   88 (28.6)   0.048     
-&gt;                 2            13 (46.4)   83 (26.9)             
-&gt;                 3             7 (25.0)   89 (28.9)             
-&gt;                 4             0 ( 0.0)   48 (15.6)             
-&gt;   slide (%)     208661850039  1 ( 3.6)   47 (15.3)   0.008     
-&gt;                 208661850041  4 (14.3)   44 (14.3)             
-&gt;                 208661850042  5 (17.9)   43 (14.0)             
-&gt;                 208661850043  2 ( 7.1)   46 (14.9)             
-&gt;                 208661850044  9 (32.1)   39 (12.7)             
-&gt;                 208661850045  7 (25.0)   41 (13.3)             
-&gt;                 208788350010  0 ( 0.0)   48 (15.6)</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">summary</span>(tab)</span></code></pre></div>
-<pre><code>&gt; 
-&gt;      ### Summary of categorical variables ### 
-&gt; 
-&gt; qc.pass: 0
-&gt;        var  n miss p.miss        level freq percent cum.percent
-&gt;  malignant 28    0    0.0            0   11    39.3        39.3
-&gt;                                      1   17    60.7       100.0
-&gt;                                                                
-&gt;     female 28    0    0.0            0   11    39.3        39.3
-&gt;                                      1   17    60.7       100.0
-&gt;                                                                
-&gt;      plate 28    0    0.0            1    8    28.6        28.6
-&gt;                                      2   13    46.4        75.0
-&gt;                                      3    7    25.0       100.0
-&gt;                                      4    0     0.0       100.0
-&gt;                                                                
-&gt;      slide 28    0    0.0 208661850039    1     3.6         3.6
-&gt;                           208661850041    4    14.3        17.9
-&gt;                           208661850042    5    17.9        35.7
-&gt;                           208661850043    2     7.1        42.9
-&gt;                           208661850044    9    32.1        75.0
-&gt;                           208661850045    7    25.0       100.0
-&gt;                           208788350010    0     0.0       100.0
-&gt;                                                                
-&gt; ------------------------------------------------------------ 
-&gt; qc.pass: 1
-&gt;        var   n miss p.miss        level freq percent cum.percent
-&gt;  malignant 308    0    0.0            0  137    44.5        44.5
-&gt;                                       1  171    55.5       100.0
-&gt;                                                                 
-&gt;     female 308    0    0.0            0  200    64.9        64.9
-&gt;                                       1  108    35.1       100.0
-&gt;                                                                 
-&gt;      plate 308    0    0.0            1   88    28.6        28.6
-&gt;                                       2   83    26.9        55.5
-&gt;                                       3   89    28.9        84.4
-&gt;                                       4   48    15.6       100.0
-&gt;                                                                 
-&gt;      slide 308    0    0.0 208661850039   47    15.3        15.3
-&gt;                            208661850041   44    14.3        29.5
-&gt;                            208661850042   43    14.0        43.5
-&gt;                            208661850043   46    14.9        58.4
-&gt;                            208661850044   39    12.7        71.1
-&gt;                            208661850045   41    13.3        84.4
-&gt;                            208788350010   48    15.6       100.0
-&gt;                                                                 
-&gt; 
-&gt; p-values
-&gt;               pApprox      pExact
-&gt; malignant 0.740393647 0.692596485
-&gt; female    0.012981499 0.012856798
-&gt; plate     0.047928365 0.029079082
-&gt; slide     0.007750177 0.004178821
-&gt; 
-&gt; Standardize mean differences
-&gt;              1 vs 2
-&gt; malignant 0.1054390
-&gt; female    0.5312493
-&gt; plate     0.6857257
-&gt; slide     0.9702522</code></pre>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Sample characteristics stratified by QC pass/fail status
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+level
+</th>
+<th style="text-align:left;">
+0
+</th>
+<th style="text-align:left;">
+1
+</th>
+<th style="text-align:left;">
+p
+</th>
+<th style="text-align:left;">
+test
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+n
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+308
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+malignant (%)
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+11 (39.3)
+</td>
+<td style="text-align:left;">
+137 (44.5)
+</td>
+<td style="text-align:left;">
+0.740
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+17 (60.7)
+</td>
+<td style="text-align:left;">
+171 (55.5)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+female (%)
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+11 (39.3)
+</td>
+<td style="text-align:left;">
+200 (64.9)
+</td>
+<td style="text-align:left;">
+0.013
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+17 (60.7)
+</td>
+<td style="text-align:left;">
+108 (35.1)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+plate (%)
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+8 (28.6)
+</td>
+<td style="text-align:left;">
+88 (28.6)
+</td>
+<td style="text-align:left;">
+0.048
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+13 (46.4)
+</td>
+<td style="text-align:left;">
+83 (26.9)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+7 (25.0)
+</td>
+<td style="text-align:left;">
+89 (28.9)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+0 (0.0)
+</td>
+<td style="text-align:left;">
+48 (15.6)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slide (%)
+</td>
+<td style="text-align:left;">
+208661850039
+</td>
+<td style="text-align:left;">
+1 (3.6)
+</td>
+<td style="text-align:left;">
+47 (15.3)
+</td>
+<td style="text-align:left;">
+0.008
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+208661850041
+</td>
+<td style="text-align:left;">
+4 (14.3)
+</td>
+<td style="text-align:left;">
+44 (14.3)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+208661850042
+</td>
+<td style="text-align:left;">
+5 (17.9)
+</td>
+<td style="text-align:left;">
+43 (14.0)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+208661850043
+</td>
+<td style="text-align:left;">
+2 (7.1)
+</td>
+<td style="text-align:left;">
+46 (14.9)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+208661850044
+</td>
+<td style="text-align:left;">
+9 (32.1)
+</td>
+<td style="text-align:left;">
+39 (12.7)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+208661850045
+</td>
+<td style="text-align:left;">
+7 (25.0)
+</td>
+<td style="text-align:left;">
+41 (13.3)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+208788350010
+</td>
+<td style="text-align:left;">
+0 (0.0)
+</td>
+<td style="text-align:left;">
+48 (15.6)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

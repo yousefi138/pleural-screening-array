@@ -32,35 +32,21 @@ read_chunk(file.path(path, sourcecode))
 
 This document summarises the versioned DNAm data release for the pleural cfDNA screening array study (project M2644). It links array locations to the released samplesheet, constructs a combined phenotype table annotating each sample with sex, malignancy status, plate, and QC-pass/fail status, and produces a stratified descriptive table to characterise the study population.
 
-# Setup
-
-Load required packages and configure directory paths pointing to the release outputs and the analysis cache.
-
-```{r globals, results = 'hide'}
+```{r globals, results = 'hide', echo = F}
 ```
 
-Define input file paths for the full samplesheet, the QC-filtered samplesheet, the array location design file, and the beta-value matrix.
-
-```{r files}
+```{r files, echo = F}
 ```
 
-# Samplesheets
-
-Read the full samplesheet (all samples before QC exclusions) and the clean samplesheet (post-exclusion), standardising column names to lowercase `make.names` format. Also read the array location design file containing patient IDs and slide positions.
-
-```{r get.samplesheets}
+```{r get.samplesheets, echo = F}
 ```
 
-# Phenotype
-
-Join the design file to the full samplesheet on `pid` to produce a unified phenotype table. Binary indicator variables are derived: `female` (1 = Female), `malignant` (1 = malignant diagnosis based on the first component of `final.diagnosis.1`), and `qc.pass` (1 = sample present in the clean samplesheet). This table forms the basis for all downstream descriptive analyses.
-
-```{r get.pheno}
+```{r get.pheno, echo = F}
 ```
 
-# Sample Characteristics
+# Sample Characteristics of QC Pass/Fail Samples
 
 Of `r nrow(pheno)` samples, `r sum(pheno$qc.pass == 0)` (`r round(mean(pheno$qc.pass == 0) * 100, 1)`%) failed QC and were excluded from the clean release. The table below compares the distribution of malignancy status, sex, plate, and slide between samples that passed and failed QC, giving an overview of the study population and highlighting any systematic differences between included and excluded samples.
 
-```{r tab.pheno}
+```{r tab.pheno, echo = F}
 ```
