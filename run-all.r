@@ -55,4 +55,4 @@ source("pheno.r", echo=T, max.deparse.length = 500)
 ##      protein.summary.r, report.rmd
 ## out: rendered output in docs/ for each model run 
 #project <- "pleural"
-#source("ewas.r", echo=T, max.deparse.length = 500)
+source("ewas.r", echo=T, max.deparse.length = 500)
