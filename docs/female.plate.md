@@ -17,7 +17,7 @@
 ## [1] "median"
 ## 
 ## $practical.threshold
-## [1] 3.852505e-05
+## [1] 2.934822e-05
 ```
 
 1/2                   
@@ -37,26 +37,16 @@ of samples with the given "value" and the
 |:--------|:-----|:-------------|:---------|
 |female   |      |0.3485342     |0.4772841 |
 |plate    |      |2.312704      |1.050957  |
-|sv1      |      |2.502582e-19  |0.0571662 |
-|sv2      |      |-8.122687e-20 |0.0571662 |
-|sv3      |      |-5.617677e-19 |0.0571662 |
-|sv4      |      |-9.66219e-19  |0.0571662 |
-|sv5      |      |-3.553896e-19 |0.0571662 |
-|sv6      |      |1.806139e-18  |0.0571662 |
-|sv7      |      |3.395071e-18  |0.0571662 |
-|sv8      |      |1.248416e-18  |0.0571662 |
-|sv9      |      |-4.475336e-18 |0.0571662 |
-|sv10     |      |-7.033618e-18 |0.0571662 |
-|sv11     |      |-1.541379e-18 |0.0571662 |
-|sv12     |      |-1.726192e-18 |0.0571662 |
-|sv13     |      |-8.485273e-18 |0.0571662 |
-|sv14     |      |-3.281273e-19 |0.0571662 |
-|sv15     |      |-4.076821e-18 |0.0571662 |
-|sv16     |      |-1.056664e-17 |0.0571662 |
-|sv17     |      |-6.718599e-18 |0.0571662 |
-|sv18     |      |-8.489709e-18 |0.0571662 |
-|sv19     |      |-3.181949e-17 |0.0571662 |
-|sv20     |      |-6.461228e-16 |0.0571662 |
+|sv1      |      |-1.089831e-18 |0.0571662 |
+|sv2      |      |-9.784748e-20 |0.0571662 |
+|sv3      |      |7.427403e-19  |0.0571662 |
+|sv4      |      |1.88411e-19   |0.0571662 |
+|sv5      |      |7.01862e-19   |0.0571662 |
+|sv6      |      |4.532636e-18  |0.0571662 |
+|sv7      |      |2.739531e-18  |0.0571662 |
+|sv8      |      |3.900166e-17  |0.0571662 |
+|sv9      |      |1.227645e-15  |0.0571662 |
+|sv10     |      |9.029096e-14  |0.0571662 |
 
 
 1/4                   
@@ -95,7 +85,7 @@ statistics
 
 |var1   |var2 |        F|   p-value|         R|   p-value|
 |:------|:----|--------:|---------:|---------:|---------:|
-|female |sv1  | 1.366445| 0.2433365| 0.0685724| 0.2309189|
+|female |sv1  | 1.460376| 0.2278064| 0.0705779| 0.2175316|
 
 
 
@@ -112,7 +102,7 @@ statistics
 
 |var1   |var2 |        F|   p-value|          R|   p-value|
 |:------|:----|--------:|---------:|----------:|---------:|
-|female |sv2  | 2.633404| 0.1056703| -0.1103021| 0.0535252|
+|female |sv2  | 2.438603| 0.1194185| -0.1032829| 0.0707443|
 
 
 
@@ -127,9 +117,9 @@ statistics
 statistics
 
 
-|var1   |var2 |        F|   p-value|          R|   p-value|
-|:------|:----|--------:|---------:|----------:|---------:|
-|female |sv3  | 1.401911| 0.2373258| -0.0734319| 0.1994519|
+|var1   |var2 |        F|   p-value|        R|   p-value|
+|:------|:----|--------:|---------:|--------:|---------:|
+|female |sv3  | 1.747403| 0.1871941| -0.09017| 0.1148704|
 
 
 
@@ -146,7 +136,7 @@ statistics
 
 |var1   |var2 |         F|   p-value|         R|   p-value|
 |:------|:----|---------:|---------:|---------:|---------:|
-|female |sv4  | 0.3470315| 0.5562344| 0.0124958| 0.8273833|
+|female |sv4  | 0.6235896| 0.4303299| 0.0229089| 0.6892955|
 
 
 
@@ -163,7 +153,7 @@ statistics
 
 |var1   |var2 |        F|   p-value|         R|   p-value|
 |:------|:----|--------:|---------:|---------:|---------:|
-|female |sv5  | 3.419839| 0.0653847| 0.1103021| 0.0535252|
+|female |sv5  | 3.523414| 0.0614621| 0.1133875| 0.0471433|
 
 
 
@@ -178,9 +168,9 @@ statistics
 statistics
 
 
-|var1   |var2 |         F|   p-value|         R|   p-value|
-|:------|:----|---------:|---------:|---------:|---------:|
-|female |sv6  | 0.0755555| 0.7835994| 0.0339391| 0.5535788|
+|var1   |var2 |         F|  p-value|         R|   p-value|
+|:------|:----|---------:|--------:|---------:|---------:|
+|female |sv6  | 0.0210587| 0.884715| 0.0127272| 0.8242382|
 
 
 
@@ -195,9 +185,9 @@ statistics
 statistics
 
 
-|var1   |var2 |        F|   p-value|         R|   p-value|
-|:------|:----|--------:|---------:|---------:|---------:|
-|female |sv7  | 1.350903| 0.2460289| 0.0633273| 0.2686539|
+|var1   |var2 |       F|   p-value|         R|   p-value|
+|:------|:----|-------:|---------:|---------:|---------:|
+|female |sv7  | 1.71277| 0.1916116| 0.0720435| 0.2081061|
 
 
 
@@ -212,9 +202,9 @@ statistics
 statistics
 
 
-|var1   |var2 |         F|   p-value|         R|   p-value|
-|:------|:----|---------:|---------:|---------:|---------:|
-|female |sv8  | 0.2955996| 0.5870515| -0.021829| 0.7032327|
+|var1   |var2 |         F|   p-value|          R|   p-value|
+|:------|:----|---------:|---------:|----------:|---------:|
+|female |sv8  | 0.5623938| 0.4538754| -0.0022369| 0.9688635|
 
 
 
@@ -231,7 +221,7 @@ statistics
 
 |var1   |var2 |        F|   p-value|         R|   p-value|
 |:------|:----|--------:|---------:|---------:|---------:|
-|female |sv9  | 2.653311| 0.1043669| 0.1109963| 0.0520299|
+|female |sv9  | 1.741664| 0.1879178| 0.0976521| 0.0876165|
 
 
 
@@ -246,185 +236,15 @@ statistics
 statistics
 
 
-|var1   |var2 |         F|   p-value|          R|   p-value|
-|:------|:----|---------:|---------:|----------:|---------:|
-|female |sv10 | 0.7521106| 0.3864906| -0.0599334| 0.2952034|
+|var1   |var2 |        F|   p-value|          R|   p-value|
+|:------|:----|--------:|---------:|----------:|---------:|
+|female |sv10 | 1.055135| 0.3051413| -0.0635587| 0.2669051|
 
 
 
 
 
 ![plot of chunk unnamed-chunk-92](figure/unnamed-chunk-92-1.png)
-
-
-### Covariate sv11
-
-
-statistics
-
-
-|var1   |var2 |         F|   p-value|         R|   p-value|
-|:------|:----|---------:|---------:|---------:|---------:|
-|female |sv11 | 0.2414403| 0.6235212| 0.0311623| 0.5865022|
-
-
-
-
-
-![plot of chunk unnamed-chunk-98](figure/unnamed-chunk-98-1.png)
-
-
-### Covariate sv12
-
-
-statistics
-
-
-|var1   |var2 |         F|   p-value|         R|  p-value|
-|:------|:----|---------:|---------:|---------:|--------:|
-|female |sv12 | 0.1071023| 0.7436921| -0.006865| 0.904646|
-
-
-
-
-
-![plot of chunk unnamed-chunk-104](figure/unnamed-chunk-104-1.png)
-
-
-### Covariate sv13
-
-
-statistics
-
-
-|var1   |var2 |        F|   p-value|         R|   p-value|
-|:------|:----|--------:|---------:|---------:|---------:|
-|female |sv13 | 1.265257| 0.2615427| 0.0096418| 0.8663846|
-
-
-
-
-
-![plot of chunk unnamed-chunk-110](figure/unnamed-chunk-110-1.png)
-
-
-### Covariate sv14
-
-
-statistics
-
-
-|var1   |var2 |        F|  p-value|          R|   p-value|
-|:------|:----|--------:|--------:|----------:|---------:|
-|female |sv14 | 2.879376| 0.090741| -0.0655642| 0.2520751|
-
-
-
-
-
-![plot of chunk unnamed-chunk-116](figure/unnamed-chunk-116-1.png)
-
-
-### Covariate sv15
-
-
-statistics
-
-
-|var1   |var2 |        F|  p-value|         R|   p-value|
-|:------|:----|--------:|--------:|---------:|---------:|
-|female |sv15 | 3.738792| 0.054088| 0.1215637| 0.0332392|
-
-
-
-
-
-![plot of chunk unnamed-chunk-122](figure/unnamed-chunk-122-1.png)
-
-
-### Covariate sv16
-
-
-statistics
-
-
-|var1   |var2 |         F|   p-value|          R|   p-value|
-|:------|:----|---------:|---------:|----------:|---------:|
-|female |sv16 | 0.6707623| 0.4134254| -0.0647928| 0.2577098|
-
-
-
-
-
-![plot of chunk unnamed-chunk-128](figure/unnamed-chunk-128-1.png)
-
-
-### Covariate sv17
-
-
-statistics
-
-
-|var1   |var2 |        F|   p-value|          R|   p-value|
-|:------|:----|--------:|---------:|----------:|---------:|
-|female |sv17 | 3.303382| 0.0701185| -0.0520657| 0.3632659|
-
-
-
-
-
-![plot of chunk unnamed-chunk-134](figure/unnamed-chunk-134-1.png)
-
-
-### Covariate sv18
-
-
-statistics
-
-
-|var1   |var2 |         F|   p-value|         R|  p-value|
-|:------|:----|---------:|---------:|---------:|--------:|
-|female |sv18 | 0.0006624| 0.9794838| 0.0232946| 0.684343|
-
-
-
-
-
-![plot of chunk unnamed-chunk-140](figure/unnamed-chunk-140-1.png)
-
-
-### Covariate sv19
-
-
-statistics
-
-
-|var1   |var2 |         F|   p-value|         R|   p-value|
-|:------|:----|---------:|---------:|---------:|---------:|
-|female |sv19 | 0.0463014| 0.8297727| 0.0745889| 0.1924423|
-
-
-
-
-
-![plot of chunk unnamed-chunk-146](figure/unnamed-chunk-146-1.png)
-
-
-### Covariate sv20
-
-
-statistics
-
-
-|var1   |var2 |         F|   p-value|        R|   p-value|
-|:------|:----|---------:|---------:|--------:|---------:|
-|female |sv20 | 0.6414188| 0.4238209| 0.029311| 0.6089409|
-
-
-
-
-
-![plot of chunk unnamed-chunk-152](figure/unnamed-chunk-152-1.png)
 
 
 
@@ -439,7 +259,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-162](figure/unnamed-chunk-162-1.png)
+![plot of chunk unnamed-chunk-102](figure/unnamed-chunk-102-1.png)
 
 ## Manhattan plots
 
@@ -448,7 +268,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-167](figure/unnamed-chunk-167-1.png)
+![plot of chunk unnamed-chunk-107](figure/unnamed-chunk-107-1.png)
 
 ## Significant CpG sites
 
@@ -461,22 +281,22 @@ These are listed in the file [associations.csv](associations.csv).
 
 
 Below are the 10
-CpG sites with association p-values < 3.852505 &times; 10<sup>-5</sup>
+CpG sites with association p-values < 2.9348224 &times; 10<sup>-5</sup>
 in the  regression model.
 
 
-|           |chromosome |  position|   estimate|  p.value|  p.adjust|
-|:----------|:----------|---------:|----------:|--------:|---------:|
-|cg09586804 |chr6       |  53140575| -0.0344677| 1.81e-05| 1.0000000|
-|cg09719324 |chr6       |  76059791| -0.0759594| 7.90e-06| 1.0000000|
-|cg23226544 |chr18      |   9143407| -0.0438198| 8.50e-06| 1.0000000|
-|cg12333161 |chr8       |  26123664|  0.0589102| 3.00e-05| 1.0000000|
-|cg03815999 |chr1       |  48689242|  0.0400684| 7.20e-06| 1.0000000|
-|cg02471378 |chr6       |  32943025| -0.0615854| 5.90e-06| 1.0000000|
-|cg26734335 |chr16      |  87166401|  0.0637180| 1.21e-05| 1.0000000|
-|cg16118747 |chr22      |  32924527| -0.0390738| 2.34e-05| 1.0000000|
-|cg09090941 |chr12      | 117319914|  0.0414519| 1.03e-05| 1.0000000|
-|cg06811732 |chr1       | 219749669| -0.0515670| 1.10e-06| 0.2571811|
+|              |chromosome |  position|   estimate|  p.value| p.adjust|
+|:-------------|:----------|---------:|----------:|--------:|--------:|
+|cg08193417    |chr5       |  80463907| -0.0558501| 2.16e-05|        1|
+|cg09719324    |chr6       |  76059791| -0.0739389| 1.36e-05|        1|
+|cg00282828    |chr1       |  15740602|  0.0360923| 4.40e-06|        1|
+|cg23226544    |chr18      |   9143407| -0.0415804| 1.96e-05|        1|
+|cg18195616    |chr12      | 120429123| -0.0476420| 2.07e-05|        1|
+|cg07177546    |chr9       | 136530014| -0.0569355| 2.75e-05|        1|
+|cg03887378    |chr8       |  10131613|  0.0584816| 1.29e-05|        1|
+|cg26734335    |chr16      |  87166401|  0.0659471| 5.40e-06|        1|
+|cg10550816    |chr6       |  32818452|  0.0464858| 1.04e-05|        1|
+|ch.3.58626439 |chr3       |  58612166|  0.0213619| 1.97e-05|        1|
 
 Plots of these sites follow, one for each covariate set.
 "p[lm]" denotes the p-value obtained using a linear model
@@ -487,52 +307,52 @@ and "p[beta]" the p-value obtained using beta regression.
 
 
 
-![plot of chunk unnamed-chunk-174](figure/unnamed-chunk-174-1.png)
+![plot of chunk unnamed-chunk-114](figure/unnamed-chunk-114-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-176](figure/unnamed-chunk-176-1.png)
+![plot of chunk unnamed-chunk-116](figure/unnamed-chunk-116-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-178](figure/unnamed-chunk-178-1.png)
+![plot of chunk unnamed-chunk-118](figure/unnamed-chunk-118-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-180](figure/unnamed-chunk-180-1.png)
+![plot of chunk unnamed-chunk-120](figure/unnamed-chunk-120-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-182](figure/unnamed-chunk-182-1.png)
+![plot of chunk unnamed-chunk-122](figure/unnamed-chunk-122-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-184](figure/unnamed-chunk-184-1.png)
+![plot of chunk unnamed-chunk-124](figure/unnamed-chunk-124-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-186](figure/unnamed-chunk-186-1.png)
+![plot of chunk unnamed-chunk-126](figure/unnamed-chunk-126-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-188](figure/unnamed-chunk-188-1.png)
+![plot of chunk unnamed-chunk-128](figure/unnamed-chunk-128-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-190](figure/unnamed-chunk-190-1.png)
+![plot of chunk unnamed-chunk-130](figure/unnamed-chunk-130-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-192](figure/unnamed-chunk-192-1.png)
+![plot of chunk unnamed-chunk-132](figure/unnamed-chunk-132-1.png)
 
 ## Selected CpG sites
 
