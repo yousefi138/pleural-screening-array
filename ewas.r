@@ -31,7 +31,7 @@ eval.save({
 	# restrict annot to CpGs in meth, then reorder to match
 	annot <- annot[match(rownames(meth), annot$name), 
 						c("name", "chromosome", "position")]
-}, "annot", redo=T)
+}, "annot", redo=F)
 annot <- eval.ret("annot")
 
 # check 
@@ -56,8 +56,9 @@ eval.save({
 						methylation = meth, 
 						data = pheno, 
 						family="gaussian",
-						method="glm",
-						generate.confounders=NULL)
+						method="limma",
+						generate.confounders="smartsva",
+						n.confounders = 20)
 
 				sum.ret <- ewaff.summary(ret, 
 								chr = annot$chromosome, 

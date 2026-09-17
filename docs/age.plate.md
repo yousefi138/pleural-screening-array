@@ -1,7 +1,7 @@
 # Genome-wide methylation analysis report
 - study: Pleural cfDNAm analysis of age.platevariable
 - author: Paul Yousefi
-- date: 19 June, 2026
+- date: 17 September, 2026
 
 ## Parameters
 
@@ -17,7 +17,7 @@
 ## [1] "median"
 ## 
 ## $practical.threshold
-## [1] 8.037419e-05
+## [1] 3.543471e-05
 ```
 
 1/2                   
@@ -33,10 +33,30 @@ of samples with the given "value" and the
 "sd/%" column the percentage of samples with the given "value".
 
 
-|variable |value |mean     |sd..     |
-|:--------|:-----|:--------|:--------|
-|age      |      |71.00977 |12.89614 |
-|plate    |      |2.312704 |1.050957 |
+|variable |value |mean          |sd..      |
+|:--------|:-----|:-------------|:---------|
+|age      |      |71.00977      |12.89614  |
+|plate    |      |2.312704      |1.050957  |
+|sv1      |      |1.276454e-19  |0.0571662 |
+|sv2      |      |-8.243865e-19 |0.0571662 |
+|sv3      |      |-1.78229e-18  |0.0571662 |
+|sv4      |      |-1.821998e-18 |0.0571662 |
+|sv5      |      |-7.273557e-19 |0.0571662 |
+|sv6      |      |4.099684e-18  |0.0571662 |
+|sv7      |      |8.094545e-20  |0.0571662 |
+|sv8      |      |1.600517e-18  |0.0571662 |
+|sv9      |      |-1.141641e-17 |0.0571662 |
+|sv10     |      |-1.136293e-19 |0.0571662 |
+|sv11     |      |1.049283e-17  |0.0571662 |
+|sv12     |      |8.313482e-18  |0.0571662 |
+|sv13     |      |-3.451359e-18 |0.0571662 |
+|sv14     |      |-2.268901e-18 |0.0571662 |
+|sv15     |      |1.329e-17     |0.0571662 |
+|sv16     |      |-8.143132e-18 |0.0571662 |
+|sv17     |      |-1.004733e-17 |0.0571662 |
+|sv18     |      |-3.142608e-17 |0.0571662 |
+|sv19     |      |-3.862925e-16 |0.0571662 |
+|sv20     |      |-1.880158e-16 |0.0571662 |
 
 
 1/4                   
@@ -67,6 +87,346 @@ statistics
 ![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32-1.png)
 
 
+### Covariate sv1
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|         R|   p-value|
+|:----|:----|--------:|---------:|---------:|---------:|
+|age  |sv1  | 1.355602| 0.2452111| 0.0679517| 0.2351783|
+
+
+
+
+
+![plot of chunk unnamed-chunk-38](figure/unnamed-chunk-38-1.png)
+
+
+### Covariate sv2
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|          R|   p-value|
+|:----|:----|---------:|---------:|----------:|---------:|
+|age  |sv2  | 0.0734315| 0.7865879| -0.0338849| 0.5542131|
+
+
+
+
+
+![plot of chunk unnamed-chunk-44](figure/unnamed-chunk-44-1.png)
+
+
+### Covariate sv3
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|         R|   p-value|
+|:----|:----|---------:|---------:|---------:|---------:|
+|age  |sv3  | 0.5353724| 0.4649187| 0.0617386| 0.2808711|
+
+
+
+
+
+![plot of chunk unnamed-chunk-50](figure/unnamed-chunk-50-1.png)
+
+
+### Covariate sv4
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|         R|   p-value|
+|:----|:----|---------:|---------:|---------:|---------:|
+|age  |sv4  | 0.3078456| 0.5794119| 0.0075596| 0.8950502|
+
+
+
+
+
+![plot of chunk unnamed-chunk-56](figure/unnamed-chunk-56-1.png)
+
+
+### Covariate sv5
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|          R|   p-value|
+|:----|:----|--------:|---------:|----------:|---------:|
+|age  |sv5  | 1.662665| 0.1982209| -0.0982851| 0.0855717|
+
+
+
+
+
+![plot of chunk unnamed-chunk-62](figure/unnamed-chunk-62-1.png)
+
+
+### Covariate sv6
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|          R|   p-value|
+|:----|:----|---------:|---------:|----------:|---------:|
+|age  |sv6  | 0.0186992| 0.8913224| -0.0268711| 0.6390817|
+
+
+
+
+
+![plot of chunk unnamed-chunk-68](figure/unnamed-chunk-68-1.png)
+
+
+### Covariate sv7
+
+
+statistics
+
+
+|var1 |var2 |        F|  p-value|          R|   p-value|
+|:----|:----|--------:|--------:|----------:|---------:|
+|age  |sv7  | 2.784358| 0.096215| -0.0858883| 0.1332206|
+
+
+
+
+
+![plot of chunk unnamed-chunk-74](figure/unnamed-chunk-74-1.png)
+
+
+### Covariate sv8
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|         R|   p-value|
+|:----|:----|---------:|---------:|---------:|---------:|
+|age  |sv8  | 0.5166095| 0.4728419| 0.0834373| 0.1446974|
+
+
+
+
+
+![plot of chunk unnamed-chunk-80](figure/unnamed-chunk-80-1.png)
+
+
+### Covariate sv9
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|          R|   p-value|
+|:----|:----|---------:|---------:|----------:|---------:|
+|age  |sv9  | 0.3975003| 0.5288551| -0.0081513| 0.8868892|
+
+
+
+
+
+![plot of chunk unnamed-chunk-86](figure/unnamed-chunk-86-1.png)
+
+
+### Covariate sv10
+
+
+statistics
+
+
+|var1 |var2 |         F|  p-value|         R|   p-value|
+|:----|:----|---------:|--------:|---------:|---------:|
+|age  |sv10 | 0.2910298| 0.589955| 0.0344545| 0.5475682|
+
+
+
+
+
+![plot of chunk unnamed-chunk-92](figure/unnamed-chunk-92-1.png)
+
+
+### Covariate sv11
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|         R|   p-value|
+|:----|:----|--------:|---------:|---------:|---------:|
+|age  |sv11 | 4.909195| 0.0274523| 0.1280568| 0.0248434|
+
+
+
+
+
+![plot of chunk unnamed-chunk-98](figure/unnamed-chunk-98-1.png)
+
+
+### Covariate sv12
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|          R|   p-value|
+|:----|:----|---------:|---------:|----------:|---------:|
+|age  |sv12 | 0.0009463| 0.9754793| -0.0108969| 0.8491867|
+
+
+
+
+
+![plot of chunk unnamed-chunk-104](figure/unnamed-chunk-104-1.png)
+
+
+### Covariate sv13
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|        R|   p-value|
+|:----|:----|---------:|---------:|--------:|---------:|
+|age  |sv13 | 0.1327988| 0.7158001| 0.047894| 0.4030269|
+
+
+
+
+
+![plot of chunk unnamed-chunk-110](figure/unnamed-chunk-110-1.png)
+
+
+### Covariate sv14
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|         R|   p-value|
+|:----|:----|--------:|---------:|---------:|---------:|
+|age  |sv14 | 6.928835| 0.0089134| 0.0992085| 0.0826582|
+
+
+
+
+
+![plot of chunk unnamed-chunk-116](figure/unnamed-chunk-116-1.png)
+
+
+### Covariate sv15
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|         R|   p-value|
+|:----|:----|--------:|---------:|---------:|---------:|
+|age  |sv15 | 1.054649| 0.3052526| 0.0828952| 0.1473345|
+
+
+
+
+
+![plot of chunk unnamed-chunk-122](figure/unnamed-chunk-122-1.png)
+
+
+### Covariate sv16
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|         R|   p-value|
+|:----|:----|--------:|---------:|---------:|---------:|
+|age  |sv16 | 3.667444| 0.0564203| 0.0884933| 0.1218054|
+
+
+
+
+
+![plot of chunk unnamed-chunk-128](figure/unnamed-chunk-128-1.png)
+
+
+### Covariate sv17
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|         R|   p-value|
+|:----|:----|---------:|---------:|---------:|---------:|
+|age  |sv17 | 0.8362838| 0.3611841| 0.0972369| 0.0889787|
+
+
+
+
+
+![plot of chunk unnamed-chunk-134](figure/unnamed-chunk-134-1.png)
+
+
+### Covariate sv18
+
+
+statistics
+
+
+|var1 |var2 |        F|   p-value|         R|   p-value|
+|:----|:----|--------:|---------:|---------:|---------:|
+|age  |sv18 | 1.190025| 0.2761857| 0.0184569| 0.7473769|
+
+
+
+
+
+![plot of chunk unnamed-chunk-140](figure/unnamed-chunk-140-1.png)
+
+
+### Covariate sv19
+
+
+statistics
+
+
+|var1 |var2 |         F|   p-value|          R|   p-value|
+|:----|:----|---------:|---------:|----------:|---------:|
+|age  |sv19 | 0.0541739| 0.8161095| -0.0944804| 0.0984579|
+
+
+
+
+
+![plot of chunk unnamed-chunk-146](figure/unnamed-chunk-146-1.png)
+
+
+### Covariate sv20
+
+
+statistics
+
+
+|var1 |var2 |         F|  p-value|         R|   p-value|
+|:----|:----|---------:|--------:|---------:|---------:|
+|age  |sv20 | 0.6120126| 0.434638| 0.0321182| 0.5750667|
+
+
+
+
+
+![plot of chunk unnamed-chunk-152](figure/unnamed-chunk-152-1.png)
+
+
 
 
 
@@ -79,7 +439,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-42](figure/unnamed-chunk-42-1.png)
+![plot of chunk unnamed-chunk-162](figure/unnamed-chunk-162-1.png)
 
 ## Manhattan plots
 
@@ -88,7 +448,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-47](figure/unnamed-chunk-47-1.png)
+![plot of chunk unnamed-chunk-167](figure/unnamed-chunk-167-1.png)
 
 ## Significant CpG sites
 
@@ -101,22 +461,22 @@ These are listed in the file [associations.csv](associations.csv).
 
 
 Below are the 10
-CpG sites with association p-values < 8.0374194 &times; 10<sup>-5</sup>
+CpG sites with association p-values < 3.5434712 &times; 10<sup>-5</sup>
 in the  regression model.
 
 
 |           |chromosome |  position|   estimate|  p.value|  p.adjust|
 |:----------|:----------|---------:|----------:|--------:|---------:|
-|cg20257171 |chr11      |  18548408| -0.0006221| 7.23e-05| 1.0000000|
-|cg22669566 |chr12      |    679287| -0.0008987| 5.90e-06| 1.0000000|
-|cg22157503 |chr17      |   8794268|  0.0010925| 3.50e-06| 0.8158754|
-|cg13450057 |chr4       |   2231660|  0.0006193| 1.92e-05| 1.0000000|
-|cg03714203 |chr2       | 160750451|  0.0016068| 2.26e-05| 1.0000000|
-|cg19195712 |chr6       |  31026215| -0.0033020| 4.26e-05| 1.0000000|
-|cg03162314 |chr19      |  51600935| -0.0022950| 6.84e-05| 1.0000000|
-|cg10235845 |chr17      |  80860419|  0.0008420| 3.18e-05| 1.0000000|
-|cg15752043 |chr10      | 120789955| -0.0004275| 6.01e-05| 1.0000000|
-|cg10502571 |chr5       |   6572919|  0.0014709| 7.47e-05| 1.0000000|
+|cg22669566 |chr12      |    679287| -0.0008678| 1.80e-05| 1.0000000|
+|cg10988614 |chr7       |  47619736|  0.0022460| 9.60e-06| 1.0000000|
+|cg22157503 |chr17      |   8794268|  0.0011086| 1.10e-06| 0.2493542|
+|cg22246785 |chr12      | 122021013| -0.0027351| 2.10e-06| 0.4921959|
+|cg18145105 |chr2       |  97166422| -0.0021738| 9.20e-06| 1.0000000|
+|cg01623187 |chr20      |  42356139|  0.0011483| 3.36e-05| 1.0000000|
+|cg03714203 |chr2       | 160750451|  0.0014198| 1.30e-05| 1.0000000|
+|cg11599346 |chr7       | 115807039|  0.0012199| 1.94e-05| 1.0000000|
+|cg22723467 |chr17      |  54989967|  0.0035640| 5.20e-06| 1.0000000|
+|cg03200309 |chr12      |  48722990|  0.0018039| 3.50e-05| 1.0000000|
 
 Plots of these sites follow, one for each covariate set.
 "p[lm]" denotes the p-value obtained using a linear model
@@ -127,52 +487,52 @@ and "p[beta]" the p-value obtained using beta regression.
 
 
 
-![plot of chunk unnamed-chunk-54](figure/unnamed-chunk-54-1.png)
+![plot of chunk unnamed-chunk-174](figure/unnamed-chunk-174-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-56](figure/unnamed-chunk-56-1.png)
+![plot of chunk unnamed-chunk-176](figure/unnamed-chunk-176-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-58](figure/unnamed-chunk-58-1.png)
+![plot of chunk unnamed-chunk-178](figure/unnamed-chunk-178-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-60](figure/unnamed-chunk-60-1.png)
+![plot of chunk unnamed-chunk-180](figure/unnamed-chunk-180-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-62](figure/unnamed-chunk-62-1.png)
+![plot of chunk unnamed-chunk-182](figure/unnamed-chunk-182-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-64](figure/unnamed-chunk-64-1.png)
+![plot of chunk unnamed-chunk-184](figure/unnamed-chunk-184-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-66](figure/unnamed-chunk-66-1.png)
+![plot of chunk unnamed-chunk-186](figure/unnamed-chunk-186-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-68](figure/unnamed-chunk-68-1.png)
+![plot of chunk unnamed-chunk-188](figure/unnamed-chunk-188-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-70](figure/unnamed-chunk-70-1.png)
+![plot of chunk unnamed-chunk-190](figure/unnamed-chunk-190-1.png)
 
 
 
 
-![plot of chunk unnamed-chunk-72](figure/unnamed-chunk-72-1.png)
+![plot of chunk unnamed-chunk-192](figure/unnamed-chunk-192-1.png)
 
 ## Selected CpG sites
 
@@ -220,7 +580,7 @@ Number of CpG sites selected: 0.
 ## [19] SmartSVA_0.1.3      RSpectra_0.16-2     isva_1.9           
 ## [22] JADE_2.0-4          fastICA_1.2-7       qvalue_2.38.0      
 ## [25] sva_3.54.0          BiocParallel_1.40.0 genefilter_1.88.0  
-## [28] mgcv_1.9-1          nlme_3.1-165        ggplot2_3.5.1      
+## [28] mgcv_1.9-1          nlme_3.1-165        ggplot2_4.0.3      
 ## [31] eval.save_1.0.0    
 ## 
 ## loaded via a namespace (and not attached):
@@ -235,24 +595,24 @@ Number of CpG sites selected: 0.
 ## [25] jomo_2.7-6              zlibbioc_1.52.0         cachem_1.1.0           
 ## [28] GenomeInfoDb_1.42.0     jsonlite_1.8.9          blob_1.2.4             
 ## [31] pan_1.9                 broom_1.0.7             cluster_2.1.8          
-## [34] R6_2.5.1                stringi_1.8.4           rpart_4.1.24           
-## [37] boot_1.3-31             Rcpp_1.0.13-1           iterators_1.0.14       
-## [40] readr_2.1.5             IRanges_2.40.0          nnet_7.3-20            
-## [43] splines_4.4.2           tidyselect_1.2.1        yaml_2.3.10            
-## [46] codetools_0.2-20        lattice_0.22-6          tibble_3.2.1           
-## [49] plyr_1.8.9              Biobase_2.66.0          withr_3.0.2            
-## [52] KEGGREST_1.46.0         evaluate_1.0.1          Biostrings_2.74.0      
-## [55] pillar_1.10.1           MatrixGenerics_1.18.0   foreach_1.5.2          
-## [58] stats4_4.4.2            generics_0.1.3          mathjaxr_1.6-0         
-## [61] hms_1.1.3               S4Vectors_0.44.0        commonmark_1.9.5       
-## [64] munsell_0.5.1           scales_1.3.0            minqa_1.2.8            
-## [67] xtable_1.8-4            glue_1.8.0              tools_4.4.2            
-## [70] lme4_1.1-35.5           annotate_1.84.0         locfit_1.5-9.10        
-## [73] XML_3.99-0.17           grid_4.4.2              tidyr_1.3.1            
-## [76] AnnotationDbi_1.68.0    edgeR_4.4.0             colorspace_2.1-1       
-## [79] GenomeInfoDbData_1.2.13 meffil_1.6.0            cli_3.6.3              
-## [82] config_0.3.2            gtable_0.3.6            BiocGenerics_0.52.0    
-## [85] farver_2.1.2            memoise_2.0.1           lifecycle_1.0.4        
-## [88] httr_1.4.7              mime_0.12               mitml_0.4-5            
-## [91] statmod_1.5.0           bit64_4.5.2
+## [34] R6_2.5.1                stringi_1.8.4           RColorBrewer_1.1-3     
+## [37] rpart_4.1.24            boot_1.3-31             Rcpp_1.0.13-1          
+## [40] iterators_1.0.14        readr_2.1.5             IRanges_2.40.0         
+## [43] nnet_7.3-20             splines_4.4.2           tidyselect_1.2.1       
+## [46] yaml_2.3.10             codetools_0.2-20        lattice_0.22-6         
+## [49] tibble_3.2.1            plyr_1.8.9              Biobase_2.66.0         
+## [52] withr_3.0.2             KEGGREST_1.46.0         S7_0.2.0               
+## [55] evaluate_1.0.1          Biostrings_2.74.0       pillar_1.10.1          
+## [58] MatrixGenerics_1.18.0   foreach_1.5.2           stats4_4.4.2           
+## [61] generics_0.1.3          mathjaxr_1.6-0          hms_1.1.3              
+## [64] S4Vectors_0.44.0        commonmark_1.9.5        scales_1.4.0           
+## [67] minqa_1.2.8             xtable_1.8-4            glue_1.8.0             
+## [70] tools_4.4.2             lme4_1.1-35.5           annotate_1.84.0        
+## [73] locfit_1.5-9.10         XML_3.99-0.17           grid_4.4.2             
+## [76] tidyr_1.3.1             AnnotationDbi_1.68.0    edgeR_4.4.0            
+## [79] GenomeInfoDbData_1.2.13 cli_3.6.3               config_0.3.2           
+## [82] gtable_0.3.6            BiocGenerics_0.52.0     farver_2.1.2           
+## [85] memoise_2.0.1           lifecycle_1.0.4         httr_1.4.7             
+## [88] mime_0.12               mitml_0.4-5             statmod_1.5.0          
+## [91] bit64_4.5.2
 ```
