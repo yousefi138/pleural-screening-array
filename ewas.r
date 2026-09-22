@@ -37,6 +37,11 @@ annot <- eval.ret("annot")
 # check 
 identical(annot$name, rownames(meth))
 
+## ----drop.cg05575921---------------------------------------------------------
+idx <- which(rownames(meth)=="cg05575921")
+meth <- meth[-idx,]
+annot <- annot[-idx,]
+
 ## ----source-models -------------------------------------------------------------
 source("models-ewas.r", echo=T, max.deparse.length = 500)
 models
