@@ -50,13 +50,14 @@ render("dnam-release-summary.rmd", output_format = "all", output_dir = "docs")
 ## generate dnam-based estimates of smoking 
 ## in: "betas/pleural-screening.betas.rds"
 ## out: eval.ret("dnam.smoking")
-source("dnam-smoking.r", echo=T, max.deparse.length = 500)
+source("dnam-smoke.r", echo=T, max.deparse.length = 500)
 
 ## desc: Joins the array-locations design file with the samplesheet,
 ##       derives phenotype variables (female, malignant), and saves
 ##       the resulting pheno object to the analysis cache.
 ## in:   results/YYYYMMDD-pleural-array-locations.csv - array design file
 ##       results/releases/YYYY-MM-DD/pleural-screening-samplesheet.csv - meffil samplesheet
+##		eval.ret("dnam.smoke")
 ## out:  results/analysis-cache/pheno.rda - cached pheno data frame
 source("pheno.r", echo=T, max.deparse.length = 500)
 
