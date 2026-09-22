@@ -66,3 +66,9 @@ read_chunk(file.path(path, sourcecode))
 ```{r volcano, fig.width = 14, fig.height = 20}
 ```
 
+## OSCA plots
+
+Percent of phenotype variance explained by 'omic' measure
+
+```{r osca}
+```

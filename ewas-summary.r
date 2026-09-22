@@ -9,6 +9,7 @@ eval.save.dir(dir$cache)
 ## ----load.data -------------------------------------------------------------
 pheno <- eval.ret("pheno") 
 ret <- eval.ret("ret")
+reml <- eval.ret("reml")
 
 ## ----source-models -------------------------------------------------------------
 source("models-ewas.r", echo=T, max.deparse.length = 500)
@@ -65,3 +66,19 @@ volcano <- res |>
 	geom_point() +
 	facet_wrap(~model_name, ncol = 2)
 volcano
+
+## ----osca -------------------------------------------------------------
+idx.osca <- grep("/",colnames(reml$stat))
+osca <- data.frame(
+				phenotype = rownames(reml$stat),
+				estimate = 100*reml$stat[,idx.osca],
+				se = 100*reml$se[,idx.osca],
+				p.value = reml$test[, "Pval"])
+osca |>
+	ggplot(aes(x=phenotype, y=estimate)) +
+		geom_bar(stat="identity", alpha=0.8) +
+		geom_errorbar(aes(x=phenotype, ymin=pmax(estimate-se,0), ymax=estimate+se), width=0.4, alpha=0.9, size=1.3) +
+	    ylab("%Phenotype Variance Explained")
+
+		
+		
