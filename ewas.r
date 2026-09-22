@@ -58,7 +58,7 @@ eval.save({
 						family="gaussian",
 						method="limma",
 						generate.confounders="smartsva",
-						n.confounders = 20)
+						n.confounders = 10)
 
 				sum.ret <- ewaff.summary(ret, 
 								chr = annot$chromosome, 
