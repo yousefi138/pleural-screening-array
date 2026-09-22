@@ -24,9 +24,13 @@ colnames(samplesheet) <- colnames(samplesheet) |>
                 tolower()
 samplesheet$sex <- NULL
 
+# load dnam smoke data from "dnam.smoke"
+dnam.smoke <- eval.ret("dnam.smoke")
+
 # Need to revisit this join once the idat match issue has been sorted
 raw <- design |>
-			inner_join(samplesheet, by = c("pid"))
+			inner_join(samplesheet, by = c("pid")) |>
+			inner_join(dnam.smoke, by = c("sample_name"))
 
 ## ----make.pheno -------------------------------------------------------------
 pheno <- raw |>          
