@@ -69,6 +69,12 @@ source("pheno.r", echo=T, max.deparse.length = 500)
 ## out: rendered output in docs/ for each model run 
 source("ewas.r", echo=T, max.deparse.length = 500)
 
+## run osca
+## in: eval.ret("pheno")
+##      betas/pleural-screening.betas.rds
+## out: eval.ret("reml")
+source("osca.r", echo=T, max.deparse.length = 500)
+
 ## summarise ewas results
 ## in: eval.ret("ret")
 ##      "models-ewas.r"
