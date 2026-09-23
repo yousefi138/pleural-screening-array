@@ -27,7 +27,9 @@ idx <- which(rownames(meth)=="cg05575921")
 meth <- meth[-idx,]
 
 ## ----prep.osca.phenos -------------------------------------------------------------
-x <- as.data.frame(pheno[, c("age", "cg05575921", "female", "malignant")])
+vars <- c("age", "cg05575921", "female", "malignant")
+x <- pheno[, vars]
+
 rownames(x) <- pheno$sample_name
 
 # belt and braces check
