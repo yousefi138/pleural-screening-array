@@ -44,6 +44,15 @@ read_chunk(file.path(path, sourcecode))
 ```{r tableone}
 ```
 
+### Variable defintions
+- **meso_malig:** meso v. any other malignancy
+- **meso_bape:** meso v. bape
+- **epithelioid_other_meso:** epithelioid v. any other type of meso
+- **lung_other_malig:** lung vs. any other malignancy
+- **malig_non_infection:** malignant vs. non-malignant (excluding infection)
+- **infection:** infection vs. non-infection
+- **infection_non_malig:** infection vs. non-infection (excluding malignant)
+
 # EWAS 
 
 ## models run
@@ -70,5 +79,5 @@ read_chunk(file.path(path, sourcecode))
 
 Percent of phenotype variance explained by 'omic' measure
 
-```{r osca}
+```{r osca, fig.width = 15}
 ```
