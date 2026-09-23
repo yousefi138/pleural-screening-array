@@ -72,7 +72,16 @@ source("ewas.r", echo=T, max.deparse.length = 500)
 ## run osca
 ## in: eval.ret("pheno")
 ##      betas/pleural-screening.betas.rds
+## 		vars - list of phenotypes to analyse 
 ## out: eval.ret("reml")
+vars <- c("age", "cg05575921", "female", "malignant",
+					"meso_malig", 
+					"meso_bape", 
+					"epithelioid_other_meso", 
+					"lung_other_malig",
+					"malig_non_infection", 
+					"infection",
+					"infection_non_malig")
 source("osca.r", echo=T, max.deparse.length = 500)
 
 ## summarise ewas results
