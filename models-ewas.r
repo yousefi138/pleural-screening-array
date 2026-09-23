@@ -2,7 +2,14 @@ packages <- c("purrr", "dplyr")
 lapply(packages, require, character.only=T)
 
 ## ----define models -------------------------------------------------------------
-model.vars <- list("malignant","female", "age", "cg05575921")
+model.vars <- list("malignant","female", "age", "cg05575921",
+					"meso_malig", 
+					"meso_bape", 
+					"epithelioid_other_meso", 
+					"lung_other_malig",
+					"malig_non_infection", 
+					"infection",
+					"infection_non_malig")
 model.vars <- c(model.vars, # crude 
 				map(model.vars, ~c(.x, "plate")), # batch adjusted
 				list(c("malignant",  "female", "age", "plate"))
