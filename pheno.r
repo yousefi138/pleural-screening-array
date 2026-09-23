@@ -14,11 +14,11 @@ file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.clean.
 file$design <- file.path(dir$data,"pheno", "20251119-pleural-array-locations-with-ages.csv")
 
 ## ----load.data -------------------------------------------------------------
-design <- data.table::fread(file$design) |>
+design <- as.data.frame(data.table::fread(file$design)) |>
 			dplyr::rename(pid = patient.id,
 				age = Age)
 
-samplesheet <- data.table::fread(file$samplesheet)
+samplesheet <- as.data.frame(data.table::fread(file$samplesheet))
 colnames(samplesheet) <- colnames(samplesheet) |>
                 make.names()|>
                 tolower()
@@ -35,12 +35,90 @@ raw <- design |>
 ## ----make.pheno -------------------------------------------------------------
 pheno <- raw |>          
             mutate(female = sign(sex == "Female"))|>
+			
+			## first "/" group defined info
 			mutate(malignant = {
 				char <- sub("^([^/]+)/.*", "\\1", final.diagnosis.1)
 				sign(char =="M")
 			})|>
+			## second "/" group defined info
+			mutate(meso = {
+				char <- sub("^[^/]+/([^/]*).*", "\\1", final.diagnosis.1)
+				sign(char == "meso")
+			},
+				lung = {
+					char <- sub("^[^/]+/([^/]*).*", "\\1", final.diagnosis.1)
+					sign(char == "lung")
+			}, 
+				infection = {
+					char <- sub("^[^/]+/([^/]*).*", "\\1", final.diagnosis.1)
+					sign(char == "infection")
+			})|>		
 
-            eval.save("pheno", redo=T)            
+			## third "/" group defined info
+			mutate(bape = {
+				char <- sub("^[^/]+/[^/]+/([^/]*).*", "\\1", final.diagnosis.1)
+				sign(char == "BAPE")
+			},
+				epithelioid = {
+					char <- sub("^[^/]+/[^/]+/([^/]*).*", "\\1", final.diagnosis.1)
+					sign(char == "epithelioid")
+			})
+
+## make and check specific contrasts from the above extractions
+
+## meso v. any other malignancy
+pheno <- pheno |>
+           mutate(meso_malig = {
+			i <- ifelse(meso==1 & malignant==1, 1, 0)
+			ifelse(malignant==0, NA, i)
+		   })
+#
+pheno |> count(malignant, meso, meso_malig)
+
+## meso v. bape
+pheno <- pheno |>
+           mutate(meso_bape = ifelse(meso==0 & bape==0, NA, meso))
+#
+pheno |> count(meso, bape, meso_bape)
+
+## epithelioid v. any other type of meso
+pheno <- pheno |>
+           mutate(epithelioid_other_meso = {
+			i <- ifelse(epithelioid==1 & meso==1, 1, 0)
+			ifelse(meso==0, NA, i)
+		   })
+#
+pheno |> count(epithelioid, meso, epithelioid_other_meso)
+
+## lung vs. any other malignancy
+pheno <- pheno |>
+           mutate(lung_other_malig = {
+			i <- ifelse(lung==1 & malignant==1, 1, 0)
+			ifelse(malignant==0, NA, i)
+		   })
+#
+pheno |> count(lung, malignant, lung_other_malig)
+
+## malignant vs. non-malignant (excluding infection)
+pheno <- pheno |>
+           mutate(malig_non_infection = { 
+				ifelse(malignant==0 & infection==1, NA, malignant)
+			})
+#
+pheno |> count(malignant, infection, malig_non_infection)
+
+## infection vs. non-infection (excluding malignant)
+pheno <- pheno |>
+           mutate(infection_non_malig = { 
+				ifelse(infection==0 & malignant==1, NA, infection)
+			})
+#
+pheno |> count(infection, malignant,infection_non_malig)
+
+## save
+pheno |>             
+	eval.save("pheno", redo=T)            
 pheno <- eval.ret("pheno")
 
 table(pheno$malignant)
