@@ -75,6 +75,8 @@ source("ewas.r", echo=T, max.deparse.length = 500)
 ## 		vars - list of phenotypes to analyse 
 ## out: eval.ret("reml")
 vars <- c("age", "cg05575921", "female", "malignant",
+					"hannum",
+					"horvath",
 					"meso_malig", 
 					"meso_bape", 
 					"epithelioid_other_meso", 
