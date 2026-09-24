@@ -3,6 +3,8 @@ lapply(packages, require, character.only=T)
 
 ## ----define models -------------------------------------------------------------
 model.vars <- list("malignant","female", "age", "cg05575921",
+					"hannum",
+					"horvath",
 					"meso_malig", 
 					"meso_bape", 
 					"epithelioid_other_meso", 
