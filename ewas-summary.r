@@ -55,6 +55,13 @@ pheno[,ages] |>
 ## ----models -------------------------------------------------------------
 models
 
+## ----hits -------------------------------------------------------------
+hits <- sapply(ret, function(model){model$sum.ret$significant.sites})
+hit.count <- data.frame(model = names(hits),
+				n.hits = sapply(hits,length))
+rownames(hit.count) <- NULL
+kable(hit.count)
+
 ## ----qq ----------------------------------------------------------
 sapply(ret, function(model){model$sum.ret$qq.plot})
 

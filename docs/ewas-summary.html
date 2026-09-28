@@ -624,6 +624,7 @@ and DNAm-age</a></li>
 <li><a href="#ewas" id="toc-ewas">EWAS</a>
 <ul>
 <li><a href="#models-run" id="toc-models-run">models run</a></li>
+<li><a href="#count-of-significant-hits" id="toc-count-of-significant-hits">Count of significant hits</a></li>
 <li><a href="#qq-plots" id="toc-qq-plots">QQ plots</a></li>
 <li><a href="#manhattan-plots" id="toc-manhattan-plots">Manhattan
 plots</a></li>
@@ -945,111 +946,237 @@ malignancy</li>
 <h2>models run</h2>
 <pre><code>&gt; $malignant
 &gt; methylation ~ malignant
-&gt; &lt;environment: 0x5621b8c03440&gt;
+&gt; &lt;environment: 0x562248f29c80&gt;
 &gt; 
 &gt; $female
 &gt; methylation ~ female
-&gt; &lt;environment: 0x5621b8bfc398&gt;
+&gt; &lt;environment: 0x5622e904be60&gt;
 &gt; 
 &gt; $age
 &gt; methylation ~ age
-&gt; &lt;environment: 0x5621b8b0b170&gt;
+&gt; &lt;environment: 0x56220b2aa4f0&gt;
 &gt; 
 &gt; $cg05575921
 &gt; methylation ~ cg05575921
-&gt; &lt;environment: 0x5621b8b026f0&gt;
+&gt; &lt;environment: 0x56220b2a7478&gt;
 &gt; 
 &gt; $hannum
 &gt; methylation ~ hannum
-&gt; &lt;environment: 0x5621b8aff560&gt;
+&gt; &lt;environment: 0x56220b298870&gt;
 &gt; 
 &gt; $horvath
 &gt; methylation ~ horvath
-&gt; &lt;environment: 0x5621b8af6648&gt;
+&gt; &lt;environment: 0x5622602b6b28&gt;
 &gt; 
 &gt; $meso_malig
 &gt; methylation ~ meso_malig
-&gt; &lt;environment: 0x5621b8af3480&gt;
+&gt; &lt;environment: 0x5622602abe40&gt;
 &gt; 
 &gt; $meso_bape
 &gt; methylation ~ meso_bape
-&gt; &lt;environment: 0x5621b8ae8648&gt;
+&gt; &lt;environment: 0x5622602a11b8&gt;
 &gt; 
 &gt; $epithelioid_other_meso
 &gt; methylation ~ epithelioid_other_meso
-&gt; &lt;environment: 0x5621b8ae3560&gt;
+&gt; &lt;environment: 0x5622602984d0&gt;
 &gt; 
 &gt; $lung_other_malig
 &gt; methylation ~ lung_other_malig
-&gt; &lt;environment: 0x5621b8ade478&gt;
+&gt; &lt;environment: 0x5622ec402a28&gt;
 &gt; 
 &gt; $malig_non_infection
 &gt; methylation ~ malig_non_infection
-&gt; &lt;environment: 0x5621b8ad54b0&gt;
+&gt; &lt;environment: 0x5622ec3fbc98&gt;
 &gt; 
 &gt; $infection
 &gt; methylation ~ infection
-&gt; &lt;environment: 0x5621b8ad22e8&gt;
+&gt; &lt;environment: 0x5622ec3f6d70&gt;
 &gt; 
 &gt; $infection_non_malig
 &gt; methylation ~ infection_non_malig
-&gt; &lt;environment: 0x5621b8ac93d0&gt;
+&gt; &lt;environment: 0x5622d8f8d750&gt;
 &gt; 
 &gt; $malignant.plate
 &gt; methylation ~ malignant + plate
-&gt; &lt;environment: 0x5621b8ac6278&gt;
+&gt; &lt;environment: 0x5622d8f82b10&gt;
 &gt; 
 &gt; $female.plate
 &gt; methylation ~ female + plate
-&gt; &lt;environment: 0x5621b8ac3200&gt;
+&gt; &lt;environment: 0x5622d8f7dc58&gt;
 &gt; 
 &gt; $age.plate
 &gt; methylation ~ age + plate
-&gt; &lt;environment: 0x5621b8aba438&gt;
+&gt; &lt;environment: 0x5622d004b800&gt;
 &gt; 
 &gt; $cg05575921.plate
 &gt; methylation ~ cg05575921 + plate
-&gt; &lt;environment: 0x5621b8ab5510&gt;
+&gt; &lt;environment: 0x562304737610&gt;
 &gt; 
 &gt; $hannum.plate
 &gt; methylation ~ hannum + plate
-&gt; &lt;environment: 0x5621b8aac748&gt;
+&gt; &lt;environment: 0x56230471f098&gt;
 &gt; 
 &gt; $horvath.plate
 &gt; methylation ~ horvath + plate
-&gt; &lt;environment: 0x5621b8aa96d0&gt;
+&gt; &lt;environment: 0x56230471c1a8&gt;
 &gt; 
 &gt; $meso_malig.plate
 &gt; methylation ~ meso_malig + plate
-&gt; &lt;environment: 0x5621b8aa0908&gt;
+&gt; &lt;environment: 0x56229b81dc18&gt;
 &gt; 
 &gt; $meso_bape.plate
 &gt; methylation ~ meso_bape + plate
-&gt; &lt;environment: 0x5621b8a9b970&gt;
+&gt; &lt;environment: 0x56229b80b428&gt;
 &gt; 
 &gt; $epithelioid_other_meso.plate
 &gt; methylation ~ epithelioid_other_meso + plate
-&gt; &lt;environment: 0x5621b8a94ac8&gt;
+&gt; &lt;environment: 0x56229b802778&gt;
 &gt; 
 &gt; $lung_other_malig.plate
 &gt; methylation ~ lung_other_malig + plate
-&gt; &lt;environment: 0x5621b8a8fba0&gt;
+&gt; &lt;environment: 0x56226012eb80&gt;
 &gt; 
 &gt; $malig_non_infection.plate
 &gt; methylation ~ malig_non_infection + plate
-&gt; &lt;environment: 0x5621b8a8ac08&gt;
+&gt; &lt;environment: 0x56226011a368&gt;
 &gt; 
 &gt; $infection.plate
 &gt; methylation ~ infection + plate
-&gt; &lt;environment: 0x5621b8a81c20&gt;
+&gt; &lt;environment: 0x5622607c5b28&gt;
 &gt; 
 &gt; $infection_non_malig.plate
 &gt; methylation ~ infection_non_malig + plate
-&gt; &lt;environment: 0x5621b8a7e8b8&gt;
+&gt; &lt;environment: 0x5622607bb038&gt;
 &gt; 
 &gt; $malignant.fulladj
 &gt; methylation ~ malignant + female + age + plate
-&gt; &lt;environment: 0x5621b8a75840&gt;</code></pre>
+&gt; &lt;environment: 0x56220a53d9f0&gt;</code></pre>
+</div>
+<div id="count-of-significant-hits" class="section level2">
+<h2>Count of significant hits</h2>
+<p>Number of significant hits identified per model. Statistical
+significance was determined using a Bonferroni multiple testing
+threshold correcting for 235702 tests. That is <span class="math display">\[0.05/235702 = 2.12e-07\]</span></p>
+<p>Please refer to specific EWAS reports for tables summarising top
+results.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">model</th>
+<th align="right">n.hits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">malignant</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">female</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">age</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">cg05575921</td>
+<td align="right">19</td>
+</tr>
+<tr class="odd">
+<td align="left">hannum</td>
+<td align="right">83</td>
+</tr>
+<tr class="even">
+<td align="left">horvath</td>
+<td align="right">273</td>
+</tr>
+<tr class="odd">
+<td align="left">meso_malig</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">meso_bape</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">epithelioid_other_meso</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">lung_other_malig</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">malig_non_infection</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">infection</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">infection_non_malig</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">malignant.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">female.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">age.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">cg05575921.plate</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="left">hannum.plate</td>
+<td align="right">72</td>
+</tr>
+<tr class="odd">
+<td align="left">horvath.plate</td>
+<td align="right">250</td>
+</tr>
+<tr class="even">
+<td align="left">meso_malig.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">meso_bape.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">epithelioid_other_meso.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">lung_other_malig.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">malig_non_infection.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">infection.plate</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">infection_non_malig.plate</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">malignant.fulladj</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="qq-plots" class="section level2">
 <h2>QQ plots</h2>

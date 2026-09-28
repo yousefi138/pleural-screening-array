@@ -67,6 +67,15 @@ read_chunk(file.path(path, sourcecode))
 ```{r models}
 ```
 
+## Count of significant hits
+
+Number of significant hits identified per model. Statistical significance was determined using a Bonferroni multiple testing threshold correcting for `r nrow(ret$malignant$ret$table)` tests. That is $$0.05/`r nrow(ret$malignant$ret$table)` = `r sprintf("%.2e",0.05/nrow(ret$malignant$ret$table))`$$
+
+Please refer to specific EWAS reports for tables summarising top results. 
+
+```{r hits}
+```
+
 ## QQ plots
 
 ```{r qq}
