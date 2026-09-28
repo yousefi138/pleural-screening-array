@@ -1,4 +1,6 @@
 default:
   project: "."
+  epic_project: "."
 local:
   project: "."
+  epic_project: "."

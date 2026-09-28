@@ -61,6 +61,14 @@ source("dnam-vars.r", echo=T, max.deparse.length = 500)
 ## out:  results/analysis-cache/pheno.rda - cached pheno data frame
 source("pheno.r", echo=T, max.deparse.length = 500)
 
+## check if any samples used in this MSA experiment
+## match the ids of any which were run in previous 
+## epic arracy analsyis
+## in: eval.ret("pheno")
+##		"dpm-01-pheno.rds" # from previous epic project
+## out: no samples overlapped
+source("check-id-overlap.r", echo=T, max.deparse.length = 500)
+
 ## run ewas
 ## in: eval.ret("pheno")
 ##      eval.ret(paste("prot.mat", project, sep="."))
