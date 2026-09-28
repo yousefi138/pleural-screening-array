@@ -1,5 +1,5 @@
 # Genome-wide methylation analysis report
-- study: Pleural cfDNAm analysis of malig_non_infection.platevariable
+- study: Pleural cfDNAm analysis of horvathvariable
 - author: Paul Yousefi
 - date: 24 September, 2026
 
@@ -17,7 +17,7 @@
 ## [1] "median"
 ## 
 ## $practical.threshold
-## [1] 6.31645e-05
+## [1] 1.598531e-11
 ```
 
 1/2                   
@@ -33,20 +33,19 @@ of samples with the given "value" and the
 "sd/%" column the percentage of samples with the given "value".
 
 
-|variable            |value |mean          |sd..       |
-|:-------------------|:-----|:-------------|:----------|
-|malig_non_infection |      |0.6309963     |0.4834277  |
-|plate               |      |2.276753      |1.05452    |
-|sv1                 |      |2.497644e-18  |0.06085806 |
-|sv2                 |      |1.261848e-18  |0.06085806 |
-|sv3                 |      |2.514244e-18  |0.06085806 |
-|sv4                 |      |3.155626e-18  |0.06085806 |
-|sv5                 |      |-1.059723e-18 |0.06085806 |
-|sv6                 |      |5.173558e-19  |0.06085806 |
-|sv7                 |      |4.810597e-18  |0.06085806 |
-|sv8                 |      |5.971688e-17  |0.06085806 |
-|sv9                 |      |1.821725e-14  |0.06085806 |
-|sv10                |      |8.018125e-13  |0.06085806 |
+|variable |value |mean         |sd..      |
+|:--------|:-----|:------------|:---------|
+|horvath  |      |63.36695     |18.30823  |
+|sv1      |      |9.722724e-19 |0.0571662 |
+|sv2      |      |1.572446e-18 |0.0571662 |
+|sv3      |      |1.81105e-19  |0.0571662 |
+|sv4      |      |-1.67707e-18 |0.0571662 |
+|sv5      |      |3.3175e-18   |0.0571662 |
+|sv6      |      |2.874637e-18 |0.0571662 |
+|sv7      |      |3.494245e-18 |0.0571662 |
+|sv8      |      |5.643028e-17 |0.0571662 |
+|sv9      |      |1.017559e-15 |0.0571662 |
+|sv10     |      |6.80572e-15  |0.0571662 |
 
 
 1/4                   
@@ -60,15 +59,15 @@ of samples with the given "value" and the
 
 
 
-### Covariate plate
+### Covariate sv1
 
 
 statistics
 
 
-|var1                |var2  |        F|   p-value|          R|   p-value|
-|:-------------------|:-----|--------:|---------:|----------:|---------:|
-|malig_non_infection |plate | 1.833399| 0.1768631| -0.0818845| 0.1789432|
+|var1    |var2 |        F|  p-value|         R|   p-value|
+|:-------|:----|--------:|--------:|---------:|---------:|
+|horvath |sv1  | 3.298401| 0.070329| 0.1370998| 0.0162873|
 
 
 
@@ -77,15 +76,15 @@ statistics
 ![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32-1.png)
 
 
-### Covariate sv1
+### Covariate sv2
 
 
 statistics
 
 
-|var1                |var2 |        F|   p-value|         R|   p-value|
-|:-------------------|:----|--------:|---------:|---------:|---------:|
-|malig_non_infection |sv1  | 5.137797| 0.0242046| 0.1411541| 0.0200934|
+|var1    |var2 |         F|   p-value|         R|   p-value|
+|:-------|:----|---------:|---------:|---------:|---------:|
+|horvath |sv2  | 0.3893337| 0.5331163| 0.0618557| 0.2797876|
 
 
 
@@ -94,15 +93,15 @@ statistics
 ![plot of chunk unnamed-chunk-38](figure/unnamed-chunk-38-1.png)
 
 
-### Covariate sv2
+### Covariate sv3
 
 
 statistics
 
 
-|var1                |var2 |         F|   p-value|          R|   p-value|
-|:-------------------|:----|---------:|---------:|----------:|---------:|
-|malig_non_infection |sv2  | 0.6623065| 0.4164666| -0.0856309| 0.1598045|
+|var1    |var2 |        F|  p-value|         R|   p-value|
+|:-------|:----|--------:|--------:|---------:|---------:|
+|horvath |sv3  | 2.104458| 0.147898| 0.1226707| 0.0317122|
 
 
 
@@ -111,15 +110,15 @@ statistics
 ![plot of chunk unnamed-chunk-44](figure/unnamed-chunk-44-1.png)
 
 
-### Covariate sv3
+### Covariate sv4
 
 
 statistics
 
 
-|var1                |var2 |        F|   p-value|          R|  p-value|
-|:-------------------|:----|--------:|---------:|----------:|--------:|
-|malig_non_infection |sv3  | 0.460149| 0.4981375| -0.0212122| 0.728124|
+|var1    |var2 |       F|   p-value|          R|   p-value|
+|:-------|:----|-------:|---------:|----------:|---------:|
+|horvath |sv4  | 1.83614| 0.1764068| -0.1317037| 0.0210431|
 
 
 
@@ -128,15 +127,15 @@ statistics
 ![plot of chunk unnamed-chunk-50](figure/unnamed-chunk-50-1.png)
 
 
-### Covariate sv4
+### Covariate sv5
 
 
 statistics
 
 
-|var1                |var2 |         F|   p-value|         R|   p-value|
-|:-------------------|:----|---------:|---------:|---------:|---------:|
-|malig_non_infection |sv4  | 0.0927172| 0.7609862| 0.0032258| 0.9578447|
+|var1    |var2 |        F|   p-value|          R| p-value|
+|:-------|:----|--------:|---------:|----------:|-------:|
+|horvath |sv5  | 14.65645| 0.0001565| -0.2889044|   3e-07|
 
 
 
@@ -145,15 +144,15 @@ statistics
 ![plot of chunk unnamed-chunk-56](figure/unnamed-chunk-56-1.png)
 
 
-### Covariate sv5
+### Covariate sv6
 
 
 statistics
 
 
-|var1                |var2 |        F|   p-value|          R|   p-value|
-|:-------------------|:----|--------:|---------:|----------:|---------:|
-|malig_non_infection |sv5  | 0.010631| 0.9179553| -0.0084067| 0.8904347|
+|var1    |var2 |        F| p-value|         R|  p-value|
+|:-------|:----|--------:|-------:|---------:|--------:|
+|horvath |sv6  | 16.77395| 5.4e-05| 0.1778272| 0.001785|
 
 
 
@@ -162,15 +161,15 @@ statistics
 ![plot of chunk unnamed-chunk-62](figure/unnamed-chunk-62-1.png)
 
 
-### Covariate sv6
+### Covariate sv7
 
 
 statistics
 
 
-|var1                |var2 |         F|   p-value|         R|  p-value|
-|:-------------------|:----|---------:|---------:|---------:|--------:|
-|malig_non_infection |sv6  | 0.0075582| 0.9307855| 0.0218965| 0.719716|
+|var1    |var2 |        F|   p-value|          R|   p-value|
+|:-------|:----|--------:|---------:|----------:|---------:|
+|horvath |sv7  | 13.47162| 0.0002858| -0.1285322| 0.0243669|
 
 
 
@@ -179,15 +178,15 @@ statistics
 ![plot of chunk unnamed-chunk-68](figure/unnamed-chunk-68-1.png)
 
 
-### Covariate sv7
+### Covariate sv8
 
 
 statistics
 
 
-|var1                |var2 |         F|   p-value|         R|  p-value|
-|:-------------------|:----|---------:|---------:|---------:|--------:|
-|malig_non_infection |sv7  | 0.0179569| 0.8935001| 0.0243403| 0.689968|
+|var1    |var2 |        F|   p-value|         R|   p-value|
+|:-------|:----|--------:|---------:|---------:|---------:|
+|horvath |sv8  | 4.690804| 0.0310991| 0.0957333| 0.0940438|
 
 
 
@@ -196,15 +195,15 @@ statistics
 ![plot of chunk unnamed-chunk-74](figure/unnamed-chunk-74-1.png)
 
 
-### Covariate sv8
+### Covariate sv9
 
 
 statistics
 
 
-|var1                |var2 |        F|   p-value|          R|   p-value|
-|:-------------------|:----|--------:|---------:|----------:|---------:|
-|malig_non_infection |sv8  | 1.390375| 0.2393836| -0.0753669| 0.2161909|
+|var1    |var2 |        F|   p-value|          R|   p-value|
+|:-------|:----|--------:|---------:|----------:|---------:|
+|horvath |sv9  | 1.819771| 0.1783412| -0.0554157| 0.3329785|
 
 
 
@@ -213,38 +212,21 @@ statistics
 ![plot of chunk unnamed-chunk-80](figure/unnamed-chunk-80-1.png)
 
 
-### Covariate sv9
-
-
-statistics
-
-
-|var1                |var2 |         F|   p-value|         R|   p-value|
-|:-------------------|:----|---------:|---------:|---------:|---------:|
-|malig_non_infection |sv9  | 0.4387473| 0.5082948| 0.0418379| 0.4928041|
-
-
-
-
-
-![plot of chunk unnamed-chunk-86](figure/unnamed-chunk-86-1.png)
-
-
 ### Covariate sv10
 
 
 statistics
 
 
-|var1                |var2 |         F|   p-value|        R|   p-value|
-|:-------------------|:----|---------:|---------:|--------:|---------:|
-|malig_non_infection |sv10 | 0.0005508| 0.9812931| 0.001173| 0.9846647|
+|var1    |var2 |         F|   p-value|         R|   p-value|
+|:-------|:----|---------:|---------:|---------:|---------:|
+|horvath |sv10 | 0.7750224| 0.3793609| 0.0802529| 0.1606322|
 
 
 
 
 
-![plot of chunk unnamed-chunk-92](figure/unnamed-chunk-92-1.png)
+![plot of chunk unnamed-chunk-86](figure/unnamed-chunk-86-1.png)
 
 
 
@@ -259,7 +241,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-102](figure/unnamed-chunk-102-1.png)
+![plot of chunk unnamed-chunk-96](figure/unnamed-chunk-96-1.png)
 
 ## Manhattan plots
 
@@ -268,11 +250,11 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-107](figure/unnamed-chunk-107-1.png)
+![plot of chunk unnamed-chunk-101](figure/unnamed-chunk-101-1.png)
 
 ## Significant CpG sites
 
-There were 0
+There were 256
 CpG sites with association p-values < 2.1177467 &times; 10<sup>-7</sup>.
 These are listed in the file [associations.csv](associations.csv).
 
@@ -281,28 +263,43 @@ These are listed in the file [associations.csv](associations.csv).
 
 
 Below are the 10
-CpG sites with association p-values < 6.3164502 &times; 10<sup>-5</sup>
+CpG sites with association p-values < 1.5985312 &times; 10<sup>-11</sup>
 in the  regression model.
 
 
-|           |chromosome |  position|   estimate|  p.value| p.adjust|
-|:----------|:----------|---------:|----------:|--------:|--------:|
-|cg27420151 |chrX       | 107979476|  0.0555363| 5.91e-05|        1|
-|cg09790289 |chrX       |  77359560|  0.0443880| 3.55e-05|        1|
-|cg06070414 |chr7       |  95226412| -0.0582118| 5.10e-05|        1|
-|cg27358021 |chrX       |  99661597|  0.0684019| 4.05e-05|        1|
-|cg14424181 |chr20      |  51400526|  0.0792622| 4.88e-05|        1|
-|cg18973058 |chr13      |  88900824|  0.0230516| 2.07e-05|        1|
-|cg27067307 |chrX       |  53710733|  0.0292848| 5.65e-05|        1|
-|cg00784644 |chr1       |  54203161| -0.0753704| 3.63e-05|        1|
-|cg16926734 |chr1       |  38152104|  0.0355929| 5.93e-05|        1|
-|cg04549111 |chr7       |  90138040|  0.0368847| 2.37e-05|        1|
+|           |chromosome |  position|   estimate| p.value| p.adjust|
+|:----------|:----------|---------:|----------:|-------:|--------:|
+|cg09157076 |chr6       |  11044880|  0.0030426|       0|    0e+00|
+|cg11071401 |chr17      |  48637194|  0.0023527|       0|    4e-07|
+|cg24724428 |chr6       |  11044888|  0.0035968|       0|    0e+00|
+|cg17280346 |chr3       | 147126703|  0.0036676|       0|    2e-07|
+|cg10943458 |chr3       | 120627085|  0.0031673|       0|    0e+00|
+|cg07834574 |chr17      |   4802847| -0.0013909|       0|    2e-06|
+|cg21572722 |chr6       |  11044894|  0.0021002|       0|    0e+00|
+|cg19056004 |chr12      |   7023262| -0.0029254|       0|    9e-07|
+|cg17110586 |chr19      |  36454623|  0.0030568|       0|    7e-07|
+|cg16867657 |chr6       |  11044877|  0.0032220|       0|    0e+00|
 
 Plots of these sites follow, one for each covariate set.
 "p[lm]" denotes the p-value obtained using a linear model
 and "p[beta]" the p-value obtained using beta regression.
 
 
+
+
+
+
+![plot of chunk unnamed-chunk-108](figure/unnamed-chunk-108-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-110](figure/unnamed-chunk-110-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-112](figure/unnamed-chunk-112-1.png)
 
 
 
@@ -338,21 +335,6 @@ and "p[beta]" the p-value obtained using beta regression.
 
 
 ![plot of chunk unnamed-chunk-126](figure/unnamed-chunk-126-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-128](figure/unnamed-chunk-128-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-130](figure/unnamed-chunk-130-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-132](figure/unnamed-chunk-132-1.png)
 
 ## Selected CpG sites
 
