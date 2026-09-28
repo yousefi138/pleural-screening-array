@@ -53,6 +53,13 @@ read_chunk(file.path(path, sourcecode))
 - **infection:** infection vs. non-infection
 - **infection_non_malig:** infection vs. non-infection (excluding malignant)
 
+## Relationship between observed and DNAm estimated variables
+
+### Correlation between age and DNAm-age
+
+```{r age.cor}
+```
+
 # EWAS 
 
 ## models run

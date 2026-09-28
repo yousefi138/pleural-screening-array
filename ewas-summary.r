@@ -1,5 +1,5 @@
 ## ----globals -------------------------------------------------------------
-packages <- c("eval.save", "knitr", "tableone", "kableExtra", "ggplot2") 
+packages <- c("eval.save", "knitr", "tableone", "kableExtra", "ggplot2", "GGally") 
 lapply(packages, require, character.only=T)
 
 # set dirs  
@@ -32,6 +32,10 @@ is_factor_like <- function(x, max_levels = 10) {
   return(FALSE)
 }
 vars <- unique(unlist(model.vars))
+#drop horvath & hannhum from the tableone output
+idx <- which(vars %in% c("hannum", "horvath"))
+vars <- vars[-idx]
+
 cat.test <- sapply(pheno[,vars], is_factor_like)
 
 cat <- vars[cat.test]
@@ -42,6 +46,11 @@ tab <- CreateTableOne(data = pheno,
 tab_mat <- print(tab, printToggle = F, noSpaces = T, showAllLevels = T)
 kable(tab_mat, format = "html") |>
 	kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+## ----age.cor -------------------------------------------------------------
+ages <- c("age","hannum", "horvath")
+pheno[,ages] |> 
+	ggpairs(lower = list(continuous = wrap("smooth", method = "loess")))
 
 ## ----models -------------------------------------------------------------
 models
