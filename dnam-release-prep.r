@@ -75,6 +75,13 @@ lab.samplesheet <- lapply(file$lab.samplesheets, function(f) {
 	mutate(Sample_Name = paste(Slide, Sentrix_Position, sep="_"))|>
 	dplyr::select(Sample_Name, pid, source_file)
 
+# fix one pid case error 
+# Was 'c1615MR' should be 'C1615MR'
+err <- grep("1615MR", lab.samplesheet$pid)
+lab.samplesheet$pid[err] 
+lab.samplesheet$pid[err] <- "C1615MR"
+lab.samplesheet$pid[err] 
+
 ## ----combined.samplesheet--------------------------------------------------------
 samplesheet <- meffil.samplesheet |>
 				left_join(lab.samplesheet, by = c("Sample_Name"))
