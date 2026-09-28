@@ -23,7 +23,9 @@ meth <- meth[,match(pheno$sample_name, colnames(meth))]
 ## check ids match between pheno and prot
 identical(pheno$sample_name, colnames(meth))
 
-idx <- which(rownames(meth)=="cg05575921")
+dnam.score.cpgs <- eval.ret("dnam.score.cpgs") 
+idx <- which(rownames(meth) %in% dnam.score.cpgs)
+
 meth <- meth[-idx,]
 
 ## ----prep.osca.phenos -------------------------------------------------------------

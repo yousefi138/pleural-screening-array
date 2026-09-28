@@ -37,8 +37,12 @@ annot <- eval.ret("annot")
 # check 
 identical(annot$name, rownames(meth))
 
-## ----drop.cg05575921---------------------------------------------------------
-idx <- which(rownames(meth)=="cg05575921")
+## ----get.dnam.score.cpgs -------------------------------------------------------------
+dnam.score.cpgs <- eval.ret("dnam.score.cpgs") 
+
+## ----drop.cpgs---------------------------------------------------------
+# Get index positions in rownames(meth) for each element in cpgs
+idx <- which(rownames(meth) %in% dnam.score.cpgs)
 meth <- meth[-idx,]
 annot <- annot[-idx,]
 

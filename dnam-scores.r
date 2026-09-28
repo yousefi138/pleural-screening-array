@@ -41,3 +41,14 @@ eval.save({
 					hannum = ret$hannum$score,
 					horvath = ret$horvath)
 }, "dnam.age", redo=F)
+
+## ----get.model.cpgs -------------------------------------------------------
+mod.names <- c("hannum", "horvath")
+models <- sapply(mod.names, function(model){
+		out <- meffonym.get.model(model)$vars
+		out[-grep("intercept", out)]
+	})
+
+eval.save({
+	dnam.score.cpgs <- unique(c(unlist(models), "cg05575921"))
+}, "dnam.score.cpgs", redo=F)
