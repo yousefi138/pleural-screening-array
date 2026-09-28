@@ -52,12 +52,25 @@ render("dnam-release-summary.rmd", output_format = "all", output_dir = "docs")
 ## out: eval.ret("dnam.smoking")
 source("dnam-vars.r", echo=T, max.deparse.length = 500)
 
+## clean extra lab provided phenotype variables
+## 	I orginally made the phenotype file just using those
+## 	variables available to me at the time of generating the
+## 	array design before samples were run.
+##	This file cleans extra phenotype variables shared by lis north
+##	for integration with `pheno` generation in the following step.
+## in: 
+##	"Pleural Investigation - Epigenetics updated with Smoking History 17.9.26.xlsx"
+##	"SPOTLight - Epigenetics updated with smoking history 17.9.26.xlsx"
+## out: eval.ret("extra")
+source("extra-pheno.r", echo=T, max.deparse.length = 500)
+
 ## desc: Joins the array-locations design file with the samplesheet,
 ##       derives phenotype variables (female, malignant), and saves
 ##       the resulting pheno object to the analysis cache.
 ## in:   results/YYYYMMDD-pleural-array-locations.csv - array design file
 ##       results/releases/YYYY-MM-DD/pleural-screening-samplesheet.csv - meffil samplesheet
 ##		eval.ret("dnam.smoke")
+##		eval.ret("extra")
 ## out:  results/analysis-cache/pheno.rda - cached pheno data frame
 source("pheno.r", echo=T, max.deparse.length = 500)
 

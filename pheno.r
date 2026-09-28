@@ -24,15 +24,26 @@ colnames(samplesheet) <- colnames(samplesheet) |>
                 tolower()
 samplesheet$sex <- NULL
 
+# load extra phenotype variables from lis north
+extra <- eval.ret("extra")
+
 # load dnam smoke data from "dnam.smoke"
 dnam.smoke <- eval.ret("dnam.smoke")
 dnam.age <- eval.ret("dnam.age")
 
+
 # Need to revisit this join once the idat match issue has been sorted
 raw <- design |>
 			inner_join(samplesheet, by = c("pid")) |>
+			left_join(extra,  by = c("pid")) |>
+
 			inner_join(dnam.smoke, by = c("sample_name")) |>
 			inner_join(dnam.age, by = c("sample_name"))
+
+## checked sex from extra and samplesheet agreed. 
+#table(raw$sex.x == raw$sex.y)
+# TRUE 
+#  307 
 
 ## ----make.pheno -------------------------------------------------------------
 pheno <- raw |>          
