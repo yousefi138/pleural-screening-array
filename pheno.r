@@ -129,6 +129,27 @@ pheno <- pheno |>
 #
 pheno |> count(infection, malignant,infection_non_malig)
 
+pheno <- pheno |>
+			mutate(smoke_4 = {
+				temp <- tolower(smoking.history)
+				temp <- ifelse(temp=="current smoker", "current", temp)
+				temp <- ifelse(temp=="ex smoker"|temp=="ex-smoker","former" , temp)
+				temp <- ifelse(temp=="never smoked", "never", temp)
+				temp <- ifelse(temp=="non-smoker", "non", temp)
+				temp <- ifelse(temp=="unknown", NA, temp)
+				temp 
+				})
+
+pheno |> count(smoke_4)
+
+pheno <- pheno |>
+			mutate(smoke_current_never  = {
+				ifelse(smoke_4=="current", 1, 
+					ifelse(smoke_4=="never",0, NA))
+				})
+pheno |> count(smoke_current_never)
+
+
 ## save
 pheno |>             
 	eval.save("pheno", redo=T)            
