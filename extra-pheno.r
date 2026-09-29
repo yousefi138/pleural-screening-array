@@ -93,6 +93,7 @@ extra <-
         }),
         .id = "source") |> 
 	rename(final.diagnosis.1.extra = final.diagnosis.1) |>
+	rename(neutrophil.lymphoctye.ratio = neutrophil..lymphoctye.ratio) |>
 
 	eval.save("extra", redo=T)            
 extra <- eval.ret("extra")
