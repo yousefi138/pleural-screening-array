@@ -78,3 +78,12 @@ The plot below shows the distribution of per-sample median correlations — i.e.
 ```{r sample.median.cor.plot, echo = F, fig.width = 7, fig.height = 4}
 ```
 
+The 10 smallest observed per-sample median correlations are below:
+
+```{r low.sample.cor}
+```
+
+Originally, the 10 smalleset list was as shown below. However, decided to drop `208661850039_R03C01` based on these results
+
+```{r original}
+```
