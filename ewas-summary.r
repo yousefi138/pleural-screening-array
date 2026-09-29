@@ -94,7 +94,8 @@ osca |>
 	ggplot(aes(x=phenotype, y=estimate)) +
 		geom_bar(stat="identity", alpha=0.8) +
 		geom_errorbar(aes(x=phenotype, ymin=pmax(estimate-se,0), ymax=estimate+se), width=0.4, alpha=0.9, size=1.3) +
-	    ylab("%Phenotype Variance Explained")
+	    ylab("%Phenotype Variance Explained") +
+		theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
 		
 		
