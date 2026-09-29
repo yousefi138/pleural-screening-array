@@ -11,7 +11,10 @@ model.vars <- list("malignant","female", "age", "cg05575921",
 					"lung_other_malig",
 					"malig_non_infection", 
 					"infection",
-					"infection_non_malig")
+					"infection_non_malig",
+					"smoke_current_never", 
+					"neutrophil.lymphoctye.ratio", 
+					"ph")
 model.vars <- c(model.vars, # crude 
 				map(model.vars, ~c(.x, "plate")), # batch adjusted
 				list(c("malignant",  "female", "age", "plate"))
