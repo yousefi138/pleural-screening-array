@@ -3,7 +3,7 @@ packages <- c("meffil", "eval.save", "dplyr") #, "readxl")
 lapply(packages, require, character.only=T)
 
 dir <- paths
-dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "2026-06-18"))
+dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "2026-09-29"))
 #dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "%Y-%m-%d"))
 dir$reports <- file.path(dir$release, "derived/reports")
 
@@ -49,10 +49,10 @@ param$pc <- 20
 param$qc <- meffil.qc.parameters()
 
 run <- list()
-run$qc <- TRUE
-run$qc.summary <- TRUE
-run$detect.p <- TRUE
-run$norm.objects <- TRUE
+run$qc <- FALSE
+run$qc.summary <- FALSE
+run$detect.p <- FALSE
+run$norm.objects <- FALSE
 
 ## ----samplesheet -------------------------------------------------------------
 meffil.samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
@@ -159,13 +159,16 @@ length(unique(outlier$sample.name))
 # value, "208661850045_R15C02", that somehow didn't get dropped automatically
 # so doing so now.
 
+# 29 Sep 2026 - added one more sample to drop based on `dnam-release-summary` 
+# which observed that `208661850039_R03C01` had per-sample-median correlation <0.5
 bad.ids <- 
 	c("208661850045_R09C03",
 	"208661850045_R10C02",
 	"208661850041_R09C01",
 	"208661850044_R09C02",
 	"208661850042_R15C02",
-	"208661850045_R15C02")
+	"208661850045_R15C02",
+	"208661850039_R03C01") ## added 29 Sept 2026
 
 outlier <- unique(c(outlier$sample.name, bad.ids))
 length(outlier)

@@ -25,6 +25,10 @@ source("set-array-locations.r", echo=T, max.deparse.length = 500)
 ##       failing samples, extracts detection p-values, applies
 ##       quantile normalisation, and generates QC and normalisation
 ##       reports. Renders dnam-release-prep.rmd to HTML.
+##
+##		Release 29 Sep 2026 - updated to drop sample `208661850039_R03C01`
+##		that had poor per sample median correlation
+##
 ## in:   data/raw/M2644/ - IDAT files (project M2644, batched plates)
 ## out:  results/releases/YYYY-MM-DD/
 ##         pleural-screening-samplesheet.csv (.clean.csv after filtering)
@@ -35,9 +39,8 @@ source("set-array-locations.r", echo=T, max.deparse.length = 500)
 ##       docs/pleural-screening-release-prep.html
 packages <- c("rmarkdown", "knitr")
 lapply(packages, require, character.only=T)
-
 render("dnam-release-prep.rmd", output_format = "all", output_dir = "docs")
-#source("pleural-screening-dnam-release-prep.r", echo=T, max.deparse.length = 500)
+#source("dnam-release-prep.r", echo=T, max.deparse.length = 500)
 
 ## desc:
 ## in:

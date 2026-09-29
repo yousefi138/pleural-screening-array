@@ -46,7 +46,7 @@ Set the root path for the IDAT files (project M2644).
 
 Define all output file paths (samplesheet, QC report, detection p-values, PC fit plot, beta matrix, normalisation report) and create the required directory structure under the date-stamped release folder.
 
-```{r files}
+```{r files, results = 'hide'}
 ```
 
 Set analysis parameters: report authorship metadata, the number of principal components to use for normalisation (`param$pc = 20`), and `run` flags that control whether cached intermediate objects are recomputed.
@@ -75,17 +75,19 @@ Join the meffil-derived samplesheet with the lab samplesheet on `Sample_Name` to
 
 Run per-sample QC using `meffil.qc()`. This extracts intensities from each IDAT pair and evaluates a battery of control probes, dye-bias, sex prediction, detection p-values, and bead-count metrics. Results are cached via `eval.save` to avoid recomputation on subsequent runs.
 
-```{r qc}
+```{r qc, results = 'hide'}
 ```
 
 Summarise the QC results across all samples and probes using `meffil.qc.summary()`. The summary identifies samples and CpGs that fail QC thresholds and is used both for reporting and for downstream sample exclusion.
 
-```{r qc.summary}
+```{r qc.summary, results = 'hide'}
 ```
 
 Generate an HTML QC report from the summary object. The report is written to both the release directory and the `docs/` folder for version-controlled archiving.
 
-```{r qc.report}
+- **NOTE** report code below didn't want to run in rendering to html but full script was run in batch mode
+
+```{r qc.report, eval = F}
 ```
 
 SNP probes on the array can be used to verify sample identity against independent genotype data. The code below (commented out) exports the SNP probe names for use with PLINK, and would load the resulting genotype calls back into R. This step is retained for reference but was not applied in this release. The pipeline continues directly to sample filtering.
@@ -117,7 +119,9 @@ Recompute the QC summary on the cleaned sample set to confirm that no further ou
 
 Generate a second QC report reflecting the post-exclusion sample set. This is the report that accompanies the released data.
 
-```{r qc.report.clean}
+- **NOTE** report code below didn't want to run in rendering to html but full script was run in batch mode
+
+```{r qc.report.clean, eval = F}
 ```
 
 # CpG Filtering
@@ -131,7 +135,7 @@ Tabulate the CpGs flagged in the QC summary by failure reason (e.g. low detectio
 
 Extract per-sample, per-CpG detection p-values from the QC objects and save them as an RDS file. Detection p-values indicate whether a probe signal is distinguishable from background and are used downstream to mask unreliable methylation calls.
 
-```{r detection.pvalue}
+```{r detection.pvalue, results = 'hide'}
 ```
 
 # Normalisation
@@ -143,7 +147,7 @@ Plot the variance explained by successive principal components of the control-pr
 
 Apply functional normalisation using quantile regression on the selected number of control-probe PCs (`meffil.normalize.quantiles()`). Beta values are then extracted with `meffil.normalize.samples()`, excluding CpGs identified as poor quality in the QC summary. The resulting beta matrix is saved as an RDS file.
 
-```{r norm}
+```{r norm, results = 'hide'}
 ```
 
 Compute principal components of the normalised beta matrix using autosomal CpG sites only. These PCs are used in the normalisation summary to assess residual technical variation after normalisation.
@@ -158,7 +162,7 @@ Summarise the normalisation by testing for association between the normalisation
 
 Generate an HTML normalisation report and write it to both the release directory and `docs/`.
 
-```{r norm.report}
+```{r norm.report, results = 'hide'}
 ```
 
 # Sample–Sample Correlation
