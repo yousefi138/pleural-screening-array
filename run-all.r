@@ -104,7 +104,10 @@ vars <- c("age", "cg05575921", "female", "malignant",
 					"lung_other_malig",
 					"malig_non_infection", 
 					"infection",
-					"infection_non_malig")
+					"infection_non_malig",
+					"smoke_current_never", 
+					"neutrophil.lymphoctye.ratio", 
+					"ph")
 source("osca.r", echo=T, max.deparse.length = 500)
 
 ## summarise ewas results
