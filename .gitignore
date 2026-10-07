@@ -8,3 +8,4 @@ config.yml
 
 # osca.og
 osca.log
+._*.DS_Store
