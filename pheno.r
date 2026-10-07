@@ -149,6 +149,11 @@ pheno <- pheno |>
 				})
 pheno |> count(smoke_current_never)
 
+pheno <- pheno |>
+			mutate(smoke_current  = {
+				ifelse(smoke_4=="current", 1, 0)
+				})
+pheno |> count(smoke_current)
 
 ## save
 pheno |>             
