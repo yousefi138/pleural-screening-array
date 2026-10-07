@@ -281,22 +281,23 @@ This section omitted.
 ## [16] nloptr_2.1.1            bit_4.5.0.1             xfun_0.52              
 ## [19] zlibbioc_1.52.0         cachem_1.1.0            GenomeInfoDb_1.42.0    
 ## [22] jsonlite_1.8.9          blob_1.2.4              cluster_2.1.8          
-## [25] R6_2.5.1                stringi_1.8.4           RColorBrewer_1.1-3     
-## [28] boot_1.3-31             Rcpp_1.0.13-1           IRanges_2.40.0         
-## [31] splines_4.4.2           tidyselect_1.2.1        yaml_2.3.10            
-## [34] codetools_0.2-20        lattice_0.22-6          tibble_3.2.1           
-## [37] Biobase_2.66.0          withr_3.0.2             KEGGREST_1.46.0        
-## [40] S7_0.2.0                askpass_1.2.1           evaluate_1.0.1         
-## [43] Biostrings_2.74.0       pillar_1.10.1           MatrixGenerics_1.18.0  
-## [46] stats4_4.4.2            generics_0.1.3          S4Vectors_0.44.0       
-## [49] commonmark_1.9.5        scales_1.4.0            minqa_1.2.8            
-## [52] xtable_1.8-4            glue_1.8.0              tools_4.4.2            
-## [55] data.table_1.15.4       annotate_1.84.0         locfit_1.5-9.10        
-## [58] XML_3.99-0.17           grid_4.4.2              AnnotationDbi_1.68.0   
-## [61] edgeR_4.4.0             base64_2.0.2            GenomeInfoDbData_1.2.13
-## [64] cli_3.6.3               config_0.3.2            gtable_0.3.6           
-## [67] digest_0.6.37           BiocGenerics_0.52.0     farver_2.1.2           
-## [70] memoise_2.0.1           htmltools_0.5.8.1       lifecycle_1.0.4        
-## [73] httr_1.4.7              mime_0.12               openssl_2.3.1          
-## [76] bit64_4.5.2
+## [25] R6_2.5.1                bslib_0.8.0             stringi_1.8.4          
+## [28] RColorBrewer_1.1-3      boot_1.3-31             jquerylib_0.1.4        
+## [31] Rcpp_1.0.13-1           IRanges_2.40.0          splines_4.4.2          
+## [34] tidyselect_1.2.1        yaml_2.3.10             codetools_0.2-20       
+## [37] lattice_0.22-6          tibble_3.2.1            Biobase_2.66.0         
+## [40] withr_3.0.2             KEGGREST_1.46.0         S7_0.2.0               
+## [43] askpass_1.2.1           evaluate_1.0.1          Biostrings_2.74.0      
+## [46] pillar_1.10.1           MatrixGenerics_1.18.0   stats4_4.4.2           
+## [49] generics_0.1.3          S4Vectors_0.44.0        commonmark_1.9.5       
+## [52] scales_1.4.0            minqa_1.2.8             xtable_1.8-4           
+## [55] glue_1.8.0              tools_4.4.2             data.table_1.15.4      
+## [58] annotate_1.84.0         locfit_1.5-9.10         XML_3.99-0.17          
+## [61] grid_4.4.2              AnnotationDbi_1.68.0    edgeR_4.4.0            
+## [64] base64_2.0.2            GenomeInfoDbData_1.2.13 cli_3.6.3              
+## [67] config_0.3.2            gtable_0.3.6            sass_0.4.9             
+## [70] digest_0.6.37           BiocGenerics_0.52.0     farver_2.1.2           
+## [73] memoise_2.0.1           htmltools_0.5.8.1       lifecycle_1.0.4        
+## [76] httr_1.4.7              mime_0.12               openssl_2.3.1          
+## [79] bit64_4.5.2
 ```
