@@ -11,8 +11,8 @@ paths$data <- file.path(paths$project, "data")
 paths$output <- file.path(paths$project, "results")
 paths$cache <- file.path(paths$project, "results", "analysis-cache")
 paths$scripts <- file.path(paths$project, "scripts/repo/pleural-screening-array")
-#paths$release <- file.path(dir$output, "releases", format(Sys.Date(), "2026-06-18"))
-paths$release <- file.path(dir$output, "releases", format(Sys.Date(), "2026-09-29"))
+#paths$release <- file.path(paths$output, "releases", format(Sys.Date(), "2026-06-18"))
+paths$release <- file.path(paths$output, "releases", format(Sys.Date(), "2026-09-29"))
 
 print(paths)
 
