@@ -5,6 +5,7 @@ lapply(packages, require, character.only=T)
 # set dirs  
 dir <- paths
 eval.save.dir(dir$cache)
+redo <- TRUE
 
 ## ----files -------------------------------------------------------------
 file <- list()
@@ -156,7 +157,7 @@ pheno |> count(smoke_current)
 
 ## save
 pheno |>             
-	eval.save("pheno", redo=T)            
+	eval.save("pheno", redo=redo)            
 pheno <- eval.ret("pheno")
 
 table(pheno$malignant)
