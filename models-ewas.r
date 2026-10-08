@@ -12,7 +12,8 @@ model.vars <- list("malignant","female", "age", "cg05575921",
 					"malig_non_infection", 
 					"infection",
 					"infection_non_malig",
-					"smoke_current_never", 
+					"smoke_current", 
+					"smoke_current_never", 					
 					"neutrophil.lymphoctye.ratio", 
 					"ph")
 model.vars <- c(model.vars, # crude 

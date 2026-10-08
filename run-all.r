@@ -108,6 +108,7 @@ vars <- c("age", "cg05575921", "female", "malignant",
 					"malig_non_infection", 
 					"infection",
 					"infection_non_malig",
+					"smoke_current", 
 					"smoke_current_never", 
 					"neutrophil.lymphoctye.ratio", 
 					"ph")
