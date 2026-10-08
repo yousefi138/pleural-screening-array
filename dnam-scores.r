@@ -23,6 +23,7 @@ eval.save({
 }, "dnam.smoke", redo=redo)
 
 # calculate hannum and horvath ages
+# Horvath takes 18 mins to compute because of BMIQ
 age.mods <- 
 	meffonym.models(full=T) |>
 		subset(target=="age")
@@ -33,7 +34,7 @@ age.mods$name
 ret <- list()
 # missing 71-66 = 5 hannum cpgs
 ret$hannum <- meffonym.score(meth, "hannum")
-# missing 15 horvath cpsg
+# missing 15 horvath cpsg 
 ret$horvath <- meffonym.horvath.age(meth)
 
 eval.save({
