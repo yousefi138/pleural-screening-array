@@ -4,7 +4,6 @@ lapply(packages, require, character.only=T)
 
 # set dirs  
 dir <- paths
-dir$release <- file.path(dir$output, "releases", format(Sys.Date(), "2026-06-18"))
 eval.save.dir(dir$cache)
 
 ## ----files -------------------------------------------------------------
