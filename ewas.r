@@ -20,7 +20,7 @@ meth <- readr::read_rds(file$betas)
 meth <- meth[,match(pheno$sample_name, colnames(meth))]
 
 ## check ids match between pheno and prot
-identical(pheno$sample_name, colnames(meth))
+stopifnot(identical(pheno$sample_name, colnames(meth)))
 
 ## ----get annotation -------------------------------------------------------------
 eval.save({
@@ -34,7 +34,7 @@ eval.save({
 annot <- eval.ret("annot")
 
 # check 
-identical(annot$name, rownames(meth))
+stopifnot(identical(annot$name, rownames(meth)))
 
 ## ----get.dnam.score.cpgs -------------------------------------------------------------
 dnam.score.cpgs <- eval.ret("dnam.score.cpgs") 
