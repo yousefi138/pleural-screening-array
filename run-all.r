@@ -53,7 +53,7 @@ render("dnam-release-summary.rmd", output_format = "all", output_dir = "docs")
 ## generate dnam-based estimates of smoking 
 ## in: "betas/pleural-screening.betas.rds"
 ## out: eval.ret("dnam.smoking")
-source("dnam-vars.r", echo=T, max.deparse.length = 500)
+source("dnam-scores.r", echo=T, max.deparse.length = 500)
 
 ## clean extra lab provided phenotype variables
 ## 	I orginally made the phenotype file just using those
