@@ -6,6 +6,7 @@ lapply(packages, require, character.only=T)
 # set dirs  
 dir <- paths
 eval.save.dir(dir$cache)
+redo <- TRUE
 
 # file
 file <- list()
@@ -19,7 +20,7 @@ idx <- which(rownames(meth)=="cg05575921")
 eval.save({
 	dnam.smoke <- data.frame(sample_name = colnames(meth), 
 					cg05575921 = meth[idx,])
-}, "dnam.smoke", redo=F)
+}, "dnam.smoke", redo=redo)
 
 # calculate hannum and horvath ages
 age.mods <- 
@@ -39,7 +40,7 @@ eval.save({
 	dnam.age <- data.frame(sample_name = colnames(meth), 
 					hannum = ret$hannum$score,
 					horvath = ret$horvath)
-}, "dnam.age", redo=F)
+}, "dnam.age", redo=redo)
 
 ## ----get.model.cpgs -------------------------------------------------------
 mod.names <- c("hannum", "horvath")
@@ -50,4 +51,4 @@ models <- sapply(mod.names, function(model){
 
 eval.save({
 	dnam.score.cpgs <- unique(c(unlist(models), "cg05575921"))
-}, "dnam.score.cpgs", redo=F)
+}, "dnam.score.cpgs", redo=redo)
