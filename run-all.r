@@ -127,8 +127,9 @@ render("ewas-summary.rmd", output_format = "all", output_dir = "docs")
 
 ## compare ewas results between reported and DNAm-estimated variables
 ## in: eval.ret("ret")
+##		 eval.ret("pheno")
 ##      "models-ewas.r"
-## out: "docs/ewas-summary.html"
+## out: "docs/compare.html"
 packages <- c("rmarkdown", "knitr")
 lapply(packages, require, character.only=T)
 render("compare.rmd", output_format = "all", output_dir = "docs")

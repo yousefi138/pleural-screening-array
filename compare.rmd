@@ -39,10 +39,36 @@ read_chunk(file.path(path, sourcecode))
 
 # Background 
 
-Noted in [ewas-summary.html](https://yousefi138.github.io/pleural-screening-array/ewas-summary.html) that self-reported age and smoking status did not show any significant associations with DNAm, but DNAm-estimated age and smoking status did. 
+Noted in [ewas-summary.html](https://yousefi138.github.io/pleural-screening-array/ewas-summary.html) that reported age and smoking status did not show any significant associations with DNAm, but DNAm-estimated age and DNAm-estimated smoking status did. 
 
 # Purpose
 
-The purpose of this analysis report is to compare the EWAS results for self-report vs. DNAm-estimated variables to see if they're comparable. 
+The purpose of this analysis report is to compare the EWAS results for reported vs. DNAm-estimated age and smoking variables to see if they're comparable. 
 
+# Results
+## Relevant comparisons
+
+```{r extract}
+```
+
+```{r pairs}
+```
+
+The EWAS results used for this comparisons had the below linear formulae + adjustment for 20 surrogate variables:
+```{r models}
+```
+
+The relevant pairs of reported and DNAm-estimated EWAS results for comparison are:
+```{r comps}
+```
+
+## Scatter plots of EWAS coefficients
+
+Plot the coefficients estimates for each pair of EWAS against one another:
+```{r scatter.all}
+```
+
+Restrict to CpG sites that had p<1e^5 in either pair of analysis:
+```{r scatter.top}
+```
 
