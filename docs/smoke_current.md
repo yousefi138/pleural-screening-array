@@ -1,5 +1,5 @@
 # Genome-wide methylation analysis report
-- study: Pleural cfDNAm analysis of epithelioid_other_meso.platevariable
+- study: Pleural cfDNAm analysis of smoke_currentvariable
 - author: Paul Yousefi
 - date: 08 October, 2026
 
@@ -17,7 +17,7 @@
 ## [1] "median"
 ## 
 ## $practical.threshold
-## [1] 7.068175e-05
+## [1] 5.287538e-05
 ```
 
 1/2                   
@@ -33,20 +33,19 @@ of samples with the given "value" and the
 "sd/%" column the percentage of samples with the given "value".
 
 
-|variable               |value |mean          |sd..      |
-|:----------------------|:-----|:-------------|:---------|
-|epithelioid_other_meso |      |0.7166667     |0.4544196 |
-|plate                  |      |2.283333      |1.059128  |
-|sv1                    |      |-2.85868e-18  |0.1301889 |
-|sv2                    |      |-3.035766e-18 |0.1301889 |
-|sv3                    |      |1.332016e-17  |0.1301889 |
-|sv4                    |      |7.229821e-18  |0.1301889 |
-|sv5                    |      |1.654673e-17  |0.1301889 |
-|sv6                    |      |1.5594e-17    |0.1301889 |
-|sv7                    |      |-1.450346e-18 |0.1301889 |
-|sv8                    |      |-8.673194e-15 |0.1301889 |
-|sv9                    |      |-7.720378e-14 |0.1301889 |
-|sv10                   |      |-6.165355e-13 |0.1301889 |
+|variable      |value |mean          |sd..       |
+|:-------------|:-----|:-------------|:----------|
+|smoke_current |      |0.1790541     |0.3840469  |
+|sv1           |      |1.463307e-19  |0.05822225 |
+|sv2           |      |6.131145e-19  |0.05822225 |
+|sv3           |      |-1.215607e-20 |0.05822225 |
+|sv4           |      |5.702134e-19  |0.05822225 |
+|sv5           |      |1.033128e-18  |0.05822225 |
+|sv6           |      |6.389604e-19  |0.05822225 |
+|sv7           |      |2.427413e-18  |0.05822225 |
+|sv8           |      |4.923139e-18  |0.05822225 |
+|sv9           |      |-4.147943e-18 |0.05822225 |
+|sv10          |      |4.942651e-17  |0.05822225 |
 
 
 1/4                   
@@ -60,15 +59,15 @@ of samples with the given "value" and the
 
 
 
-### Covariate plate
+### Covariate sv1
 
 
 statistics
 
 
-|var1                   |var2  |        F|   p-value|          R|   p-value|
-|:----------------------|:-----|--------:|---------:|----------:|---------:|
-|epithelioid_other_meso |plate | 1.286731| 0.2613179| -0.1596095| 0.2231671|
+|var1          |var2 |         F|  p-value|          R|   p-value|
+|:-------------|:----|---------:|--------:|----------:|---------:|
+|smoke_current |sv1  | 0.1923924| 0.661255| -0.0072703| 0.9008762|
 
 
 
@@ -77,15 +76,15 @@ statistics
 ![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32-1.png)
 
 
-### Covariate sv1
+### Covariate sv2
 
 
 statistics
 
 
-|var1                   |var2 |        F|   p-value|         R|   p-value|
-|:----------------------|:----|--------:|---------:|---------:|---------:|
-|epithelioid_other_meso |sv1  | 1.594137| 0.2117889| 0.1014459| 0.4405531|
+|var1          |var2 |         F|   p-value|          R|   p-value|
+|:-------------|:----|---------:|---------:|----------:|---------:|
+|smoke_current |sv2  | 0.0924909| 0.7612492| -0.0224295| 0.7007507|
 
 
 
@@ -94,15 +93,15 @@ statistics
 ![plot of chunk unnamed-chunk-38](figure/unnamed-chunk-38-1.png)
 
 
-### Covariate sv2
+### Covariate sv3
 
 
 statistics
 
 
-|var1                   |var2 |         F|   p-value|        R|   p-value|
-|:----------------------|:----|---------:|---------:|--------:|---------:|
-|epithelioid_other_meso |sv2  | 0.1607875| 0.6899059| 0.050189| 0.7033333|
+|var1          |var2 |         F|   p-value|         R|   p-value|
+|:-------------|:----|---------:|---------:|---------:|---------:|
+|smoke_current |sv3  | 0.4958056| 0.4819063| 0.0113952| 0.8452148|
 
 
 
@@ -111,15 +110,15 @@ statistics
 ![plot of chunk unnamed-chunk-44](figure/unnamed-chunk-44-1.png)
 
 
-### Covariate sv3
+### Covariate sv4
 
 
 statistics
 
 
-|var1                   |var2 |        F|   p-value|         R|   p-value|
-|:----------------------|:----|--------:|---------:|---------:|---------:|
-|epithelioid_other_meso |sv3  | 0.888439| 0.3498104| 0.0032036| 0.9806191|
+|var1          |var2 |         F|   p-value|         R|   p-value|
+|:-------------|:----|---------:|---------:|---------:|---------:|
+|smoke_current |sv4  | 0.8115263| 0.3684067| 0.0596573| 0.3063307|
 
 
 
@@ -128,15 +127,15 @@ statistics
 ![plot of chunk unnamed-chunk-50](figure/unnamed-chunk-50-1.png)
 
 
-### Covariate sv4
+### Covariate sv5
 
 
 statistics
 
 
-|var1                   |var2 |         F|   p-value|          R|   p-value|
-|:----------------------|:----|---------:|---------:|----------:|---------:|
-|epithelioid_other_meso |sv4  | 0.0015395| 0.9688361| -0.0437819| 0.7397695|
+|var1          |var2 |         F|   p-value|          R|   p-value|
+|:-------------|:----|---------:|---------:|----------:|---------:|
+|smoke_current |sv5  | 0.6951462| 0.4050963| -0.0201608| 0.7297738|
 
 
 
@@ -145,15 +144,15 @@ statistics
 ![plot of chunk unnamed-chunk-56](figure/unnamed-chunk-56-1.png)
 
 
-### Covariate sv5
+### Covariate sv6
 
 
 statistics
 
 
-|var1                   |var2 |         F|   p-value|          R|   p-value|
-|:----------------------|:----|---------:|---------:|----------:|---------:|
-|epithelioid_other_meso |sv5  | 0.3585234| 0.5516589| -0.0032036| 0.9806191|
+|var1          |var2 |         F|   p-value|          R|   p-value|
+|:-------------|:----|---------:|---------:|----------:|---------:|
+|smoke_current |sv6  | 0.1934605| 0.6603751| -0.0196451| 0.7364258|
 
 
 
@@ -162,15 +161,15 @@ statistics
 ![plot of chunk unnamed-chunk-62](figure/unnamed-chunk-62-1.png)
 
 
-### Covariate sv6
+### Covariate sv7
 
 
 statistics
 
 
-|var1                   |var2 |        F|   p-value|         R|   p-value|
-|:----------------------|:----|--------:|---------:|---------:|---------:|
-|epithelioid_other_meso |sv6  | 1.289939| 0.2607307| 0.1121244| 0.3936946|
+|var1          |var2 |         F|   p-value|          R|   p-value|
+|:-------------|:----|---------:|---------:|----------:|---------:|
+|smoke_current |sv7  | 0.7505253| 0.3870164| -0.0719291| 0.2172486|
 
 
 
@@ -179,15 +178,15 @@ statistics
 ![plot of chunk unnamed-chunk-68](figure/unnamed-chunk-68-1.png)
 
 
-### Covariate sv7
+### Covariate sv8
 
 
 statistics
 
 
-|var1                   |var2 |         F|   p-value|          R|   p-value|
-|:----------------------|:----|---------:|---------:|----------:|---------:|
-|epithelioid_other_meso |sv7  | 0.6808776| 0.4126657| -0.0779532| 0.5538353|
+|var1          |var2 |        F|  p-value|         R|  p-value|
+|:-------------|:----|--------:|--------:|---------:|--------:|
+|smoke_current |sv8  | 1.256845| 0.263164| 0.0905946| 0.119886|
 
 
 
@@ -196,15 +195,15 @@ statistics
 ![plot of chunk unnamed-chunk-74](figure/unnamed-chunk-74-1.png)
 
 
-### Covariate sv8
+### Covariate sv9
 
 
 statistics
 
 
-|var1                   |var2 |        F|   p-value|         R|   p-value|
-|:----------------------|:----|--------:|---------:|---------:|---------:|
-|epithelioid_other_meso |sv8  | 3.378618| 0.0711703| 0.1527028| 0.2441019|
+|var1          |var2 |         F|  p-value|          R|   p-value|
+|:-------------|:----|---------:|--------:|----------:|---------:|
+|smoke_current |sv9  | 0.8665967| 0.352663| -0.0464574| 0.4258392|
 
 
 
@@ -213,38 +212,21 @@ statistics
 ![plot of chunk unnamed-chunk-80](figure/unnamed-chunk-80-1.png)
 
 
-### Covariate sv9
-
-
-statistics
-
-
-|var1                   |var2 |         F|   p-value|          R|   p-value|
-|:----------------------|:----|---------:|---------:|----------:|---------:|
-|epithelioid_other_meso |sv9  | 0.2219487| 0.6393263| -0.0117464| 0.9290215|
-
-
-
-
-
-![plot of chunk unnamed-chunk-86](figure/unnamed-chunk-86-1.png)
-
-
 ### Covariate sv10
 
 
 statistics
 
 
-|var1                   |var2 |        F| p-value|          R|   p-value|
-|:----------------------|:----|--------:|-------:|----------:|---------:|
-|epithelioid_other_meso |sv10 | 1.462813| 0.23139| -0.1591099| 0.2246379|
+|var1          |var2 |         F|   p-value|         R|   p-value|
+|:-------------|:----|---------:|---------:|---------:|---------:|
+|smoke_current |sv10 | 0.8485232| 0.3577257| 0.0422293| 0.4691948|
 
 
 
 
 
-![plot of chunk unnamed-chunk-92](figure/unnamed-chunk-92-1.png)
+![plot of chunk unnamed-chunk-86](figure/unnamed-chunk-86-1.png)
 
 
 
@@ -259,7 +241,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-102](figure/unnamed-chunk-102-1.png)
+![plot of chunk unnamed-chunk-96](figure/unnamed-chunk-96-1.png)
 
 ## Manhattan plots
 
@@ -268,7 +250,7 @@ statistics
 
 
 
-![plot of chunk unnamed-chunk-107](figure/unnamed-chunk-107-1.png)
+![plot of chunk unnamed-chunk-101](figure/unnamed-chunk-101-1.png)
 
 ## Significant CpG sites
 
@@ -281,28 +263,43 @@ These are listed in the file [associations.csv](associations.csv).
 
 
 Below are the 10
-CpG sites with association p-values < 7.0681747 &times; 10<sup>-5</sup>
+CpG sites with association p-values < 5.2875381 &times; 10<sup>-5</sup>
 in the  regression model.
 
 
 |           |chromosome |  position|   estimate|  p.value| p.adjust|
 |:----------|:----------|---------:|----------:|--------:|--------:|
-|cg19689672 |chr12      |  96001921|  0.0555195| 6.35e-05|        1|
-|cg20920574 |chr12      |  66276101|  0.1161074| 5.77e-05|        1|
-|cg24082638 |chr19      |   9666638|  0.0708657| 7.70e-06|        1|
-|cg17882544 |chr1       |   2730824|  0.0910713| 5.83e-05|        1|
-|cg11347156 |chr7       |  86684183|  0.0881334| 4.40e-06|        1|
-|cg05530416 |chr3       | 131910723|  0.0653963| 2.17e-05|        1|
-|cg16506032 |chr11      |  66749879| -0.1070986| 4.11e-05|        1|
-|cg13371910 |chr6       |  69990372|  0.0993707| 6.70e-05|        1|
-|cg13927088 |chr1       | 152691125|  0.0833299| 3.35e-05|        1|
-|cg07784042 |chr2       |  67893948|  0.1289365| 5.13e-05|        1|
+|cg02668843 |chr17      |  40575479|  0.0501094| 2.73e-05|        1|
+|cg06447378 |chr13      |  39358893| -0.0680038| 6.10e-06|        1|
+|cg08866281 |chr5       | 169920639| -0.0702315| 2.69e-05|        1|
+|cg09780447 |chr6       |  86155386|  0.0655151| 2.30e-05|        1|
+|cg12486373 |chr8       |  42434655| -0.0350507| 5.05e-05|        1|
+|cg22510460 |chr2       |  75789090| -0.0766123| 2.32e-05|        1|
+|cg06007645 |chr1       |  55107421| -0.0431681| 1.52e-05|        1|
+|cg01923473 |chr8       |  53323692| -0.0412500| 4.14e-05|        1|
+|cg11509907 |chr2       | 235404686|  0.0516086| 1.13e-05|        1|
+|cg16035267 |chr6       |  29342630| -0.0919038| 1.02e-05|        1|
 
 Plots of these sites follow, one for each covariate set.
 "p[lm]" denotes the p-value obtained using a linear model
 and "p[beta]" the p-value obtained using beta regression.
 
 
+
+
+
+
+![plot of chunk unnamed-chunk-108](figure/unnamed-chunk-108-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-110](figure/unnamed-chunk-110-1.png)
+
+
+
+
+![plot of chunk unnamed-chunk-112](figure/unnamed-chunk-112-1.png)
 
 
 
@@ -338,21 +335,6 @@ and "p[beta]" the p-value obtained using beta regression.
 
 
 ![plot of chunk unnamed-chunk-126](figure/unnamed-chunk-126-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-128](figure/unnamed-chunk-128-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-130](figure/unnamed-chunk-130-1.png)
-
-
-
-
-![plot of chunk unnamed-chunk-132](figure/unnamed-chunk-132-1.png)
 
 ## Selected CpG sites
 
