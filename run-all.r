@@ -134,3 +134,7 @@ packages <- c("rmarkdown", "knitr")
 lapply(packages, require, character.only=T)
 render("compare.rmd", output_format = "all", output_dir = "docs")
 
+# test making an ioslides presentation
+packages <- c("rmarkdown", "knitr")
+lapply(packages, require, character.only=T)
+render("habits.rmd", output_format = "all", output_dir = "docs")
