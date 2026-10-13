@@ -1,7 +1,7 @@
 # QC report
 - study: pleural-cfDNA-screening-array
 - author: Paul Yousefi
-- date: 29 September, 2026
+- date: 13 October, 2026
 
 ## Parameters used for QC
 
@@ -56,17 +56,149 @@ There are 336 samples analysed.
 ## Sex mismatches
 
 To separate females and males, we use the difference of total median intensity for Y chromosome probes and X chromosome probes. This will give two distinct clusters of intensities. Females will be clustered on the left and males on the right. 
-There are 6 sex detection outliers, and 0 sex detection mismatches.
+There are 6 sex detection outliers, and 137 sex detection mismatches.
 
 
-|sample.name         |predicted.sex |declared.sex |   xy.diff|status  |
-|:-------------------|:-------------|:------------|---------:|:-------|
-|208661850044_R06C01 |M             |NA           | -1.986003|outlier |
-|208661850044_R04C01 |M             |NA           | -1.791829|outlier |
-|208661850041_R04C02 |M             |NA           | -1.786598|outlier |
-|208661850044_R12C01 |M             |NA           | -1.757729|outlier |
-|208661850045_R14C02 |M             |NA           | -1.713838|outlier |
-|208661850042_R07C01 |M             |NA           | -1.520417|outlier |
+|sample.name         |predicted.sex |declared.sex |    xy.diff|status     |
+|:-------------------|:-------------|:------------|----------:|:----------|
+|208661850041_R04C03 |F             |M            | -4.0540299|mismatched |
+|208788350010_R03C03 |F             |M            | -3.7732160|mismatched |
+|208661850039_R11C01 |F             |M            | -3.7633887|mismatched |
+|208788350010_R09C03 |F             |M            | -3.7280975|mismatched |
+|208661850041_R06C01 |F             |M            | -3.7092036|mismatched |
+|208661850043_R12C03 |F             |M            | -3.6972385|mismatched |
+|208661850043_R09C01 |F             |M            | -3.6740972|mismatched |
+|208661850041_R02C03 |F             |M            | -3.6479630|mismatched |
+|208661850039_R14C03 |F             |M            | -3.6348921|mismatched |
+|208661850041_R08C03 |F             |M            | -3.6008254|mismatched |
+|208661850039_R05C02 |F             |M            | -3.5808146|mismatched |
+|208661850041_R06C03 |F             |M            | -3.5210497|mismatched |
+|208661850041_R12C02 |F             |M            | -3.4772867|mismatched |
+|208661850039_R01C03 |F             |M            | -3.4771460|mismatched |
+|208661850042_R03C01 |F             |M            | -3.4647954|mismatched |
+|208661850041_R02C02 |F             |M            | -3.4425664|mismatched |
+|208661850039_R09C02 |F             |M            | -3.4176702|mismatched |
+|208661850039_R06C02 |F             |M            | -3.4107411|mismatched |
+|208788350010_R05C01 |F             |M            | -3.3866575|mismatched |
+|208788350010_R15C03 |F             |M            | -3.3832751|mismatched |
+|208661850043_R04C02 |F             |M            | -3.3645967|mismatched |
+|208661850043_R14C03 |F             |M            | -3.3608771|mismatched |
+|208661850043_R11C01 |F             |M            | -3.3499919|mismatched |
+|208788350010_R09C01 |F             |M            | -3.3069171|mismatched |
+|208661850039_R03C01 |F             |M            | -3.2899222|mismatched |
+|208788350010_R12C02 |F             |M            | -3.2891647|mismatched |
+|208661850039_R15C02 |F             |M            | -3.2859502|mismatched |
+|208661850039_R12C02 |F             |M            | -3.2859004|mismatched |
+|208661850039_R16C01 |F             |M            | -3.2811301|mismatched |
+|208661850041_R05C02 |F             |M            | -3.2554616|mismatched |
+|208661850045_R11C03 |F             |M            | -3.2429810|mismatched |
+|208661850043_R05C02 |F             |M            | -3.2134816|mismatched |
+|208661850042_R02C02 |F             |M            | -3.1977221|mismatched |
+|208661850043_R05C01 |F             |M            | -3.1908778|mismatched |
+|208661850045_R09C01 |F             |M            | -3.1737271|mismatched |
+|208661850044_R11C01 |F             |M            | -3.1543542|mismatched |
+|208661850041_R07C03 |F             |M            | -3.0980900|mismatched |
+|208661850042_R14C01 |F             |M            | -3.0410252|mismatched |
+|208788350010_R08C03 |F             |M            | -3.0397337|mismatched |
+|208661850042_R15C01 |F             |M            | -3.0026200|mismatched |
+|208661850041_R01C02 |F             |M            | -2.9782681|mismatched |
+|208661850042_R11C01 |F             |M            | -2.9770136|mismatched |
+|208661850043_R05C03 |F             |M            | -2.9623839|mismatched |
+|208661850044_R13C02 |F             |M            | -2.9566547|mismatched |
+|208661850045_R07C03 |F             |M            | -2.9406413|mismatched |
+|208661850043_R02C01 |F             |M            | -2.9102195|mismatched |
+|208661850041_R14C01 |F             |M            | -2.9064929|mismatched |
+|208661850045_R02C03 |F             |M            | -2.7922780|mismatched |
+|208661850045_R04C03 |F             |M            | -2.7902172|mismatched |
+|208661850044_R11C02 |F             |M            | -2.7681365|mismatched |
+|208661850041_R01C03 |F             |M            | -2.7453995|mismatched |
+|208661850043_R01C02 |F             |M            | -2.7039703|mismatched |
+|208661850045_R03C02 |F             |M            | -2.6798644|mismatched |
+|208661850042_R16C02 |F             |M            | -2.6545364|mismatched |
+|208661850044_R06C02 |F             |M            | -2.6528503|mismatched |
+|208661850045_R06C01 |F             |M            | -2.6345602|mismatched |
+|208661850042_R03C03 |F             |M            | -2.5572034|mismatched |
+|208661850044_R06C03 |F             |M            | -2.5107041|mismatched |
+|208661850045_R05C03 |F             |M            | -2.4601035|mismatched |
+|208661850045_R01C02 |F             |M            | -2.3880698|mismatched |
+|208661850042_R15C02 |F             |M            | -2.3374954|mismatched |
+|208661850045_R15C02 |F             |M            | -2.3164825|mismatched |
+|208661850041_R16C02 |F             |M            | -2.2275601|mismatched |
+|208661850044_R10C03 |F             |M            | -2.1788111|mismatched |
+|208661850041_R13C02 |F             |M            | -2.0311902|mismatched |
+|208661850044_R04C01 |M             |F            | -1.7918289|mismatched |
+|208661850041_R04C02 |M             |F            | -1.7865980|mismatched |
+|208661850044_R12C01 |M             |F            | -1.7577290|mismatched |
+|208661850045_R14C02 |M             |F            | -1.7138380|mismatched |
+|208661850042_R07C01 |M             |F            | -1.5204173|mismatched |
+|208661850045_R08C03 |M             |F            | -1.3393437|mismatched |
+|208661850041_R15C01 |M             |F            | -1.2794422|mismatched |
+|208788350010_R02C02 |M             |F            | -1.0212467|mismatched |
+|208661850039_R07C01 |M             |F            | -1.0198832|mismatched |
+|208661850042_R09C01 |M             |F            | -0.9430971|mismatched |
+|208661850039_R10C03 |M             |F            | -0.8529075|mismatched |
+|208661850043_R02C03 |M             |F            | -0.7819661|mismatched |
+|208788350010_R11C03 |M             |F            | -0.7329313|mismatched |
+|208661850043_R06C01 |M             |F            | -0.7082149|mismatched |
+|208661850041_R15C02 |M             |F            | -0.6810638|mismatched |
+|208661850044_R02C03 |M             |F            | -0.6563428|mismatched |
+|208661850041_R10C01 |M             |F            | -0.6485936|mismatched |
+|208661850041_R09C01 |M             |F            | -0.4947532|mismatched |
+|208661850041_R11C02 |M             |F            | -0.4927137|mismatched |
+|208661850041_R11C01 |M             |F            | -0.4724112|mismatched |
+|208661850044_R03C03 |M             |F            | -0.4698455|mismatched |
+|208661850039_R01C02 |M             |F            | -0.4244757|mismatched |
+|208661850041_R05C03 |M             |F            | -0.4109051|mismatched |
+|208661850042_R04C03 |M             |F            | -0.3993294|mismatched |
+|208661850045_R09C02 |M             |F            | -0.3747916|mismatched |
+|208788350010_R05C02 |M             |F            | -0.3487843|mismatched |
+|208661850041_R10C03 |M             |F            | -0.3226797|mismatched |
+|208661850044_R01C01 |M             |F            | -0.3049253|mismatched |
+|208661850044_R11C03 |M             |F            | -0.2977425|mismatched |
+|208661850041_R11C03 |M             |F            | -0.2904918|mismatched |
+|208661850045_R06C03 |M             |F            | -0.2750796|mismatched |
+|208661850039_R06C01 |M             |F            | -0.2603612|mismatched |
+|208661850043_R09C02 |M             |F            | -0.2353834|mismatched |
+|208661850045_R10C03 |M             |F            | -0.2330448|mismatched |
+|208661850044_R07C03 |M             |F            | -0.2299507|mismatched |
+|208661850044_R10C01 |M             |F            | -0.2099205|mismatched |
+|208788350010_R01C02 |M             |F            | -0.1997292|mismatched |
+|208661850039_R09C03 |M             |F            | -0.1834338|mismatched |
+|208661850043_R02C02 |M             |F            | -0.1817975|mismatched |
+|208661850039_R12C03 |M             |F            | -0.1803750|mismatched |
+|208661850043_R03C03 |M             |F            | -0.1743436|mismatched |
+|208661850045_R10C01 |M             |F            | -0.1736529|mismatched |
+|208661850042_R02C03 |M             |F            | -0.1735483|mismatched |
+|208661850043_R01C03 |M             |F            | -0.1703305|mismatched |
+|208661850043_R07C01 |M             |F            | -0.1690497|mismatched |
+|208661850041_R12C03 |M             |F            | -0.1560971|mismatched |
+|208788350010_R10C03 |M             |F            | -0.1485940|mismatched |
+|208661850042_R03C02 |M             |F            | -0.1401821|mismatched |
+|208661850039_R16C02 |M             |F            | -0.1319977|mismatched |
+|208661850043_R08C01 |M             |F            | -0.1264832|mismatched |
+|208661850045_R11C01 |M             |F            | -0.1130678|mismatched |
+|208661850044_R05C02 |M             |F            | -0.1108936|mismatched |
+|208788350010_R15C02 |M             |F            | -0.0995307|mismatched |
+|208661850043_R13C01 |M             |F            | -0.0880295|mismatched |
+|208788350010_R14C01 |M             |F            | -0.0868488|mismatched |
+|208661850041_R14C03 |M             |F            | -0.0752150|mismatched |
+|208661850045_R09C03 |M             |F            | -0.0415172|mismatched |
+|208661850041_R06C02 |M             |F            | -0.0412789|mismatched |
+|208788350010_R11C01 |M             |F            | -0.0383154|mismatched |
+|208661850039_R02C03 |M             |F            | -0.0287271|mismatched |
+|208661850042_R06C02 |M             |F            | -0.0266104|mismatched |
+|208661850045_R14C03 |M             |F            | -0.0139659|mismatched |
+|208661850039_R08C02 |M             |F            | -0.0102440|mismatched |
+|208661850044_R15C01 |M             |F            | -0.0092864|mismatched |
+|208661850043_R12C02 |M             |F            | -0.0045610|mismatched |
+|208661850042_R05C03 |M             |F            |  0.0037034|mismatched |
+|208661850044_R15C03 |M             |F            |  0.0069429|mismatched |
+|208661850044_R14C02 |M             |F            |  0.0286762|mismatched |
+|208661850039_R08C03 |M             |F            |  0.1123764|mismatched |
+|208661850041_R03C03 |M             |F            |  0.1313282|mismatched |
+|208661850045_R16C01 |M             |F            |  0.1431994|mismatched |
+|208661850044_R01C02 |M             |F            |  0.2478297|mismatched |
+|208661850044_R06C01 |M             |M            | -1.9860033|outlier    |
 
 This is a plot of the difference between median 
 chromosome Y and chromosome X probe intensities ("XY diff").
@@ -265,12 +397,11 @@ This section omitted.
 ## [16] Matrix_1.6-5          multcomp_1.4-26       TH.data_1.1-2        
 ## [19] survival_3.8-3        mvtnorm_1.3-2         matrixStats_1.5.0    
 ## [22] markdown_1.13         gridExtra_2.3         Cairo_1.6-2          
-## [25] reshape2_1.4.4        plyr_1.8.9            ggplot2_4.0.3        
-## [28] sva_3.54.0            BiocParallel_1.40.0   genefilter_1.88.0    
-## [31] mgcv_1.9-1            nlme_3.1-165          limma_3.62.1         
-## [34] sandwich_3.1-1        lmtest_0.9-40         zoo_1.8-12           
-## [37] MASS_7.3-60.0.1       illuminaio_0.48.0     knitr_1.49           
-## [40] rmarkdown_2.29       
+## [25] knitr_1.49            reshape2_1.4.4        plyr_1.8.9           
+## [28] ggplot2_4.0.3         sva_3.54.0            BiocParallel_1.40.0  
+## [31] genefilter_1.88.0     mgcv_1.9-1            nlme_3.1-165         
+## [34] limma_3.62.1          sandwich_3.1-1        lmtest_0.9-40        
+## [37] zoo_1.8-12            MASS_7.3-60.0.1       illuminaio_0.48.0    
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] DBI_1.2.3               rlang_1.1.4             magrittr_2.0.3         
@@ -281,23 +412,21 @@ This section omitted.
 ## [16] nloptr_2.1.1            bit_4.5.0.1             xfun_0.52              
 ## [19] zlibbioc_1.52.0         cachem_1.1.0            GenomeInfoDb_1.42.0    
 ## [22] jsonlite_1.8.9          blob_1.2.4              cluster_2.1.8          
-## [25] R6_2.5.1                bslib_0.8.0             stringi_1.8.4          
-## [28] RColorBrewer_1.1-3      boot_1.3-31             jquerylib_0.1.4        
-## [31] Rcpp_1.0.13-1           IRanges_2.40.0          splines_4.4.2          
-## [34] tidyselect_1.2.1        yaml_2.3.10             codetools_0.2-20       
-## [37] lattice_0.22-6          tibble_3.2.1            Biobase_2.66.0         
-## [40] withr_3.0.2             KEGGREST_1.46.0         S7_0.2.0               
-## [43] askpass_1.2.1           evaluate_1.0.1          Biostrings_2.74.0      
-## [46] pillar_1.10.1           MatrixGenerics_1.18.0   stats4_4.4.2           
-## [49] generics_0.1.3          S4Vectors_0.44.0        commonmark_1.9.5       
-## [52] scales_1.4.0            minqa_1.2.8             xtable_1.8-4           
-## [55] glue_1.8.0              tools_4.4.2             data.table_1.15.4      
-## [58] annotate_1.84.0         locfit_1.5-9.10         XML_3.99-0.17          
-## [61] grid_4.4.2              AnnotationDbi_1.68.0    edgeR_4.4.0            
-## [64] base64_2.0.2            GenomeInfoDbData_1.2.13 cli_3.6.3              
-## [67] config_0.3.2            gtable_0.3.6            sass_0.4.9             
-## [70] digest_0.6.37           BiocGenerics_0.52.0     farver_2.1.2           
-## [73] memoise_2.0.1           htmltools_0.5.8.1       lifecycle_1.0.4        
-## [76] httr_1.4.7              mime_0.12               openssl_2.3.1          
-## [79] bit64_4.5.2
+## [25] R6_2.5.1                stringi_1.8.4           RColorBrewer_1.1-3     
+## [28] boot_1.3-31             Rcpp_1.0.13-1           IRanges_2.40.0         
+## [31] splines_4.4.2           tidyselect_1.2.1        yaml_2.3.10            
+## [34] codetools_0.2-20        lattice_0.22-6          tibble_3.2.1           
+## [37] Biobase_2.66.0          withr_3.0.2             KEGGREST_1.46.0        
+## [40] S7_0.2.0                askpass_1.2.1           evaluate_1.0.1         
+## [43] Biostrings_2.74.0       pillar_1.10.1           MatrixGenerics_1.18.0  
+## [46] stats4_4.4.2            generics_0.1.3          S4Vectors_0.44.0       
+## [49] commonmark_1.9.5        scales_1.4.0            minqa_1.2.8            
+## [52] xtable_1.8-4            glue_1.8.0              tools_4.4.2            
+## [55] data.table_1.15.4       annotate_1.84.0         locfit_1.5-9.10        
+## [58] XML_3.99-0.17           grid_4.4.2              AnnotationDbi_1.68.0   
+## [61] edgeR_4.4.0             base64_2.0.2            GenomeInfoDbData_1.2.13
+## [64] cli_3.6.3               config_0.3.2            gtable_0.3.6           
+## [67] BiocGenerics_0.52.0     farver_2.1.2            memoise_2.0.1          
+## [70] lifecycle_1.0.4         httr_1.4.7              mime_0.12              
+## [73] openssl_2.3.1           bit64_4.5.2
 ```

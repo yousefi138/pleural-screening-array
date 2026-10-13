@@ -18,6 +18,7 @@ dir$samplesheets <- file.path(dir$data, "raw", "180626_M2644")
 ## ----files -------------------------------------------------------------
 file <- list()
 file$samplesheet <- file.path(dir$release, "pleural-screening-samplesheet.csv")
+file$design <- file.path(dir$data,"pheno", "20251119-pleural-array-locations-with-ages.csv")
 file$qc.report <- file.path(dir$reports, "qc/pleural-screening.qc-report.html")
 file$detect.p <- file.path(dir$release, "detect.p/pleural-screening.detection_p_values.rds")
 file$pc.fit.plot <- file.path(dir$reports,"qc/pleural-screening.pc.fit.pdf")
@@ -47,14 +48,15 @@ param$pc <- 20
 param$qc <- meffil.qc.parameters()
 
 run <- list()
-run$qc <- FALSE
-run$qc.summary <- FALSE
-run$detect.p <- FALSE
-run$norm.objects <- FALSE
+run$qc <- TRUE
+run$qc.summary <- TRUE
+run$detect.p <- TRUE
+run$norm.objects <- TRUE
 
 ## ----samplesheet -------------------------------------------------------------
 meffil.samplesheet <- meffil.create.samplesheet(dir$idats, recursive=TRUE)
 meffil.samplesheet$subdir <- sub(".*/M2644/", "", meffil.samplesheet$Basename)
+meffil.samplesheet$Sex <- NULL
 
 ## ----lab.samplesheet -------------------------------------------------------------
 file$lab.samplesheets <- list.files(dir$samplesheets, 
@@ -80,9 +82,17 @@ lab.samplesheet$pid[err]
 lab.samplesheet$pid[err] <- "C1615MR"
 lab.samplesheet$pid[err] 
 
+# add the design information from `set-array-locations.r`
+# to get the Sex variable
+design <- as.data.frame(data.table::fread(file$design)) |>
+			mutate(Sex = substr(sex, 1, 1)) |>
+			dplyr::rename(pid = patient.id)|>
+			dplyr::select(pid, Sex)
+
 ## ----combined.samplesheet--------------------------------------------------------
 samplesheet <- meffil.samplesheet |>
-				left_join(lab.samplesheet, by = c("Sample_Name"))
+				left_join(lab.samplesheet, by = c("Sample_Name"))|>
+				inner_join(design, by = c("pid"))
 data.table::fwrite(samplesheet,file = file$samplesheet)
 
 ## ----qc -------------------------------------------------------------
