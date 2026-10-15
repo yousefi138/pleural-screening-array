@@ -52,15 +52,23 @@ recs <-
 recs <- as.matrix(recs)
 recs <- apply(recs, 2, scale)			
 
-## ----calculate euclidean distance---------------------------------------------------
-eucl <- apply(slide, 1, function(n){
-			apply(recs, 1, function(p) dist(rbind(n, p)))
+# For one solution:
+## 	## ----calculate euclidean distance---------------------------------------------------
+## 	eucl <- apply(slide, 1, function(n){
+## 				apply(recs, 1, function(p) dist(rbind(n, p)))
+## 	})
+## 	
+## 	## ----solve -------------------------------------------------------------
+## 	# This output shows order from RECS to SLIDE
+## 	sol <- solve_LSAP(eucl)
+## 	sol
+
+ # For all solutions and left out correlations
+lapply(1:ncol(recs), function(var){
+	eucl <- apply(slide[,-var], 1, function(n){
+				apply(recs[,-var], 1, function(p) dist(rbind(n, p)))
+	})
+
+	idx <- solve_LSAP(eucl)
+	cor(recs[,var], slide[idx,var], use="pairwise.complete.obs")
 })
-
-## ----solve -------------------------------------------------------------
-# This output shows order from RECS to SLIDE
-sol <- solve_LSAP(eucl)
-sol
-
-
-
