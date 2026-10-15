@@ -100,6 +100,7 @@ meffil.list.featuresets()
 
 eval.save({
 	qc.objects <- meffil.qc(samplesheet,  
+					cell.type.reference = "blood gse35069 complete", 
 					verbose = param$verbose,
 					detection.threshold = 0.01)	## default but specifying for clarity
 }, "qc.objects", redo=run$qc)
